@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+set -x
+rm -rf .cache public __deploy
+gatsby build
+git clone git@github.com:graphile/graphile.github.io __deploy
+cd __deploy
+git checkout master
+rm -Rf ./*
+cp -a ../public/* ./
+echo 'www.graphile.org' > CNAME
+git add .
+git commit -m'Deploy'
+git push origin master
