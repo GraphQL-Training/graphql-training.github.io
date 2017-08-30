@@ -1,0 +1,54 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.3.0",
+    "eslint-cli": "^1.1.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-react": "^7.1.0",
+    "flow-bin": "^0.51.1",
+    "fsevents": "^1.1.2",
+    "gatsby": "^1.7.2",
+    "gatsby-link": "^1.6.5",
+    "gatsby-plugin-catch-links": "^1.0.2",
+    "gatsby-plugin-react-helmet": "^1.0.1",
+    "gatsby-plugin-sass": "^1.0.1",
+    "gatsby-plugin-sharp": "^1.6.0",
+    "gatsby-remark-autolink-headers": "^1.4.1",
+    "gatsby-remark-images": "^1.5.0",
+    "gatsby-remark-prismjs": "^1.2.0",
+    "gatsby-source-filesystem": "^1.4.1",
+    "gatsby-transformer-json": "^1.0.2",
+    "gatsby-transformer-remark": "^1.7.0",
+    "graphile-build": "latest",
+    "graphql": "^0.10.5",
+    "react-typography": "^0.16.1",
+    "remark-custom-blocks": "^1.0.1",
+    "typography": "^0.16.0",
+    "typography-theme-fairy-gates": "^0.15.11",
+    "typography-theme-funston": "^0.15.10"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "./scripts/deploy",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "start": "gatsby develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "node-fetch": "^1.7.2",
+    "prettier": "^1.5.3"
+  }
+}
