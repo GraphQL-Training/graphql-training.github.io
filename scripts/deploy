@@ -3,12 +3,12 @@ set -e
 set -x
 rm -rf .cache public __deploy
 gatsby build
-git clone git@github.com:graphile/graphile.github.io __deploy
+git clone git@github.com:GraphQLTraining/graphql-training.github.io __deploy
 cd __deploy
 git checkout master
 rm -Rf ./*
 cp -a ../public/* ./
-echo 'www.graphile.org' > CNAME
+echo 'www.graphql-training.com' > CNAME
 git add .
 git commit -m'Deploy'
 git push origin master
