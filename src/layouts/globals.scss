@@ -4,6 +4,7 @@
 body {
   // @extend .debug-grid;
   font-family: Lato, "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
 
 h1,
@@ -21,7 +22,7 @@ h6 {
 
 h1 {
   @extend .mb4-ns;
-  @extend .mb3;
+  @extend .mb4;
 }
 
 h2,
@@ -76,4 +77,15 @@ a {
   @extend .no-underline;
   @extend .underline-hover;
   color: #1A82BF;
+}
+
+blockquote {
+  @extend .serif;
+  @extend .i;
+  @extend .measure;
+  @extend .lh-copy;
+  @extend .ml0;
+  @extend .mr0;
+  @extend .mb4-ns;
+  @extend .mt4-ns;
 }

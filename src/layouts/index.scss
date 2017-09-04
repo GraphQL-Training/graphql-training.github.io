@@ -21,16 +21,58 @@ $headerRadius: 2rem;
 
   h3 {
     @extend .lh-copy;
+    @extend .mb6;
   }
 }
 
 .header-spacer {
-  border: 1px solid;
   height: $headerRadius;
-  width: 100%;
 }
 
 .header-brain {
   width: 10rem;
   border: 1px solid;
+}
+
+.do-what {
+  background-color: #343842;
+
+  h1,
+  h2,
+  h3,
+  div,
+  p {
+    @extend .white;
+  }
+}
+
+.quote-wrapper {
+  blockquote {
+    @extend .relative;
+    @extend .flex;
+
+    &:after,
+    &:before {
+      font-size: 5em;
+      line-height: 100%;
+      padding: 0;
+      @extend .georgia;
+      @extend .fs-normal;
+      @extend .db;
+      height: 0.3em;
+    }
+
+    &:before {
+      content: "“";
+      align-self: flex-start;
+      @extend .mr2;
+    }
+
+    &:after {
+      content: "”";
+      align-self: flex-end;
+      @extend .ml2;
+    }
+
+  }
 }
