@@ -1,89 +1,36 @@
 @import "./tachyons.scss";
+@import "./globals.scss";
 
-// ----------------------------------------
-// Globals
+$headerRadius: 2rem;
 
-body {
-  // @extend .debug-grid;
-  font-family: "Open Sans", Verdana, Arial, Helvetica, sans-serif;
-  font-weight: normal;
+.header {
+  background-image: linear-gradient(270deg, #b4fcfe 0%, #9bcee0 16%, #83a2c2 33%, #6a77a5 50%, #504e89 66%, #34286d 83%, #130052 100%);
+  // border-radius: 0 0 50% 50%  / '${$headerRadius}';
+  // margin-bottom: 0 - $headerRadius;
+
+  h1,
+  h2,
+  h3 {
+    @extend .white;
+  }
+
+  h1 {
+    @extend .ttu;
+    @extend .mb5;
+  }
+
+  h3 {
+    @extend .lh-copy;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend .helvetica;
-  @extend .lh-title;
-  @extend .mt3;
-  @extend .measure;
-  @extend .fw6;
+.header-spacer {
+  border: 1px solid;
+  height: $headerRadius;
+  width: 100%;
 }
 
-h1 {
-  @extend .mb4-ns;
-  @extend .mb3;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend .mb3-ns;
-  @extend .mb2;
-}
-
-h1 {
-  @extend .f1-ns;
-  @extend .f2;
-}
-
-h2 {
-  @extend .f2-ns;
-  @extend .f3;
-}
-
-h3 {
-  @extend .f3-ns;
-  @extend .f4;
-
-}
-h4 {
-  @extend .f4-ns;
-  @extend .f5;
-}
-
-h5 {
-  @extend .f5-ns;
-  @extend .f6;
-}
-
-h6 {
-  @extend .f6-ns;
-  @extend .f7;
-}
-
-p {
-  @extend .f5-ns;
-  @extend .f6;
-  @extend .lh-copy;
-  @extend .measure;
-  @extend .mb4-ns;
-  @extend .mt4-ns;
-}
-
-a {
-  @extend .no-underline;
-  @extend .underline-hover;
-  color: #1A82BF;
-}
-
-// ----------------------------------------
-// Temp
-
-.container {
-  height: 100vh;
+.header-brain {
+  width: 10rem;
+  border: 1px solid;
 }
