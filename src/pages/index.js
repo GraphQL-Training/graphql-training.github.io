@@ -27,7 +27,7 @@ const HomeHeader = () => (
             <ButtonLink href="/">Book Now</ButtonLink>
           </div>
 
-          <div className="col-xs-3 header-brain pt1vh">Brain</div>
+          <div className="col-xs-3 header-brain pt1vh" />
         </div>
       </div>
     </div>
