@@ -72,8 +72,8 @@ const Index = () => (
         <h3>
           Nothing but awesome. You&rsquo;re getting some serious expertise here!
         </h3>
-      </RowCenter>
-      <RowCenter>
+        <br />
+        <br />
         <div className="shadow--l1 bg-white w-100 pt4 pb4 pr5 pl5 flex">
           <div className="flex justify-center align-center w-100">
             <div className="flex flex-column items-center mr5">
