@@ -30,16 +30,6 @@ $headerRadius: 2rem;
   height: $headerRadius;
 }
 
-.header-brain {
-  width: 10rem;
-  background-color: transparent;
-  background-image:
-    url('/images/big-brain.png');
-  background-repeat: no-repeat;
-  background-size: contain, cover;
-  background-position: left 0 bottom 4vh;
-}
-
 .section-dark {
   h1,
   h2,
