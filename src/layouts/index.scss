@@ -1,10 +1,10 @@
 @import "./tachyons.scss";
 @import "./globals.scss";
+@import "./tachyons-custom.scss";
 
 $headerRadius: 2rem;
 
 .header {
-  background-image: linear-gradient(270deg, #b4fcfe 0%, #9bcee0 16%, #83a2c2 33%, #6a77a5 50%, #504e89 66%, #34286d 83%, #130052 100%);
   // border-radius: 0 0 50% 50%  / '${$headerRadius}';
   // margin-bottom: 0 - $headerRadius;
 
@@ -17,6 +17,7 @@ $headerRadius: 2rem;
   h1 {
     @extend .ttu;
     @extend .mb5;
+    @extend .tracked-light;
   }
 
   h3 {
@@ -34,9 +35,7 @@ $headerRadius: 2rem;
   border: 1px solid;
 }
 
-.do-what {
-  background-color: #343842;
-
+.section-dark {
   h1,
   h2,
   h3,

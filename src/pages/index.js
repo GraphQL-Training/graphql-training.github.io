@@ -4,7 +4,7 @@ import "../layouts/flexgrid.scss";
 
 const ButtonLink = ({ href, children }) => (
   <a
-    className="b--white b--solid bw1 pl4 pr4 pb2 pt2 f4 ttu white tracked-light dib"
+    className="b--white b--solid bw1 pl4 pr4 pb3 pt3 f4 ttu white tracked-light dib fw6"
     href={href}
   >
     {children}
@@ -13,7 +13,7 @@ const ButtonLink = ({ href, children }) => (
 
 const HomeHeader = () => (
   <div className="bg-off-grey">
-    <div className="header br-curve-section flex justify-center flex-column bg-brains-gradient">
+    <div className="header flex justify-center flex-column bg-brains-gradient">
       <div className="container mw8 w-100">
         <div className="row justify-between">
           <div className="pt1vh pb1vh col-xs-7">
@@ -30,7 +30,6 @@ const HomeHeader = () => (
           <div className="col-xs-3 header-brain pt1vh">Brain</div>
         </div>
       </div>
-      <div className="header-spacer" />
     </div>
   </div>
 );
@@ -52,7 +51,7 @@ const RowCenter = ({ className, children }) => (
 const Reference = ({ children }) => (
   <div className="col-xs-4 flex">
     <div className="shadow--l2 bg-white self-stretch pa4 w-100 flex flex-column justify-between">
-      <blockquote className="f4 mb4">{children}</blockquote>
+      <blockquote className="f4 mb4 mt0">{children}</blockquote>
       <div className="flex items-center">
         <img
           className="db w3 h3 mr3 br-100"
@@ -99,7 +98,7 @@ const Index = () => (
       </RowCenter>
     </Section>
 
-    <Section className="do-what">
+    <Section className="section-dark bg-people-dark-grey">
       <div className="row">
         <div className="col-xs-6">
           <h3 className="ttu tracked-light">Stuff</h3>
