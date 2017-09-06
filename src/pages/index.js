@@ -182,6 +182,15 @@ const Index = () => (
         </div>
         <div className="split-right white">
           <div className="split-background pb4 pt6">
+            <svg
+              className="split-divider"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+            >
+              <path d="M 100,0 100,100 0,100 z" />
+            </svg>
             <h3 className="ttu tracked-light">Stuff</h3>
             <p className="f4">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem

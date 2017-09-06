@@ -6,7 +6,6 @@
 $blueGradient: linear-gradient(106deg, #0f0c40 0%, #222d5b 16%, #324f77 33%, #407294 50%, #4d98b2 66%, #59c0d0 83%, #64e9f0 100%);
 $splitWidth: 5rem;
 $splitBackgroundDark: #111824;
-$splitTriangle: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" width="100" height="100"> <path fill="#{$splitBackgroundDark}" d="M 100,0 100,100 0,100 z"/> </svg>');
 
 //* {border: 1px solid}
 
@@ -69,14 +68,11 @@ $splitTriangle: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/
   }
 }
 
-
 .split-left,
 .split-right {
-  //max-width: calc(50% - 100px);
   flex-basis: 50%;
   max-width: 50%;
   box-sizing: border-box;
-  flex: 0 0 auto;
 }
 
 .split-row {
@@ -88,7 +84,7 @@ $splitTriangle: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/
 }
 
 .split-left {
-  padding-right: (0.5 * $splitWidth) + $gutter;
+  padding-right: (0.5 * $splitWidth) + (2 * $gutter);
   padding-left: $gutter;
   position: relative;
 
@@ -105,20 +101,18 @@ $splitTriangle: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/
   }
 }
 
-.split-angle {
+.split-divider {
   position: absolute;
   top: 0;
   left: -0.5 * $splitWidth;
   width: $splitWidth;
   height: 100%;
-  background-image: $splitTriangle;
-  background-repeat: no-repeat;
-  background-size: $splitWidth 100%;
-  background-position: 0 0;
+  pointer-events: none;
+  fill: $splitBackgroundDark;
 }
 
 .split-background {
-  padding-left: (0.5 * $splitWidth) +  $gutter;
+  padding-left: (0.5 * $splitWidth) +  (2 * $gutter);
 }
 
 .split-right {
@@ -137,22 +131,7 @@ $splitTriangle: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/
     background-color: $splitBackgroundDark;
     z-index: -1;
   }
-
-  &:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: -0.5 * $splitWidth;
-    width: $splitWidth;
-    height: 100%;
-    background-image: $splitTriangle;
-    background-repeat: no-repeat;
-    background-size: $splitWidth 100%;
-    background-position: 0 0;
-    pointer-events: none;
-  }
 }
-
 
 .bg-people-dark-grey {
   background-color: #1E232D;
