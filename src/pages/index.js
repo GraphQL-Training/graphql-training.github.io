@@ -166,10 +166,22 @@ const Index = () => (
       </div>
     </Section>
 
-    <section className="bg-blue-gradient white">
-      <div className="w-100 mw8 center">
-        <div className="row row-split-dark">
-          <div className="col-xs-6--paAuto gutter-left">
+    <section className="container mw8 w-100">
+      <div className="row">
+        <div className="split-left white pt4 pb6">
+          <h3 className="ttu tracked-light">Stuff</h3>
+          <p className="f4">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+            qui dolorem ipsum quia dolor sit amet, consectetur, a
+          </p>
+        </div>
+        <div className="split-right white">
+          <div className="split-background pb4 pt6">
             <h3 className="ttu tracked-light">Stuff</h3>
             <p className="f4">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -178,27 +190,8 @@ const Index = () => (
               dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
               aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
               eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, a
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, a dicta
             </p>
-          </div>
-          <div className="col-xs-6--paAuto gutter-right">
-            <div>
-              <h3 className="ttu tracked-light">Stuff</h3>
-              <p className="f4">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, a dicta sunt explicabo. Nemo enim ipsam
-                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
-                quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, a
-              </p>
-            </div>
           </div>
         </div>
       </div>

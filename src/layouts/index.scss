@@ -3,7 +3,12 @@
 @import "./globals.scss";
 @import "./tachyons-custom.scss";
 
-* {border: 1px solid}
+$blueGradient: linear-gradient(106deg, #0f0c40 0%, #222d5b 16%, #324f77 33%, #407294 50%, #4d98b2 66%, #59c0d0 83%, #64e9f0 100%);
+$splitWidth: 5rem;
+$splitBackgroundDark: #111824;
+$splitTriangle: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" width="100" height="100"> <path fill="#{$splitBackgroundDark}" d="M 100,0 100,100 0,100 z"/> </svg>');
+
+//* {border: 1px solid}
 
 .header {
   h1,
@@ -64,55 +69,90 @@
   }
 }
 
-$splitWidth: 5rem;
-$splitBackgroundDark: black;
 
-.row-split-dark {
-  >  div {
-    position: relative;
-    overflow: hidden;
-  }
+.split-left,
+.split-right {
+  //max-width: calc(50% - 100px);
+  flex-basis: 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
 
-  > div:first-child {
-    padding-right: $splitWidth + $gutter;
-  }
+.split-row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-  > div:nth-child(2) {
-    padding-left: $splitWidth;
+.split-left {
+  padding-right: (0.5 * $splitWidth) + $gutter;
+  padding-left: $gutter;
+  position: relative;
 
-    > div {
-      padding-left: $gutter;
-      background: $splitBackgroundDark;
-    }
-
-    &:before,
-    &:after {
-      position: absolute;
-      content: "";
-      border-style: solid;
-      width: 0;
-      height: 0;
-      background-color: $splitBackgroundDark;
-      pointer-events: none;
-    }
-
-    &:before1 {
-      border-width: 100px 0 100px $splitWidth;
-      border-color: transparent transparent transparent #007bff;
-      top: 0;
-      left: 0;
-    }
-
-    &:after {
-      border-width: 100px $splitWidth 100px 0;
-      border-color: transparent #007bff transparent transparent;
-      bottom: 0;
-      left: 0;
-    }
+  &:after {
+    content: "";
+    right: -1 * $splitWidth;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-image: $blueGradient;
+    z-index: -1;
+    pointer-events: none;
   }
 }
 
-$blueGradient: linear-gradient(106deg, #0f0c40 0%, #222d5b 16%, #324f77 33%, #407294 50%, #4d98b2 66%, #59c0d0 83%, #64e9f0 100%);
+.split-angle {
+  position: absolute;
+  top: 0;
+  left: -0.5 * $splitWidth;
+  width: $splitWidth;
+  height: 100%;
+  background-image: $splitTriangle;
+  background-repeat: no-repeat;
+  background-size: $splitWidth 100%;
+  background-position: 0 0;
+}
+
+.split-background {
+  padding-left: (0.5 * $splitWidth) +  $gutter;
+}
+
+.split-right {
+  position: relative;
+  overflow: visible;
+  padding-right: $gutter;
+  z-index: 0;
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: (0.5 * $splitWidth);
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: $splitBackgroundDark;
+    z-index: -1;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -0.5 * $splitWidth;
+    width: $splitWidth;
+    height: 100%;
+    background-image: $splitTriangle;
+    background-repeat: no-repeat;
+    background-size: $splitWidth 100%;
+    background-position: 0 0;
+    pointer-events: none;
+  }
+}
+
 
 .bg-people-dark-grey {
   background-color: #1E232D;
