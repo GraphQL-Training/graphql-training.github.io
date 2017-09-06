@@ -144,6 +144,40 @@ const Index = () => (
     </Section>
 
     <PageHeader />
+
+    <Section className="bg-dark white">
+      <div className="row">
+        <div className="col-xs-9">
+          <h3 className="ttu tracked-light">Stuff</h3>
+          <p className="f4">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+            qui dolorem ipsum quia dolor sit amet, consectetur, a
+          </p>
+        </div>
+        <div className="col-xs-3">
+          <ul className="list pa0 mb5">
+            <li>Sed ut perspiciatis</li>
+            <li>Nde omnis</li>
+            <li>Error sit</li>
+            <li>Voluptatem</li>
+            <li>Accusantium</li>
+          </ul>
+          <ul className="list pa0 mb5">
+            <li>Sed ut perspiciatis</li>
+            <li>Nde omnis</li>
+            <li>Error sit</li>
+            <li>Voluptatem</li>
+            <li>Accusantium</li>
+          </ul>
+        </div>
+      </div>
+    </Section>
+
     <Section className="section-dark bg-people-dark-grey">
       <div className="row">
         <div className="col-xs-6">

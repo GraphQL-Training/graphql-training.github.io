@@ -10,6 +10,14 @@
   background-color: #EFF3F7;
 }
 
+.bg-dark {
+  background-color: $darkBackgroundColor;
+  background-image: url('/images/light-graph-3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
 .bg-fire-gradient {
   background-image:
     url('/images/fire-graph-1.png'),
@@ -26,28 +34,19 @@
 .mw10 { max-width: 128rem; }
 .pt1vh { padding-top: 15vh }
 .pb1vh { padding-bottom: 15vh }
+.gutter-left { padding-left: $gutter; }
+.gutter-right { padding-right: $gutter; }
 
 .tracked-light { letter-spacing: .03em; }
 
+.events-none { pointer-events: none; }
+
 .shadow--l1 {box-shadow: 0 0 18px 10px rgba( 0, 0, 0, .05 ); }
 .shadow--l2 {box-shadow: 0 5px 16px 8px rgba( 0, 0, 0, .1 ); }
-
 
 .col-xs-6--paAuto {
   flex-basis: 50%;
   max-width: 50%;
   box-sizing: border-box;
   flex: 0 0 auto;
-}
-
-.gutter-left {
-  padding-left: $gutter;
-}
-
-.gutter-right {
-  padding-right: $gutter;
-}
-
-.events-none {
-  pointer-events: none;
 }
