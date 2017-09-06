@@ -1,41 +1,14 @@
+@import "./_variables.scss";
+
 // Custom styles in the spirit of Tachyons
 
 .no-underline-hover:hover { text-decoration: none; }
 
 .fire { color: #EF5038 }
 
+
 .bg-off-grey {
   background-color: #EFF3F7;
-}
-
-.bg-people-dark-grey {
-  background-color: #1E232D;
-  background-image:
-    url('/images/light-graph-2.png'),
-    url('/images/coders.jpg');
-  background-repeat: no-repeat;
-  background-size: contain, cover;
-  background-position: center bottom;
-}
-
-.bg-brains-gradient {
-  background-image:
-    url('/images/big-brain.png'),
-    url('/images/light-graph-1.png'),
-    linear-gradient(106deg, #0f0c40 0%, #222d5b 16%, #324f77 33%, #407294 50%, #4d98b2 66%, #59c0d0 83%, #64e9f0 100%);
-  background-repeat: no-repeat;
-  background-size: 17rem, contain, auto;
-  background-position: right 15% center, center top, top left;
-}
-
-@media screen and (max-width: 840px) {
-  .bg-brains-gradient {
-    background-size: 30%, 1000px 150px, auto;
-    background-position: right 20% center, right top, top left;
-  }
-  .bg-people-dark-grey {
-    background-size: 1000px 150px, auto;
-  }
 }
 
 .bg-fire-gradient {
@@ -59,3 +32,20 @@
 
 .shadow--l1 {box-shadow: 0 0 18px 10px rgba( 0, 0, 0, .05 ); }
 .shadow--l2 {box-shadow: 0 5px 16px 8px rgba( 0, 0, 0, .1 ); }
+
+
+.col-xs-6--paAuto {
+  flex-basis: 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.gutter-left {
+  padding-left: $gutter;
+}
+
+
+.gutter-right {
+  padding-right: $gutter;
+}
