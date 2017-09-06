@@ -13,24 +13,69 @@ const ButtonLink = ({ href, children }) => (
 
 const HomeHeader = () => (
   <div className="bg-off-grey">
-    <div className="header flex justify-center flex-column bg-brains-gradient">
+    <div className="white flex justify-center flex-column bg-brains-gradient">
       <div className="container mw8 w-100">
-        <div className="row justify-between">
-          <div className="pt1vh pb1vh col-xs-7">
-            <h1>GraphQL Training</h1>
-            <h3>
-              Training in London, Berlin, Paris
-              <br />
-              and beyond from the creator
-              <br /> of PostGraphQL
-            </h3>
+        <div className="row">
+          <div className="pt1vh pb1vh col-xs-12">
+            <div className="mb5">
+              <h1>GraphQL Training</h1>
+            </div>
+            <div className="mb5">
+              <h3>
+                Training in London, Berlin, Paris
+                <br />
+                and beyond from the creator
+                <br /> of PostGraphQL
+              </h3>
+            </div>
             <ButtonLink href="/">Book Now</ButtonLink>
           </div>
-
-          <div className="col-xs-3 header-brain pt1vh" />
         </div>
       </div>
     </div>
+  </div>
+);
+
+const PageHeader = () => (
+  <div className="bg-off-grey relative">
+    <div className="white flex justify-center flex-column bg-blue-gradient">
+      <div className="container mw8 w-100">
+        <div className="row">
+          <div className="pt1vh pb1vh col-xs-12 tc">
+            <div className="mb2">
+              <h1 className="ttu tracked-light">GraphQL Training</h1>
+            </div>
+            <div className="mb5 flex justify-center">
+              <h3>
+                Here’s lots of training opportunities. And things and stuff and
+                things
+                <br />
+                and you know what. It’s pretty great.
+              </h3>
+            </div>
+            <div className="tools-logos-container flex justify-between w-100 pa3">
+              {["graphql", "apollo", "node", "react"].map(f => (
+                <img
+                  className="header-tools-logo"
+                  key={f}
+                  src={`/images/${f}-logo.png`}
+                  title={`${f} logo`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg
+      className="down-divider absolute events-none bottom-0 w-100 l-0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+      <path d="M 0,0 50,100 100,0 100,100 0,100 z" />
+    </svg>
   </div>
 );
 
@@ -98,6 +143,7 @@ const Index = () => (
       </RowCenter>
     </Section>
 
+    <PageHeader />
     <Section className="section-dark bg-people-dark-grey">
       <div className="row">
         <div className="col-xs-6">
@@ -168,7 +214,7 @@ const Index = () => (
 
     <section className="container mw8 w-100">
       <div className="row">
-        <div className="split-left white pt4 pb6">
+        <div className="split-left white pt4 pb6 relative">
           <h3 className="ttu tracked-light">Stuff</h3>
           <p className="f4">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -180,10 +226,10 @@ const Index = () => (
             qui dolorem ipsum quia dolor sit amet, consectetur, a
           </p>
         </div>
-        <div className="split-right white">
+        <div className="split-right white relative overflow-visible">
           <div className="split-background pb4 pt6">
             <svg
-              className="split-divider"
+              className="split-divider events-none h-100 top-0 absolute"
               xmlns="http://www.w3.org/2000/svg"
               version="1.1"
               viewBox="0 0 100 100"
@@ -205,6 +251,29 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    <Section className="bg-off-grey">
+      <div className="row">
+        <div className="col-xs-3">
+          Title
+          <ul className="list pl0">
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div className="col-xs-3">
+          Title
+          <ul className="list pl0">
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+      </div>
+    </Section>
   </div>
 );
 

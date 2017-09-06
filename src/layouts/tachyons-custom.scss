@@ -6,7 +6,6 @@
 
 .fire { color: #EF5038 }
 
-
 .bg-off-grey {
   background-color: #EFF3F7;
 }
@@ -45,7 +44,10 @@
   padding-left: $gutter;
 }
 
-
 .gutter-right {
   padding-right: $gutter;
+}
+
+.events-none {
+  pointer-events: none;
 }

@@ -7,7 +7,7 @@ $blueGradient: linear-gradient(106deg, #0f0c40 0%, #222d5b 16%, #324f77 33%, #40
 $splitWidth: 5rem;
 $splitBackgroundDark: #111824;
 
-//* {border: 1px solid}
+// * {border: 1px solid}
 
 .header {
   h1,
@@ -86,7 +86,6 @@ $splitBackgroundDark: #111824;
 .split-left {
   padding-right: (0.5 * $splitWidth) + (2 * $gutter);
   padding-left: $gutter;
-  position: relative;
 
   &:after {
     content: "";
@@ -102,12 +101,8 @@ $splitBackgroundDark: #111824;
 }
 
 .split-divider {
-  position: absolute;
-  top: 0;
   left: -0.5 * $splitWidth;
   width: $splitWidth;
-  height: 100%;
-  pointer-events: none;
   fill: $splitBackgroundDark;
 }
 
@@ -116,8 +111,6 @@ $splitBackgroundDark: #111824;
 }
 
 .split-right {
-  position: relative;
-  overflow: visible;
   padding-right: $gutter;
   z-index: 0;
 
@@ -131,6 +124,19 @@ $splitBackgroundDark: #111824;
     background-color: $splitBackgroundDark;
     z-index: -1;
   }
+}
+
+.header-tools-logo {
+  height: 3rem;
+}
+
+.tools-logos-container {
+  border-top: 2px solid RGBA(255,255,255, 0.4)
+}
+
+.down-divider {
+  height: 3rem;
+  fill: $splitBackgroundDark;
 }
 
 .bg-people-dark-grey {
