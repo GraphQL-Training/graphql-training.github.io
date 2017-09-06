@@ -68,7 +68,7 @@ const Index = () => (
     <HomeHeader />
 
     <Section className="bg-off-grey">
-      <RowCenter className="mb5">
+      <RowCenter>
         <h3>
           Nothing but awesome. You&rsquo;re getting some serious expertise here!
         </h3>
@@ -165,6 +165,44 @@ const Index = () => (
         </div>
       </div>
     </Section>
+
+    <section className="bg-blue-gradient white">
+      <div className="w-100 mw8 center">
+        <div className="row row-split-dark">
+          <div className="col-xs-6--paAuto gutter-left">
+            <h3 className="ttu tracked-light">Stuff</h3>
+            <p className="f4">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, a
+            </p>
+          </div>
+          <div className="col-xs-6--paAuto gutter-right">
+            <div>
+              <h3 className="ttu tracked-light">Stuff</h3>
+              <p className="f4">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                sit amet, consectetur, a dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                sit amet, consectetur, a
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 );
 

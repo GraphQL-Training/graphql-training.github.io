@@ -3,12 +3,9 @@
 @import "./globals.scss";
 @import "./tachyons-custom.scss";
 
-$headerRadius: 2rem;
+* {border: 1px solid}
 
 .header {
-  // border-radius: 0 0 50% 50%  / '${$headerRadius}';
-  // margin-bottom: 0 - $headerRadius;
-
   h1,
   h2,
   h3 {
@@ -25,10 +22,6 @@ $headerRadius: 2rem;
     @extend .lh-copy;
     @extend .mb6;
   }
-}
-
-.header-spacer {
-  height: $headerRadius;
 }
 
 .section-dark {
@@ -48,13 +41,13 @@ $headerRadius: 2rem;
 
     &:after,
     &:before {
+      @extend .db;
+      @extend .fs-normal;
+      @extend .georgia;
       font-size: 5em;
+      height: 0.3em;
       line-height: 100%;
       padding: 0;
-      @extend .georgia;
-      @extend .fs-normal;
-      @extend .db;
-      height: 0.3em;
     }
 
     &:before {
@@ -68,6 +61,89 @@ $headerRadius: 2rem;
       align-self: flex-end;
       @extend .ml2;
     }
+  }
+}
 
+$splitWidth: 5rem;
+$splitBackgroundDark: black;
+
+.row-split-dark {
+  >  div {
+    position: relative;
+    overflow: hidden;
+  }
+
+  > div:first-child {
+    padding-right: $splitWidth + $gutter;
+  }
+
+  > div:nth-child(2) {
+    padding-left: $splitWidth;
+
+    > div {
+      padding-left: $gutter;
+      background: $splitBackgroundDark;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      border-style: solid;
+      width: 0;
+      height: 0;
+      background-color: $splitBackgroundDark;
+      pointer-events: none;
+    }
+
+    &:before1 {
+      border-width: 100px 0 100px $splitWidth;
+      border-color: transparent transparent transparent #007bff;
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      border-width: 100px $splitWidth 100px 0;
+      border-color: transparent #007bff transparent transparent;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+$blueGradient: linear-gradient(106deg, #0f0c40 0%, #222d5b 16%, #324f77 33%, #407294 50%, #4d98b2 66%, #59c0d0 83%, #64e9f0 100%);
+
+.bg-people-dark-grey {
+  background-color: #1E232D;
+  background-image:
+    url('/images/light-graph-2.png'),
+    url('/images/coders.jpg');
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: center bottom;
+}
+
+.bg-blue-gradient {
+  background-image: $blueGradient;
+}
+
+.bg-brains-gradient {
+  background-image:
+    url('/images/big-brain.png'),
+    url('/images/light-graph-1.png'),
+    $blueGradient;
+  background-repeat: no-repeat;
+  background-size: 17rem, contain, auto;
+  background-position: right 15% center, center top, top left;
+}
+
+@media screen and (max-width: 840px) {
+  .bg-brains-gradient {
+    background-size: 30%, 1000px 150px, auto;
+    background-position: right 20% center, right top, top left;
+  }
+  .bg-people-dark-grey {
+    background-size: 1000px 150px, auto;
   }
 }
