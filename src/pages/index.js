@@ -246,9 +246,9 @@ const Index = () => (
       </div>
     </Section>
 
-    <section className="container mw8 w-100">
-      <div className="row">
-        <div className="split-left white pt4 pb6 relative">
+    <section className="flex split-section">
+      <div className="split-left white">
+        <div className="split-left-core">
           <h3 className="ttu tracked-light">Stuff</h3>
           <p className="f4">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -260,7 +260,9 @@ const Index = () => (
             qui dolorem ipsum quia dolor sit amet, consectetur, a
           </p>
         </div>
-        <div className="split-right white relative overflow-visible">
+      </div>
+      <div className="split-right white">
+        <div className="split-right-core">
           <div className="split-background pb4 pt6">
             <svg
               className="split-divider events-none h-100 top-0 absolute"

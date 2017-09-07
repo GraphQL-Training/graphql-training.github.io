@@ -64,36 +64,39 @@
   }
 }
 
+.split-section {
+  background-image: linear-gradient(106deg, #0f0c40 0%, #222d5b 8%, #324f77 16%, #407294 25%, #4d98b2 33%, #59c0d0 42%, #64e9f0 50%);
+}
+
 .split-left,
 .split-right {
   flex-basis: 50%;
   max-width: 50%;
   box-sizing: border-box;
-}
-
-.split-row {
-  box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.split-left {
-  padding-right: (0.5 * $splitWidth) + (2 * $gutter);
-  padding-left: $gutter;
+.split-right {
+  background-image: linear-gradient(to bottom, $darkBackgroundColor 0%, $darkBackgroundColor 100%);
+  background-position: 0.5 * $splitWidth top;
+  background-repeat: no-repeat;
+}
 
-  &:after {
-    content: "";
-    right: -1 * $splitWidth;
-    top: 0;
-    height: 100%;
-    width: 100vw;
-    position: absolute;
-    background-image: $blueGradient;
-    z-index: -1;
-    pointer-events: none;
-  }
+.split-left-core,
+.split-right-core {
+  max-width: 32rem;
+}
+
+.split-left-core {
+  margin-left: auto;
+  padding-right: (0.5 * $splitWidth) +  (2 * $gutter);
+  padding-left: $gutter;
+}
+
+.split-right-core {
+  position: relative;
+  padding-right: $gutter;
+  padding-left: (0.5 * $splitWidth) +  (2 * $gutter);
 }
 
 .split-divider {
@@ -102,25 +105,6 @@
   fill: $darkBackgroundColor;
 }
 
-.split-background {
-  padding-left: (0.5 * $splitWidth) +  (2 * $gutter);
-}
-
-.split-right {
-  padding-right: $gutter;
-  z-index: 0;
-
-  &:after {
-    position: absolute;
-    content: "";
-    left: (0.5 * $splitWidth);
-    top: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: $darkBackgroundColor;
-    z-index: -1;
-  }
-}
 
 .header-tools-logo {
   height: 3rem;
