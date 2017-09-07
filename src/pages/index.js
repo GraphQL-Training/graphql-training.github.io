@@ -24,8 +24,8 @@ const HomeHeader = () => (
               <h3>
                 Training in London, Berlin, Paris
                 <br />
-                and beyond from the creator
-                <br /> of PostGraphQL
+                and beyond from the brain
+                <br /> behind PostGraphile.
               </h3>
             </div>
             <ButtonLink href="/">Book Now</ButtonLink>
