@@ -10,22 +10,6 @@
   background-color: #EFF3F7;
 }
 
-.bg-dark {
-  background-color: $darkBackgroundColor;
-  background-image: url('/images/light-graph-3.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-}
-
-.bg-fire-gradient {
-  background-image:
-    url('/images/fire-graph-1.png'),
-    linear-gradient(120deg, rgb(237, 47, 24) 0%, rgb(241, 71, 39) 16%, rgb(245, 89, 53) 33%, rgb(248, 106, 66) 50%, rgb(250, 122, 80) 66%, rgb(252, 137, 94) 83%, rgb(254, 151, 108) 100%);
-  background-repeat: no-repeat;
-  background-size: cover, auto;
-}
-
 .br-curve-section {
   border-radius: 0 0 50% 50%  / 2rem;
   overflow: hidden;

@@ -246,7 +246,7 @@ const Index = () => (
       </div>
     </Section>
 
-    <section className="flex split-section">
+    <section className="split-section">
       <div className="split-left white">
         <div className="split-left-core pb6 pt4">
           <h3 className="ttu tracked-light">Stuff</h3>
