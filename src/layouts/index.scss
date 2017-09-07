@@ -5,35 +5,6 @@
 
 // * {border: 1px solid}
 
-.header {
-  h1,
-  h2,
-  h3 {
-    @extend .white;
-  }
-
-  h1 {
-    @extend .ttu;
-    @extend .mb5;
-    @extend .tracked-light;
-  }
-
-  h3 {
-    @extend .lh-copy;
-    @extend .mb6;
-  }
-}
-
-.section-dark {
-  h1,
-  h2,
-  h3,
-  div,
-  p {
-    @extend .white;
-  }
-}
-
 .quote-wrapper {
   blockquote {
     @extend .relative;
