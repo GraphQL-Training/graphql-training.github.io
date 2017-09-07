@@ -11,6 +11,15 @@ const ButtonLink = ({ href, children }) => (
   </a>
 );
 
+const ButtonLinkSolid = ({ href, children }) => (
+  <a
+    href={href}
+    className="b--white b--solid bw1 ph3 ph4-ns pv2 pv3-ns f5 f4-ns ttu fire tracked-light dib fw6 no-underline-hover grow shadow--l2 bg-white"
+  >
+    {children}
+  </a>
+);
+
 const HomeHeader = () => (
   <div className="bg-off-grey">
     <div className="white flex justify-center flex-column bg-brains-gradient">
