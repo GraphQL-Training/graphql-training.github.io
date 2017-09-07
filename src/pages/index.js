@@ -4,7 +4,7 @@ import "../layouts/flexgrid.scss";
 
 const ButtonLink = ({ href, children }) => (
   <a
-    className="b--white b--solid bw1 pl4 pr4 pb3 pt3 f4 ttu white tracked-light dib fw6"
+    className="b--white b--solid bw1 pl4 pr4 pb3 pt3 f4 ttu white tracked-light dib fw6 no-underline-hover grow"
     href={href}
   >
     {children}
