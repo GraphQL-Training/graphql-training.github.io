@@ -1,8 +1,4 @@
-
-// * { border: 1px solid RGBA(0,0,0,0.5) }
-
 body {
-  // @extend .debug-grid;
   font-family: Lato, "Open Sans", Verdana, Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
@@ -15,13 +11,13 @@ h5,
 h6 {
   @extend .sans-serif;
   @extend .lh-title;
-  @extend .mt3;
+  //@extend .mt3;
   @extend .measure;
   @extend .fw4;
 }
 
 h1 {
-  @extend .mb4-ns;
+  @extend .mb5-ns;
   @extend .mb4;
 }
 
@@ -30,8 +26,8 @@ h3,
 h4,
 h5,
 h6 {
-  @extend .mb3-ns;
-  @extend .mb2;
+  @extend .mb4-ns;
+  @extend .mb3;
 }
 
 h1 {
@@ -70,7 +66,8 @@ p {
   @extend .lh-copy;
   @extend .measure;
   @extend .mb4-ns;
-  @extend .mt4-ns;
+  @extend .mt0;
+  //@extend .mt4-ns;
 }
 
 a {

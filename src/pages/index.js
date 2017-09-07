@@ -4,7 +4,7 @@ import "../layouts/flexgrid.scss";
 
 const ButtonLink = ({ href, children }) => (
   <a
-    className="b--white b--solid bw1 pl4 pr4 pb3 pt3 f4 ttu white tracked-light dib fw6 no-underline-hover grow"
+    className="b--white b--solid bw1 ph3 ph4-ns pv2 pv3-ns f5 f4-ns ttu white tracked-light dib fw6 no-underline-hover grow"
     href={href}
   >
     {children}
@@ -21,15 +21,15 @@ const ButtonLinkSolid = ({ href, children }) => (
 );
 
 const HomeHeader = () => (
-  <div className="bg-off-grey">
+  <div className="bg-off-grey tl-l tc">
     <div className="white flex justify-center flex-column bg-brains-gradient">
       <div className="container mw8 w-100">
         <div className="row">
-          <div className="pt1vh pb1vh col-xs-12">
-            <div className="mb5">
+          <div className="pv5 pv6-l col-xs-12">
+            <div className="mb4">
               <h1>GraphQL Training</h1>
             </div>
-            <div className="mb5">
+            <div className="mb4 flex justify-center justify-start-l">
               <h3>
                 Training in London, Berlin, Paris
                 <br />
@@ -37,7 +37,6 @@ const HomeHeader = () => (
                 <br /> behind PostGraphile.
               </h3>
             </div>
-            <ButtonLink href="/">Book Now</ButtonLink>
           </div>
         </div>
       </div>
@@ -50,11 +49,11 @@ const PageHeader = () => (
     <div className="white flex justify-center flex-column bg-blue-gradient">
       <div className="container mw8 w-100">
         <div className="row">
-          <div className="pt1vh pb1vh col-xs-12 tc">
+          <div className="pv5 pv6-l col-xs-12 tc">
             <div className="mb2">
               <h1 className="ttu tracked-light">GraphQL Training</h1>
             </div>
-            <div className="mb5 flex justify-center">
+            <div className="mb4 mb5-l flex justify-center">
               <h3>
                 Here’s lots of training opportunities. And things and stuff and
                 things
@@ -62,10 +61,10 @@ const PageHeader = () => (
                 and you know what. It’s pretty great.
               </h3>
             </div>
-            <div className="tools-logos-container flex justify-between w-100 pa3">
+            <div className="tools-logos-container flex flex-wrap justify-center w-100 pa3">
               {["graphql", "apollo", "node", "react"].map(f => (
                 <img
-                  className="header-tools-logo"
+                  className="header-tools-logo mh3 mv2 h1-ns"
                   key={f}
                   src={`/images/${f}-logo.png`}
                   title={`${f} logo`}
@@ -89,29 +88,29 @@ const PageHeader = () => (
 );
 
 const Section = ({ className, children }) => (
-  <section className={`${className} pb5 pt5`}>
+  <section className={`${className} pv4 pv5-l`}>
     <div className="container mw8 w-100">{children}</div>
   </section>
 );
 
 const RowCenter = ({ className, children }) => (
   <div className="row">
-    <div className={`col-xs-12 tc flex flex-column items-center ${className}`}>
+    <div className={`col-xs-12 flex flex-column items-center ${className}`}>
       {children}
     </div>
   </div>
 );
 
 const Reference = ({ children }) => (
-  <div className="col-xs-4 flex">
-    <div className="shadow--l2 bg-white self-stretch pa4 w-100 flex flex-column justify-between">
-      <blockquote className="f4 mb4 mt0">{children}</blockquote>
+  <div className="flex mb0-l justify-center h-100">
+    <div className="shadow--l2 bg-white self-stretch pa4 w-100 mw6 flex flex-column justify-between">
+      <blockquote className="f4-ns f5 mb4 mt0">{children}</blockquote>
       <div className="flex items-center">
         <img
           className="db w3 h3 mr3 br-100"
           src="https://pbs.twimg.com/profile_images/834411354769481728/Nbrm0GlJ_400x400.jpg"
         />
-        <div className="f5 ttu tracked-light">Jof Arnold</div>
+        <div className="f4-l f5 ttu tracked-light">Jof Arnold</div>
       </div>
     </div>
   </div>
@@ -123,30 +122,37 @@ const Index = () => (
 
     <Section className="bg-off-grey">
       <RowCenter>
-        <h3>
+        <h3 className="tc">
           Nothing but awesome. You&rsquo;re getting some serious expertise here!
         </h3>
         <br />
         <br />
-        <div className="shadow--l1 bg-white w-100 pt4 pb4 pr5 pl5 flex">
-          <div className="flex justify-center align-center w-100">
-            <div className="flex flex-column items-center mr5">
-              <img
-                className="br-100 h4 w4 shadow-2 db mt4 mb4"
-                src="images/benjie-medium.jpg"
-                alt="Profile photo of Benjie Gillam"
-              />
-              <div className="f4 ttu tracked-light tc">Benjie Gillam</div>
+        <div className="shadow--l1 bg-white w-100 pv4 ph0">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-12 col-md-3 flex flex-column items-center">
+                <img
+                  className="br-100 h4 w4 shadow-2 db mt4 mb4"
+                  src="images/benjie-medium.jpg"
+                  alt="Profile photo of Benjie Gillam"
+                />
+                <div className="f4 ttu tracked-light tc mb3 mb0-l">
+                  Benjie Gillam
+                </div>
+              </div>
+              <div className="col-xs-12 col-md-9 tc tl-l flex flex-column tc tl-l items-center items-start-l">
+                <p className="f5 f4-ns">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                  consequuntur magni dolores eos qui ratione voluptatem sequi
+                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                  dolor sit amet, consectetur, a
+                </p>
+              </div>
             </div>
-            <p className="f4">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, a
-            </p>
           </div>
         </div>
       </RowCenter>
@@ -156,9 +162,19 @@ const Index = () => (
 
     <Section className="bg-dark white">
       <div className="row">
-        <div className="col-xs-9">
+        <div className="col-xs-12 col-md-9 flex flex-column tc tl-l items-center items-start-l">
           <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f4">
+          <p className="f5 f4-ns">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+            qui dolorem ipsum quia dolor sit amet, consectetur, a
+          </p>
+          <h3 className="ttu tracked-light">Stuff</h3>
+          <p className="f5 f4-ns">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -168,15 +184,15 @@ const Index = () => (
             qui dolorem ipsum quia dolor sit amet, consectetur, a
           </p>
         </div>
-        <div className="col-xs-3">
-          <ul className="list pa0 mb5">
+        <div className="col-xs-12 col-md-3 flex flex-row flex-column-l tc tl-l items-center justify-center justify-start-l items-left-l flex-wrap flex-nowrap-l">
+          <ul className="list pa0 ma3 mb4-l">
             <li>Sed ut perspiciatis</li>
             <li>Nde omnis</li>
             <li>Error sit</li>
             <li>Voluptatem</li>
             <li>Accusantium</li>
           </ul>
-          <ul className="list pa0 mb5">
+          <ul className="list pa0 ma3 mb4-l">
             <li>Sed ut perspiciatis</li>
             <li>Nde omnis</li>
             <li>Error sit</li>
@@ -187,11 +203,11 @@ const Index = () => (
       </div>
     </Section>
 
-    <Section className="section-dark bg-people-dark-grey">
+    <Section className="section-dark bg-people-dark-grey white tc tl-l">
       <div className="row">
-        <div className="col-xs-6">
+        <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
           <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f4">
+          <p className="f5 f4-ns">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -201,9 +217,9 @@ const Index = () => (
             qui dolorem ipsum quia dolor sit amet, consectetur, a
           </p>
         </div>
-        <div className="col-xs-6">
+        <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
           <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f4">
+          <p className="f5 f4-ns">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -213,7 +229,7 @@ const Index = () => (
             qui dolorem ipsum quia dolor sit amet, consectetur, a
           </p>
         </div>
-        <div className="col-xs-12 flex justify-center mt5">
+        <div className="col-xs-12 flex justify-center pt3 pt4-l pb3 pb3-l">
           <ButtonLink href="/">Book Now</ButtonLink>
         </div>
       </div>
@@ -221,9 +237,9 @@ const Index = () => (
 
     <Section>
       <RowCenter>
-        <h2 className="ttu tracked-light">GraphQL</h2>
+        <h3 className="ttu tracked-light">GraphQL</h3>
         <div className="quote-wrapper">
-          <blockquote className="f3" cite="jof">
+          <blockquote className="f5 f4-ns f3-l" cite="jof">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -235,31 +251,32 @@ const Index = () => (
     </Section>
 
     <Section className="bg-fire-gradient">
-      <div className="row mb5">
-        <Reference>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-        </Reference>
-        <Reference>Stuff</Reference>
-        <Reference>Things</Reference>
+      <div className="row">
+        <div className="col-xs-12 col-md-4 mb3 mb0-l">
+          <Reference>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          </Reference>
+        </div>
+        <div className="col-xs-12 col-md-4 mb3 mb0-l">
+          <Reference>Stuff</Reference>
+        </div>
+        <div className="col-xs-12 col-md-4">
+          <Reference>Things</Reference>
+        </div>
       </div>
       <div className="row">
-        <div className="col-xs-12 flex justify-center">
-          <a
-            href="/"
-            className="b--white b--solid bw1 pl4 pr4 pb2 pt2 bg-white f4 ttu tracked-light dib fire fw6 shadow--l2"
-          >
-            Book Now
-          </a>
+        <div className="col-xs-12 flex justify-center pt4">
+          <ButtonLinkSolid href="/">Book Now</ButtonLinkSolid>
         </div>
       </div>
     </Section>
 
-    <section className="split-section">
+    <section className="split-section tc-ns tl-l">
       <div className="split-left white">
         <div className="split-left-core pb6 pt4">
           <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f4">
+          <p className="f4-ns f5 tc tl-l">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -282,7 +299,7 @@ const Index = () => (
             <path d="M 100,0 100,100 0,100 z" />
           </svg>
           <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f4">
+          <p className="f4-ns f5 tc tl-l">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
