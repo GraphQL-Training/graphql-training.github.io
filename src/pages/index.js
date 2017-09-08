@@ -35,9 +35,17 @@ const Index = () => (
         },
       ]}
     />
-
-    <PageHeader />
-
+    <PageHeader
+      nav={
+        <ul className="list flex justify-start pa0">
+          <li>Blah</li>
+          <li className="ml-auto mr4">
+            <span className="fa fa-github" />PostGraphile
+          </li>
+          <li className="">Graphile Build</li>
+        </ul>
+      }
+    />
     <Section className="bg-dark white">
       <div className="row">
         <div className="col-xs-12 col-md-9 flex flex-column tc tl-l items-center items-start-l">
