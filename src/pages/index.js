@@ -1,105 +1,8 @@
 import React from "react";
-import "../layouts/index.scss";
-import "../layouts/flexgrid.scss";
-
-const ButtonLink = ({ href, children }) => (
-  <a
-    className="b--white b--solid bw1 ph3 ph4-ns pv2 pv3-ns f5 f4-ns ttu white tracked-light dib fw6 no-underline-hover grow"
-    href={href}
-  >
-    {children}
-  </a>
-);
-
-const ButtonLinkSolid = ({ href, children }) => (
-  <a
-    href={href}
-    className="b--white b--solid bw1 ph3 ph4-ns pv2 pv3-ns f5 f4-ns ttu fire tracked-light dib fw6 no-underline-hover grow shadow--l2 bg-white"
-  >
-    {children}
-  </a>
-);
-
-const HomeHeader = () => (
-  <div className="bg-off-grey tl-l tc">
-    <div className="white flex justify-center flex-column bg-brains-gradient">
-      <div className="container mw8 w-100">
-        <div className="row">
-          <div className="pv5 pv6-l col-xs-12">
-            <div className="mb4">
-              <h1>GraphQL Training</h1>
-            </div>
-            <div className="mb4 flex justify-center justify-start-l">
-              <h3>
-                Training in London, Berlin, Paris
-                <br />
-                and beyond from the brain
-                <br /> behind PostGraphile.
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const PageHeader = () => (
-  <div className="bg-off-grey relative">
-    <div className="white flex justify-center flex-column bg-blue-gradient">
-      <div className="container mw8 w-100">
-        <div className="row">
-          <div className="pv5 pv6-l col-xs-12 tc">
-            <div className="mb2">
-              <h1 className="ttu tracked-light">GraphQL Training</h1>
-            </div>
-            <div className="mb4 mb5-l flex justify-center">
-              <h3>
-                Here’s lots of training opportunities. And things and stuff and
-                things
-                <br />
-                and you know what. It’s pretty great.
-              </h3>
-            </div>
-            <div className="tools-logos-container flex flex-wrap justify-center w-100 pa3">
-              {["graphql", "apollo", "node", "react"].map(f => (
-                <img
-                  className="header-tools-logo mh3 mv2 h1-ns"
-                  key={f}
-                  src={`/images/${f}-logo.png`}
-                  title={`${f} logo`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <svg
-      className="down-divider absolute events-none bottom-0 w-100 l-0"
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-    >
-      <path d="M 0,0 50,100 100,0 100,100 0,100 z" />
-    </svg>
-  </div>
-);
-
-const Section = ({ className, children }) => (
-  <section className={`${className} pv4 pv5-l`}>
-    <div className="container mw8 w-100">{children}</div>
-  </section>
-);
-
-const RowCenter = ({ className, children }) => (
-  <div className="row">
-    <div className={`col-xs-12 flex flex-column items-center ${className}`}>
-      {children}
-    </div>
-  </div>
-);
+import Helmet from "react-helmet";
+import { ButtonLink, ButtonLinkSolid } from "../components/Button";
+import PageHeader from "../components/PageHeader";
+import { Section, RowCenter } from "../components/LayoutHelpers";
 
 const Reference = ({ children }) => (
   <div className="flex mb0-l justify-center h-100">
@@ -118,45 +21,20 @@ const Reference = ({ children }) => (
 
 const Index = () => (
   <div>
-    <HomeHeader />
-
-    <Section className="bg-off-grey">
-      <RowCenter>
-        <h3 className="tc">
-          Nothing but awesome. You&rsquo;re getting some serious expertise here!
-        </h3>
-        <br />
-        <br />
-        <div className="shadow--l1 bg-white w-100 pv4 ph0">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-md-3 flex flex-column items-center">
-                <img
-                  className="br-100 h4 w4 shadow-2 db mt4 mb4"
-                  src="images/benjie-medium.jpg"
-                  alt="Profile photo of Benjie Gillam"
-                />
-                <div className="f4 ttu tracked-light tc mb3 mb0-l">
-                  Benjie Gillam
-                </div>
-              </div>
-              <div className="col-xs-12 col-md-9 tc tl-l flex flex-column tc tl-l items-center items-start-l">
-                <p className="f5 f4-ns">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                  dolor sit amet, consectetur, a
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </RowCenter>
-    </Section>
+    <Helmet
+      title={`GraphQL Training in London, Manchester, Berlin and Beyond`}
+      meta={[
+        {
+          name: "description",
+          content: "GraphQL training in London, Manchester and Berlin",
+        },
+        {
+          name: "keywords",
+          content:
+            "GraphQL, API, Graph, PostgreSQL, Nodejs, Reactjs, London, Berline",
+        },
+      ]}
+    />
 
     <PageHeader />
 
@@ -203,6 +81,45 @@ const Index = () => (
       </div>
     </Section>
 
+    <Section className="bg-off-grey">
+      <RowCenter>
+        <h3 className="tc">
+          Nothing but awesome. You&rsquo;re getting some serious expertise here!
+        </h3>
+        <br />
+        <br />
+        <div className="shadow--l1 bg-white w-100 pv4 ph0">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-12 col-md-3 flex flex-column items-center">
+                <img
+                  className="br-100 h4 w4 shadow-2 db mt4 mb4"
+                  src="images/benjie-medium.jpg"
+                  alt="Profile photo of Benjie Gillam"
+                />
+                <div className="f4 ttu tracked-light tc mb3 mb0-l">
+                  Benjie Gillam
+                </div>
+              </div>
+              <div className="col-xs-12 col-md-9 tc tl-l flex flex-column tc tl-l items-center items-start-l">
+                <p className="f5 f4-ns">
+                  “I think PostGraphQL is a game changer for API development.”.
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                  consequuntur magni dolores eos qui ratione voluptatem sequi
+                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                  dolor sit amet, consectetur, a
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </RowCenter>
+    </Section>
+
     <Section className="section-dark bg-people-dark-grey white tc tl-l">
       <div className="row">
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
@@ -237,16 +154,20 @@ const Index = () => (
 
     <Section>
       <RowCenter>
-        <h3 className="ttu tracked-light">GraphQL</h3>
+        <h3 className="ttu tracked-light">
+          GraphQL &ndash; The Future of Web APIS
+        </h3>
         <div className="quote-wrapper">
           <blockquote className="f5 f4-ns f3-l" cite="jof">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.
+            GraphQL is a query language for APIs and a runtime for fulfilling
+            those queries with your existing data. GraphQL provides a complete
+            and understandable description of the data in your API, gives
+            clients the power to ask for exactly what they need and nothing
+            more, makes it easier to evolve APIs over time, and enables powerful
+            developer tools.
           </blockquote>
         </div>
-        <h4 className="ttu tracked-light tc">Jof Probably</h4>
+        <h4 className="ttu tracked-light tc">Creator of GraphQL</h4>
       </RowCenter>
     </Section>
 
@@ -254,15 +175,23 @@ const Index = () => (
       <div className="row">
         <div className="col-xs-12 col-md-4 mb3 mb0-l">
           <Reference>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            The workshop was presented with well thought out code samples - and
+            even those I was on a (less than ideally set up Windows machine),
+            Benjie knew just how to sort out any problems that arose.
           </Reference>
         </div>
         <div className="col-xs-12 col-md-4 mb3 mb0-l">
-          <Reference>Stuff</Reference>
+          <Reference>
+            Benjie can give a massively in-depth talk without making your brain
+            melt. His speaking style makes the subject very approachable and
+            gets you excited for what you are learning
+          </Reference>
         </div>
         <div className="col-xs-12 col-md-4">
-          <Reference>Things</Reference>
+          <Reference>
+            Great presentation Benjie. The live code running in the slides was
+            particularly impressive. Very cool
+          </Reference>
         </div>
       </div>
       <div className="row">
