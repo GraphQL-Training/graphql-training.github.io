@@ -65,7 +65,7 @@ const Index = () => (
     />
     <PageHeader
       nav={
-        <ul className="flex justify-start pa0 items-center">
+        <ul className="flex justify-start pv0 ph3 items-center">
           <HeaderLink faName="github" pushRight>
             Graphile
           </HeaderLink>

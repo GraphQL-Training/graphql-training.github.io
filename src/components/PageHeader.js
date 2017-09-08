@@ -8,7 +8,11 @@ const PageHeader = ({ nav }) => (
           <header className="ttu tracked f7 w-100">
             <div className="col-xs-12 flex items-center pv3">
               <div className="flex items-center">
-                <img height={40} src="/images/small-brain-light.png" />
+                <img
+                  className="nav-logo"
+                  height={36}
+                  src="/images/small-brain-light.png"
+                />
               </div>
               <div className="ml-auto flex items-center togglable-menu-container">
                 <input

@@ -87,6 +87,11 @@
   border-bottom: 2px solid $darkBackgroundColor; // Hack gap cause by SVG height calc.
 }
 
+.nav-logo {
+  position: relative;
+  top: 5px;
+}
+
 // from flexgrid.css
 @media only screen and (max-width: 60em) {
   .split-section {
