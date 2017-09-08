@@ -1,0 +1,90 @@
+@import "./_variables.scss";
+
+$toggleSize: 30px;
+$heightIcon: $toggleSize;
+$widthLine: $toggleSize;
+$heightLine: 4px;
+$halfHeightLine: $heightLine / 2;
+$transitionTime: 0.3s;
+$lineColor: white;
+
+$translateY1: ($toggleSize / 2) - $halfHeightLine;
+$translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
+
+.togglable-menu-container {
+  position: relative;
+}
+
+.menu-toggler {
+  height: $toggleSize;
+  width: $toggleSize;
+  position: relative;
+}
+
+.menu-toggler-crosses {
+  background: transparent;
+  position: relative;
+  pointer-events: none;
+  height: $heightIcon;
+  width: $widthLine;
+  margin-right: -1 * $toggleSize;
+
+  span {
+    background: $lineColor;
+    border-radius: ($heightLine / 2);
+    display: block;
+    height: $heightLine;
+    left: 0;
+    position: absolute;
+    transition: all $transitionTime;
+    width: $widthLine;
+  }
+
+  span:nth-child(1) { top: 0; }
+  span:nth-child(2) { top: calc(50% - #{$halfHeightLine}); }
+  span:nth-child(3) { top: calc(100% - #{$heightLine}; }
+}
+
+.togglable-menu ul {
+  display: none;
+}
+
+.menu-toggler:checked + .togglable-menu {
+  .menu-toggler-crosses {
+    span:nth-child(1) { transform: translateY($translateY1) translateX(0) rotate(45deg); }
+    span:nth-child(2) { opacity:0; }
+    span:nth-child(3) { transform: translateY($translateY3) translateX(0) rotate(-45deg); }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background: black;
+    align-items: flex-start;
+  }
+
+  li {
+    margin: 0;
+    width: 100%;
+  }
+
+  li a {
+    @extend .ph4;
+    @extend .pv3;
+    @extend .shadow--l2;
+    @extend .no-underline-hover;
+    @extend .f6;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: black;
+    cursor: pointer;
+    transition: background .15s ease-in;
+  }
+
+  li a:hover {
+    background: $fire;
+  }
+}
