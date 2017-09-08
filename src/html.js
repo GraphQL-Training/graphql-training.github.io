@@ -8,6 +8,12 @@ const Html = ({ postBodyComponents, body }) => (
     <head>
       <script src="https://use.fontawesome.com/c72bfae6f9.js" />
       <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0 maximum-scale=5.0"
+      />
+
       <link
         rel="stylesheet"
         href={`/styles.css?t=${encodeURIComponent(buildTimestamp)}`}
