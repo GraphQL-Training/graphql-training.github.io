@@ -6,8 +6,29 @@ const PageHeader = ({ nav }) => (
       <div className="container mw8 w-100">
         <div className="row">
           <header className="ttu tracked f7 w-100">
-            <div className="col-xs-12">
-              <nav className="ph3 pv3">{nav}</nav>
+            <div className="col-xs-12 flex items-center pv3">
+              <div className="flex items-center">
+                <img height={40} src="/images/small-brain-light.png" />
+              </div>
+              <div className="ml-auto flex items-center togglable-menu-container">
+                <input
+                  className="menu-toggler input-reset order-3 db dn-ns"
+                  type="checkbox"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle Navigation"
+                />
+                <nav className="nested-list-reset flex togglable-menu">
+                  <div className="menu-toggler-crosses db dn-ns">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                  </div>
+                  <div className="togglable-menu-items db-ns">{nav}</div>
+                </nav>
+              </div>
             </div>
           </header>
         </div>

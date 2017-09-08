@@ -45,24 +45,48 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
   span:nth-child(3) { top: calc(100% - #{$heightLine}; }
 }
 
-.togglable-menu ul {
+.togglable-menu-items {
   display: none;
+  position: relative;
+}
+
+@media screen and (min-width: 30em) {
+  .togglable-menu-items {
+    display: flex;
+  }
+}
+
+.menu-toggler:checked {
+  display: block;
 }
 
 .menu-toggler:checked + .togglable-menu {
+  .togglable-menu-items {
+    display: flex;
+    min-width: 20em;
+  }
+
   .menu-toggler-crosses {
+    display: block;
+
     span:nth-child(1) { transform: translateY($translateY1) translateX(0) rotate(45deg); }
     span:nth-child(2) { opacity:0; }
     span:nth-child(3) { transform: translateY($translateY3) translateX(0) rotate(-45deg); }
   }
 
-  ul {
+  .togglable-menu-items {
     display: flex;
     flex-direction: column;
     position: absolute;
+    top: $toggleSize + 8px;
     right: 0;
     background: black;
     align-items: flex-start;
+  }
+
+  ul {
+    flex-direction: column;
+    position: relative;
   }
 
   li {
@@ -74,7 +98,6 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
     @extend .ph4;
     @extend .pv3;
     @extend .shadow--l2;
-    @extend .no-underline-hover;
     @extend .f6;
     display: flex;
     align-items: center;
