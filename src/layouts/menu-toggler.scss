@@ -20,6 +20,7 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
   width: $toggleSize;
   position: relative;
   border: 0;
+  cursor: pointer;
 }
 
 .menu-toggler-crosses {
@@ -91,6 +92,7 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
     flex-direction: column;
     position: relative;
     width: 100%;
+    padding: 0;
   }
 
   li {
