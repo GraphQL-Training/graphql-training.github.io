@@ -35,6 +35,18 @@ const TitledParagraph = ({ title, children }) => (
   </div>
 );
 
+const FooterItem = ({ children, href, title }) => (
+  <li className="mr3 mb3">
+    {href ? (
+      <a href={href} title={title} target="_blank">
+        {children}
+      </a>
+    ) : (
+      children
+    )}
+  </li>
+);
+
 const Index = () => (
   <div>
     <Helmet
@@ -260,22 +272,31 @@ const Index = () => (
 
     <Section className="bg-off-grey">
       <div className="row">
-        <div className="col-xs-3">
-          Title
+        <div className="col-xs-12 col-sm-4">
           <ul className="list pl0">
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
+            <FooterItem href="https://graphile.org">graphile.org</FooterItem>
+            <FooterItem href="https://www.twitter.com/benjie">
+              @benjie
+            </FooterItem>
+            <FooterItem href="https://www.twitter.com/jofarnold">
+              @jofarnold
+            </FooterItem>
+            <FooterItem href="mailto://hello@graphql-training.com">
+              hello@graphql-training.com
+            </FooterItem>
           </ul>
         </div>
-        <div className="col-xs-3">
-          Title
+        <div className="col-xs-12 col-sm-4">
           <ul className="list pl0">
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
+            <FooterItem href="https://www.twitter.com/benjie">
+              @benjie
+            </FooterItem>
+            <FooterItem href="https://www.twitter.com/jofarnold">
+              @jofarnold
+            </FooterItem>
+            <FooterItem href="mailto://hello@graphql-training.com">
+              hello@graphql-training.com
+            </FooterItem>
           </ul>
         </div>
       </div>
