@@ -26,6 +26,13 @@ const HeaderLink = ({ faName, children, href, title, pushRight }) => (
   </li>
 );
 
+const TitledParagraph = ({ title, children }) => (
+  <div>
+    {title && <h3 className="ttu tracked-light">{title}</h3>}
+    <p className="f5 f4-ns">{children}</p>
+  </div>
+);
+
 const Index = () => (
   <div>
     <Helmet
@@ -56,8 +63,7 @@ const Index = () => (
     <Section className="bg-dark white">
       <div className="row">
         <div className="col-xs-12 col-md-9 flex flex-column tc tl-l items-center items-start-l">
-          <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f5 f4-ns">
+          <TitledParagraph title="Stuff1">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -65,9 +71,8 @@ const Index = () => (
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
             qui dolorem ipsum quia dolor sit amet, consectetur, a
-          </p>
-          <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f5 f4-ns">
+          </TitledParagraph>
+          <TitledParagraph title="Stuff2">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -75,7 +80,7 @@ const Index = () => (
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
             qui dolorem ipsum quia dolor sit amet, consectetur, a
-          </p>
+          </TitledParagraph>
         </div>
         <div className="col-xs-12 col-md-3 flex flex-row flex-column-l tc tl-l items-center justify-center justify-start-l items-left-l flex-wrap flex-nowrap-l">
           <ul className="list pa0 ma3 mb4-l">
@@ -117,7 +122,7 @@ const Index = () => (
                 </div>
               </div>
               <div className="col-xs-12 col-md-9 tc tl-l flex flex-column tc tl-l items-center items-start-l">
-                <p className="f5 f4-ns">
+                <TitledParagraph>
                   “I think PostGraphQL is a game changer for API development.”.
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                   accusantium doloremque laudantium, totam rem aperiam, eaque
@@ -127,7 +132,7 @@ const Index = () => (
                   consequuntur magni dolores eos qui ratione voluptatem sequi
                   nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
                   dolor sit amet, consectetur, a
-                </p>
+                </TitledParagraph>
               </div>
             </div>
           </div>
@@ -138,8 +143,7 @@ const Index = () => (
     <Section className="section-dark bg-people-dark-grey white tc tl-l">
       <div className="row">
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f5 f4-ns">
+          <TitledParagraph title="Stuff4">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -147,11 +151,10 @@ const Index = () => (
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
             qui dolorem ipsum quia dolor sit amet, consectetur, a
-          </p>
+          </TitledParagraph>
         </div>
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f5 f4-ns">
+          <TitledParagraph title="Stuff5">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -159,7 +162,7 @@ const Index = () => (
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
             qui dolorem ipsum quia dolor sit amet, consectetur, a
-          </p>
+          </TitledParagraph>
         </div>
         <div className="col-xs-12 flex justify-center pt3 pt4-l pb3 pb3-l">
           <ButtonLink href="/">Book Now</ButtonLink>
@@ -219,8 +222,7 @@ const Index = () => (
     <section className="split-section tc-ns tl-l">
       <div className="split-left white">
         <div className="split-left-core pb6 pt4">
-          <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f4-ns f5 tc tl-l">
+          <TitledParagraph title="Stuff6">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -228,7 +230,7 @@ const Index = () => (
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
             qui dolorem ipsum quia dolor sit amet, consectetur, a
-          </p>
+          </TitledParagraph>
         </div>
       </div>
       <div className="split-right white">
@@ -242,8 +244,7 @@ const Index = () => (
           >
             <path d="M 100,0 100,100 0,100 z" />
           </svg>
-          <h3 className="ttu tracked-light">Stuff</h3>
-          <p className="f4-ns f5 tc tl-l">
+          <TitledParagraph title="Stuff7">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -251,7 +252,7 @@ const Index = () => (
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
             qui dolorem ipsum quia dolor sit amet, consectetur, a dicta
-          </p>
+          </TitledParagraph>
         </div>
       </div>
     </section>
