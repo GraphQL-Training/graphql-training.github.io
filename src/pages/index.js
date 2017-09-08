@@ -19,6 +19,13 @@ const Reference = ({ children }) => (
   </div>
 );
 
+const HeaderLink = ({ faName, children, href, title, pushRight }) => (
+  <li className={`${pushRight && "ml-auto"} mr4 flex items-center`}>
+    {!!faName && <span className={`fa fa-${faName} f3 mr2`} />}
+    <span>{children}</span>
+  </li>
+);
+
 const Index = () => (
   <div>
     <Helmet
@@ -37,12 +44,12 @@ const Index = () => (
     />
     <PageHeader
       nav={
-        <ul className="list flex justify-start pa0">
+        <ul className="list flex justify-start pa0 items-center">
           <li>Blah</li>
-          <li className="ml-auto mr4">
-            <span className="fa fa-github" />PostGraphile
-          </li>
-          <li className="">Graphile Build</li>
+          <HeaderLink faName="github" pushRight>
+            Graphile
+          </HeaderLink>
+          <HeaderLink faName="github">Graphile Build</HeaderLink>
         </ul>
       }
     />
