@@ -7,6 +7,7 @@ $heightLine: 4px;
 $halfHeightLine: $heightLine / 2;
 $transitionTime: 0.3s;
 $lineColor: white;
+$focussedColor: RGBA(0,0,0,0.1);
 
 $translateY1: ($toggleSize / 2) - $halfHeightLine;
 $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
@@ -21,6 +22,17 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
   position: relative;
   border: 0;
   cursor: pointer;
+  border-radius: 2px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0px 5px $focussedColor;
+    background: $focussedColor;
+
+    &:checked {
+      background: $focussedColor;
+    }
+  }
 }
 
 .menu-toggler-crosses {
