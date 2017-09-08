@@ -19,6 +19,7 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
   height: $toggleSize;
   width: $toggleSize;
   position: relative;
+  border: 0;
 }
 
 .menu-toggler-crosses {
@@ -58,6 +59,8 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
 
 .menu-toggler:checked {
   display: block;
+  background: transparent;
+  border: 0;
 }
 
 .menu-toggler:checked + .togglable-menu {
