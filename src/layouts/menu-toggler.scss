@@ -60,13 +60,13 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
 }
 
 .togglable-menu-items {
-  display: none;
   position: relative;
+  transition: opacity .25s ease-in-out;
 }
 
 @media screen and (min-width: 30em) {
   .togglable-menu-items {
-    display: flex;
+    opacity: 1;
   }
 }
 
@@ -77,10 +77,6 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
 }
 
 .menu-toggler:checked + .togglable-menu {
-  .togglable-menu-items {
-    display: flex;
-    min-width: 20em;
-  }
 
   .menu-toggler-crosses {
     display: block;
@@ -91,13 +87,14 @@ $translateY3: -1 * (($toggleSize / 2) - $halfHeightLine);
   }
 
   .togglable-menu-items {
+    align-items: flex-start;
+    background: black;
     display: flex;
     flex-direction: column;
+    min-width: 20em;
     position: absolute;
-    top: $toggleSize + 8px;
     right: 0;
-    background: black;
-    align-items: flex-start;
+    top: $toggleSize + 8px;
   }
 
   ul {

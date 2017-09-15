@@ -16,7 +16,7 @@ const PageHeader = ({ nav }) => (
               </div>
               <div className="ml-auto flex items-center togglable-menu-container">
                 <input
-                  className="menu-toggler input-reset order-3 db dn-ns"
+                  className="menu-toggler input-reset order-3 db dn-nsi"
                   type="checkbox"
                   data-toggle="collapse"
                   data-target="#navbarSupportedContent"
@@ -25,12 +25,12 @@ const PageHeader = ({ nav }) => (
                   aria-label="Toggle Navigation"
                 />
                 <nav className="nested-list-reset flex togglable-menu">
-                  <div className="menu-toggler-crosses db dn-ns">
+                  <div className="menu-toggler-crosses db dn-nsi">
                     <span> </span>
                     <span> </span>
                     <span> </span>
                   </div>
-                  <div className="togglable-menu-items db-ns">{nav}</div>
+                  <div className="togglable-menu-items dn db-nsi">{nav}</div>
                 </nav>
               </div>
             </div>
@@ -43,10 +43,9 @@ const PageHeader = ({ nav }) => (
             </div>
             <div className="mb4 mb5-l flex justify-center">
               <h3>
-                Here’s lots of training opportunities. And things and stuff and
-                things
+                Expert GraphQL training from the maintainer of PostGraphQL.
                 <br />
-                and you know what. It’s pretty great.
+                On and off-site courses...
               </h3>
             </div>
             <div className="tools-logos-container flex flex-wrap justify-center w-100 pa3">
