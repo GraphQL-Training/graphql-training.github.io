@@ -189,22 +189,44 @@ const Index = () => (
       </div>
       <div className="row">
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Frontend GraphQL">
-            Implementing the client-side of GraphQL in a web, mobile or native
-            app.
+          <TitledParagraph title="Frontend GraphQL with React">
+            Implementing the client-side of GraphQL in a React or React Native
+            project.
           </TitledParagraph>
           <h2>Syllabus</h2>
+          <p>Follows on from the GraphQL Core syllabus</p>
           <ul>
-            <li>Stuff</li>
+            <li>
+              Introduction to common GraphQL clients including Apollo and Relay
+              Modern
+            </li>
+            <li>Apollo Basics: adding Apollo GraphQL client to a React app</li>
+            <li>
+              Authentication: GraphQL authentication methods including JWTs and
+              sessions/cookies
+            </li>
+            <li>Advanced Apollo: exploring Apollo options and HOCs</li>
+            <li>Simplification: removing unnecessary state from your app</li>
+            <li>
+              Debugging: Using the DevTools for an improved debugging experience
+            </li>
+            <li>
+              Advanced mutations: telling Apollo what to do when it's not
+              obvious
+            </li>
+            <li>Optimistic updates: slick interface for users</li>
+            <li>Where to next: a brief overview of related technologies</li>
           </ul>
         </div>
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Backend GraphQL">
+          <TitledParagraph title="Backend GraphQL on Node.js">
             Implementing a GraphQL API for apps to consume.
           </TitledParagraph>
           <h2>Syllabus</h2>
+          <p>Follows on from the GraphQL Core syllabus</p>
           <ul>
-            <li>Stuff</li>
+            <li>Building a GraphQL API with Express and GraphQL.js</li>
+            <li>Coming soon...</li>
           </ul>
         </div>
       </div>
