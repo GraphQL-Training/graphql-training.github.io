@@ -162,34 +162,18 @@ const Index = () => (
 
     <Section className="section-dark bg-people-dark-grey white tc tl-l">
       <div className="row">
+        <div className="col-xs-12 flex flex-column items-center">
+          <h2>Syllabus</h2>
+        </div>
+      </div>
+      <div className="row">
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Teaching Style">
+          <TitledParagraph title="Graphile Basics">
             Something something
           </TitledParagraph>
         </div>
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="On-site, Remote and Hosted Locations">
-            Every organization’s need is different which is why we love to work
-            with teams on site, customizing the syllabus to meet your needs.
-            With a decade of experience in building products and consulting with
-            small startups through to household name media companies, we
-            understand how to help your developers achieve the very best…
-            <br />
-            <br />
-            Need a remote or external location? We can do that too. We conduct
-            bespoke online webinars and can host up to 20 developers at central
-            locations in all major European cities.
-            <br />
-            <br />
-            <a
-              className="white b--hover no-underline-hover grow"
-              href="mailto:info@graphql-training.com"
-              title="Email GraphQL Training"
-            >
-              Contact us
-            </a>{" "}
-            for more details.
-          </TitledParagraph>
+          <TitledParagraph title="GraphQL Advanced">Syllabus</TitledParagraph>
         </div>
       </div>
     </Section>
@@ -251,14 +235,27 @@ const Index = () => (
     <section className="split-section tc-ns tl-l">
       <div className="split-left white">
         <div className="split-left-core pb6 pt4">
-          <TitledParagraph title="Stuff6">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, a
+          <TitledParagraph title="On-site, Remote and Hosted Locations">
+            Every organization’s need is different which is why we love to work
+            with teams on site, customizing the syllabus to meet your needs.
+            With a decade of experience in building products and consulting with
+            small startups through to household name media companies, we
+            understand how to help your developers achieve the very best…
+            <br />
+            <br />
+            Need a remote or external location? We can do that too. We conduct
+            bespoke online webinars and can host up to 20 developers at central
+            locations in all major European cities.
+            <br />
+            <br />
+            <a
+              className="white b--hover no-underline-hover grow"
+              href="mailto:info@graphql-training.com"
+              title="Email GraphQL Training"
+            >
+              Contact us
+            </a>{" "}
+            for more details.
           </TitledParagraph>
         </div>
       </div>
