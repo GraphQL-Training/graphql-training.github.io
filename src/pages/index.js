@@ -163,17 +163,67 @@ const Index = () => (
     <Section className="section-dark bg-people-dark-grey white tc tl-l">
       <div className="row">
         <div className="col-xs-12 flex flex-column items-center">
-          <h2>Syllabus</h2>
+          <h2>GraphQL Courses</h2>
         </div>
       </div>
       <div className="row">
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Graphile Basics">
-            Something something
+          <TitledParagraph title="GraphQL Core">
+            Common to the frontend and backend courses
           </TitledParagraph>
+          <h2>Syllabus</h2>
+          <ul>
+            <li>GraphQL basics (why use GraphQL?)</li>
+            <li>Introduction to GraphQL terminology</li>
+            <li>Methods of exploring a GraphQL schema</li>
+            <li>
+              Performing simple queries and mutations using Graph<em>i</em>QL
+            </li>
+            <li>Performing queries/mutations using HTTP</li>
+            <li>Maximising reuse with fragments</li>
+            <li>Integrating GraphQL into an existing web project</li>
+            <li>GraphQL object stores/caches, normalisation, etc</li>
+            <li>Conciderations for API maintenance, deprecations, etc</li>
+          </ul>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
+          <TitledParagraph title="Frontend GraphQL">
+            Implementing the client-side of GraphQL in a web, mobile or native
+            app.
+          </TitledParagraph>
+          <h2>Syllabus</h2>
+          <ul>
+            <li>Stuff</li>
+          </ul>
         </div>
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="GraphQL Advanced">Syllabus</TitledParagraph>
+          <TitledParagraph title="Backend GraphQL">
+            Implementing a GraphQL API for apps to consume.
+          </TitledParagraph>
+          <h2>Syllabus</h2>
+          <ul>
+            <li>Stuff</li>
+          </ul>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 flex flex-column items-center items-start-l">
+          <h2>Target Audience</h2>
+          <p>
+            The course has maximum benefit for those businesses looking to
+            implement Reactjs and GraphQL within the next 6 months. It's also
+            suitable for those evaluating GraphQL as a way of improving
+            development speed and decreasing API complexity.
+          </p>
+          <p>
+            Assumes a working knowledge of ECMAScript (JavaScript) 2017,
+            especially `async`/`await` and promises. A working understanding of
+            React (including React Higher Order Components) will confer a
+            learning advantage. We're happy to send primers for those not yet
+            comfortable at with these technologies.
+          </p>
         </div>
       </div>
     </Section>
