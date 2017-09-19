@@ -166,17 +166,17 @@ const Index = () => (
 
     <Section className="section-dark bg-people-dark-grey white">
       <div className="row">
-        <div className="col-xs-12 flex flex-column items-center">
-          <h2 className="ttu tracked-light mb4">GraphQL Courses</h2>
+        <div className="col-xs-12 flex flex-column items-center tc">
+          <h2 className="ttu tracked-light mb4">1 Day GraphQL Courses</h2>
         </div>
       </div>
-      <div className="row">
-        <div className="col-xs-12">
+      <div className="row mb4">
+        <div className="col-xs-12 flex flex-column items-center tc">
           <CourseTitle>GraphQL Core</CourseTitle>
           <p>Common to the frontend and backend courses.</p>
         </div>
       </div>
-      <div className="row pb5 mb4 bb bb--solid b--white">
+      <div className="row pb5 mb4 bb bb--solid b--white-20">
         <div className="col-xs-10 col-md-6">
           <ul>
             <li>GraphQL basics (why use GraphQL?).</li>
@@ -197,12 +197,11 @@ const Index = () => (
           </ul>
         </div>
       </div>
-      <div className="row">
-        <div className="col-xs-12">
+      <div className="row mb4">
+        <div className="col-xs-12 flex flex-column items-center tc">
           <CourseTitle>Frontend GraphQL with React</CourseTitle>
           <p>
-            Implementing the client-side of GraphQL in a React or React Native
-            project.
+            Implementing the client-side of GraphQL in React or React Native.
           </p>
           <p>
             Follows on from the GraphQL Core syllabus. Assumes a working
@@ -212,7 +211,7 @@ const Index = () => (
           </p>
         </div>
       </div>
-      <div className="row pb5 mb4 bb bb--solid b--white">
+      <div className="row pb5 mb4 bb bb--solid b--white-20">
         <div className="col-xs-12 col-md-6">
           <ul>
             <li>
@@ -242,63 +241,18 @@ const Index = () => (
             <li>Where to next: a brief overview of related technologies.</li>
           </ul>
         </div>
+        <div className="col-xs-12 mt4 flex flex-column items-center tc">
+          <ButtonLink>Sign Up</ButtonLink>
+        </div>
       </div>
       <div className="row">
-        <div className="col-xs-12">
+        <div className="col-xs-12 flex flex-column items-center tc">
           <CourseTitle>Coming Soon: Backend GraphQL on Node.js</CourseTitle>
           <p>Implementing a GraphQL API for apps to consume.</p>
           <p className="f5">Follows on from the GraphQL Core syllabus</p>
         </div>
-      </div>
-    </Section>
-
-    <Section>
-      <RowCenter>
-        <h3 className="ttu tracked-light tc">
-          GraphQL &ndash; The Future of Web APIS
-        </h3>
-        <div className="quote-wrapper">
-          <blockquote className="f5 f4-ns f3-l tc">
-            GraphQL... gives clients the power to ask for exactly what they need
-            and nothing more, makes it easier to evolve APIs over time, and
-            enables powerful developer tools.
-          </blockquote>
-        </div>
-        <h4 className="ttu tracked-light tc">Creator of GraphQL</h4>
-      </RowCenter>
-    </Section>
-
-    <Section className="bg-fire-gradient">
-      <div className="row">
-        <div className="col-xs-12 col-md-4 mb3 mb0-l">
-          <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
-            The workshop was presented with well thought out code samples - and
-            even those I was on a (less than ideally set up Windows machine),
-            Benjie knew just how to sort out any problems that arose.
-          </Reference>
-        </div>
-        <div className="col-xs-12 col-md-4 mb3 mb0-l">
-          <Reference name="Neil Sweeney" avatarUrl="/images/neil.jpg">
-            Benjie can give a massively in-depth talk without making your brain
-            melt. His speaking style makes the subject very approachable and
-            gets you excited for what you are learning
-          </Reference>
-        </div>
-        <div className="col-xs-12 col-md-4">
-          <Reference avatarUrl="/images/theo.jpg" name="Theo Vararu">
-            Benjie is an extraordinary teacher. He taught me basically
-            everything I know.
-          </Reference>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xs-12 flex justify-center pt4">
-          <ButtonLinkSolid
-            href="mailto:info@graphql-training.com"
-            title="Book GraphQL Training"
-          >
-            Book Now
-          </ButtonLinkSolid>
+        <div className="col-xs-12 mt4 flex flex-column items-center tc">
+          <ButtonLink>Register Interest</ButtonLink>
         </div>
       </div>
     </Section>
@@ -353,6 +307,57 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    <Section className="bg-fire-gradient">
+      <div className="row">
+        <div className="col-xs-12 col-md-4 mb3 mb0-l">
+          <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
+            The workshop was presented with well thought out code samples - and
+            even those I was on a (less than ideally set up Windows machine),
+            Benjie knew just how to sort out any problems that arose.
+          </Reference>
+        </div>
+        <div className="col-xs-12 col-md-4 mb3 mb0-l">
+          <Reference name="Neil Sweeney" avatarUrl="/images/neil.jpg">
+            Benjie can give a massively in-depth talk without making your brain
+            melt. His speaking style makes the subject very approachable and
+            gets you excited for what you are learning
+          </Reference>
+        </div>
+        <div className="col-xs-12 col-md-4">
+          <Reference avatarUrl="/images/theo.jpg" name="Theo Vararu">
+            Benjie is an extraordinary teacher. He taught me basically
+            everything I know.
+          </Reference>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 flex justify-center pt4">
+          <ButtonLinkSolid
+            href="mailto:info@graphql-training.com"
+            title="Book GraphQL Training"
+          >
+            Book Now
+          </ButtonLinkSolid>
+        </div>
+      </div>
+    </Section>
+
+    <Section>
+      <RowCenter>
+        <h3 className="ttu tracked-light tc">
+          GraphQL &ndash; The Future of Web APIS
+        </h3>
+        <div className="quote-wrapper">
+          <blockquote className="f5 f4-ns f3-l tc">
+            GraphQL... gives clients the power to ask for exactly what they need
+            and nothing more, makes it easier to evolve APIs over time, and
+            enables powerful developer tools.
+          </blockquote>
+        </div>
+        <h4 className="ttu tracked-light tc">Creator of GraphQL</h4>
+      </RowCenter>
+    </Section>
 
     <Section className="bg-off-grey">
       <div className="row">
