@@ -171,9 +171,10 @@
   background-color: #1E232D;
   background-image:
     url('/images/light-graph-2.png'),
+    linear-gradient(0, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%),
     url('/images/coders.jpg');
   background-repeat: no-repeat;
-  background-size: contain, cover;
+  background-size: contain, auto, cover;
   background-position: center bottom;
 }
 
