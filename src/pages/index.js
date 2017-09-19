@@ -21,7 +21,11 @@ const Reference = ({ children }) => (
 
 const HeaderLink = ({ faName, children, href, title, pushRight }) => (
   <li className={`${pushRight ? "ml-auto" : "ml4"} `}>
-    <a href={href} className="flex items-center no-underline-hover">
+    <a
+      href={href}
+      title={title}
+      className="flex items-center no-underline-hover"
+    >
       {!!faName && <span className={`fa fa-${faName} f3 mr2 white`} />}
       <span className="white">{children}</span>
     </a>
@@ -59,17 +63,28 @@ const Index = () => (
         {
           name: "keywords",
           content:
-            "GraphQL, API, Graph, PostgreSQL, Nodejs, Reactjs, London, Berline",
+            "GraphQL, Schema, API, Graph, PostgreSQL, Postgres, PG, Nodejs, Node, Reactjs, React, Training, Teach, Learn, London, Berlin",
         },
       ]}
     />
     <PageHeader
       nav={
         <ul className="flex justify-start pv0 ph3 items-center">
-          <HeaderLink faName="github" pushRight>
-            Graphile
+          <HeaderLink
+            href="https://www.graphile.org/postgraphile/"
+            title="Instant GraphQL API from a PostgreSQL schema"
+            faName="github"
+            pushRight
+          >
+            PostGraphile
           </HeaderLink>
-          <HeaderLink faName="github">Graphile Build</HeaderLink>
+          <HeaderLink
+            href="https://www.graphile.org/graphile-build/"
+            title="Tools to build a performant pluggable GraphQL Schema"
+            faName="github"
+          >
+            Graphile Build
+          </HeaderLink>
         </ul>
       }
     />
