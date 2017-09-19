@@ -4,16 +4,13 @@ import { ButtonLink, ButtonLinkSolid } from "../components/Button";
 import PageHeader from "../components/PageHeader";
 import { Section, RowCenter } from "../components/LayoutHelpers";
 
-const Reference = ({ children }) => (
+const Reference = ({ children, avatarUrl, name }) => (
   <div className="flex mb0-l justify-center h-100">
     <div className="shadow--l2 bg-white self-stretch pa4 w-100 mw6 flex flex-column justify-between">
       <blockquote className="f4-ns f5 mb4 mt0">{children}</blockquote>
       <div className="flex items-center">
-        <img
-          className="db w3 h3 mr3 br-100"
-          src="https://pbs.twimg.com/profile_images/834411354769481728/Nbrm0GlJ_400x400.jpg"
-        />
-        <div className="f4-l f5 ttu tracked-light">Jof Arnold</div>
+        <img className="db w3 h3 mr3 br-100" src={avatarUrl} />
+        <div className="f4-l f5 ttu tracked-light">{name}</div>
       </div>
     </div>
   </div>
@@ -194,9 +191,6 @@ const Index = () => (
             for more details.
           </TitledParagraph>
         </div>
-        <div className="col-xs-12 flex justify-center pt3 pt4-l pb3 pb3-l">
-          <ButtonLink href="/">Book Now</ButtonLink>
-        </div>
       </div>
     </Section>
 
@@ -222,29 +216,34 @@ const Index = () => (
     <Section className="bg-fire-gradient">
       <div className="row">
         <div className="col-xs-12 col-md-4 mb3 mb0-l">
-          <Reference>
+          <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
             The workshop was presented with well thought out code samples - and
             even those I was on a (less than ideally set up Windows machine),
             Benjie knew just how to sort out any problems that arose.
           </Reference>
         </div>
         <div className="col-xs-12 col-md-4 mb3 mb0-l">
-          <Reference>
+          <Reference name="Neil Sweeney" avatarUrl="/images/neil.jpg">
             Benjie can give a massively in-depth talk without making your brain
             melt. His speaking style makes the subject very approachable and
             gets you excited for what you are learning
           </Reference>
         </div>
         <div className="col-xs-12 col-md-4">
-          <Reference>
-            Great presentation Benjie. The live code running in the slides was
-            particularly impressive. Very cool
+          <Reference avatarUrl="/images/theo.jpg" name="Theo Vararu">
+            Benjie is an extraordinary teacher. He taught me basically
+            everything I know.
           </Reference>
         </div>
       </div>
       <div className="row">
         <div className="col-xs-12 flex justify-center pt4">
-          <ButtonLinkSolid href="/">Book Now</ButtonLinkSolid>
+          <ButtonLinkSolid
+            href="mailto:info@graphql-training.com"
+            title="Book GraphQL Training"
+          >
+            Book Now
+          </ButtonLinkSolid>
         </div>
       </div>
     </Section>
@@ -290,29 +289,27 @@ const Index = () => (
     <Section className="bg-off-grey">
       <div className="row">
         <div className="col-xs-12 col-sm-4">
+          <h3>Contact</h3>
           <ul className="list pl0">
-            <FooterItem href="https://graphile.org">graphile.org</FooterItem>
             <FooterItem href="https://www.twitter.com/benjie">
               @benjie
             </FooterItem>
             <FooterItem href="https://www.twitter.com/jofarnold">
               @jofarnold
             </FooterItem>
-            <FooterItem href="mailto://hello@graphql-training.com">
-              hello@graphql-training.com
+            <FooterItem href="mailto:info@graphql-training.com">
+              info@graphql-training.com
             </FooterItem>
           </ul>
         </div>
         <div className="col-xs-12 col-sm-4">
+          <h3>Projects</h3>
           <ul className="list pl0">
-            <FooterItem href="https://www.twitter.com/benjie">
-              @benjie
+            <FooterItem href="https://www.graphile.org/postgraphile/">
+              PostGraphile
             </FooterItem>
-            <FooterItem href="https://www.twitter.com/jofarnold">
-              @jofarnold
-            </FooterItem>
-            <FooterItem href="mailto://hello@graphql-training.com">
-              hello@graphql-training.com
+            <FooterItem href="https://www.graphile.org/graphile-build/">
+              Graphile Build
             </FooterItem>
           </ul>
         </div>
