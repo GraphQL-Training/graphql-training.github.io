@@ -61,8 +61,8 @@ h6 {
 }
 
 p {
-  @extend .f5-ns;
-  @extend .f6;
+  @extend .f4-ns;
+  @extend .f5;
   @extend .lh-copy;
   @extend .measure;
   @extend .mb4-ns;
@@ -74,6 +74,18 @@ a {
   @extend .no-underline;
   @extend .underline-hover;
   color: #1A82BF;
+}
+
+ul {
+  padding-left: 1.1em;
+}
+
+li {
+  @extend .f4-ns;
+  @extend .f5;
+  @extend .lh-copy;
+  @extend .mb3-ns;
+  @extend .mb2;
 }
 
 blockquote {

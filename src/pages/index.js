@@ -68,6 +68,10 @@ const Bio = ({ name, avatarUrl, children }) => (
   </div>
 );
 
+const CourseTitle = ({ children }) => (
+  <h3 className="ttu tracked-light">{children}</h3>
+);
+
 const Index = () => (
   <div>
     <Helmet
@@ -160,109 +164,104 @@ const Index = () => (
       </RowCenter>
     </Section>
 
-    <Section className="section-dark bg-people-dark-grey white tc tl-l">
+    <Section className="section-dark bg-people-dark-grey white">
       <div className="row">
         <div className="col-xs-12 flex flex-column items-center">
-          <h2>GraphQL Courses</h2>
+          <h2 className="ttu tracked-light mb4">GraphQL Courses</h2>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="GraphQL Core">
-            Common to the frontend and backend courses
-          </TitledParagraph>
-          <h2>Syllabus</h2>
+        <div className="col-xs-12">
+          <CourseTitle>GraphQL Core</CourseTitle>
+          <p>Common to the frontend and backend courses.</p>
+        </div>
+      </div>
+      <div className="row pb5 mb4 bb bb--solid b--white">
+        <div className="col-xs-10 col-md-6">
           <ul>
-            <li>GraphQL basics (why use GraphQL?)</li>
-            <li>Introduction to GraphQL terminology</li>
-            <li>Methods of exploring a GraphQL schema</li>
+            <li>GraphQL basics (why use GraphQL?).</li>
+            <li>Introduction to GraphQL terminology.</li>
+            <li>Methods of exploring a GraphQL schema.</li>
             <li>
-              Performing simple queries and mutations using Graph<em>i</em>QL
+              Performing simple queries and mutations using Graph<em>i.</em>QL .
             </li>
-            <li>Performing queries/mutations using HTTP</li>
-            <li>Maximising reuse with fragments</li>
-            <li>Integrating GraphQL into an existing web project</li>
-            <li>GraphQL object stores/caches, normalisation, etc</li>
-            <li>Conciderations for API maintenance, deprecations, etc</li>
+            <li>Performing queries/mutations using HTTP.</li>
+          </ul>
+        </div>
+        <div className="col-xs-10 col-md-6">
+          <ul>
+            <li>Maximising reuse with fragments.</li>
+            <li>Integrating GraphQL into an existing web project.</li>
+            <li>GraphQL object stores/caches, normalisation, etc.</li>
+            <li>Conciderations for API maintenance, deprecations, etc.</li>
           </ul>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Frontend GraphQL with React">
+        <div className="col-xs-12">
+          <CourseTitle>Frontend GraphQL with React</CourseTitle>
+          <p>
             Implementing the client-side of GraphQL in a React or React Native
             project.
-          </TitledParagraph>
-          <h2>Syllabus</h2>
-          <p>Follows on from the GraphQL Core syllabus</p>
+          </p>
+          <p>
+            Follows on from the GraphQL Core syllabus. Assumes a working
+            knowledge of ES2017, especially `async`/`await` and promises. A
+            working understanding of React is also very helpful. We're happy to
+            send primers for those not yet comfortable with these technologies.
+          </p>
+        </div>
+      </div>
+      <div className="row pb5 mb4 bb bb--solid b--white">
+        <div className="col-xs-12 col-md-6">
           <ul>
             <li>
               Introduction to common GraphQL clients including Apollo and Relay
-              Modern
+              Modern.
             </li>
-            <li>Apollo Basics: adding Apollo GraphQL client to a React app</li>
+            <li>Apollo Basics: adding Apollo GraphQL client to a React app.</li>
             <li>
               Authentication: GraphQL authentication methods including JWTs and
-              sessions/cookies
+              sessions/cookies.
             </li>
-            <li>Advanced Apollo: exploring Apollo options and HOCs</li>
-            <li>Simplification: removing unnecessary state from your app</li>
+            <li>Advanced Apollo: exploring Apollo options and HOCs.</li>
+            <li>Simplification: removing unnecessary state from your app.</li>
+          </ul>
+        </div>
+        <div className="col-xs-12 col-md-6">
+          <ul>
             <li>
-              Debugging: Using the DevTools for an improved debugging experience
+              Debugging: Using the DevTools for an improved debugging
+              experience.
             </li>
             <li>
               Advanced mutations: telling Apollo what to do when it's not
-              obvious
+              obvious.
             </li>
-            <li>Optimistic updates: slick interface for users</li>
-            <li>Where to next: a brief overview of related technologies</li>
-          </ul>
-        </div>
-        <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Backend GraphQL on Node.js">
-            Implementing a GraphQL API for apps to consume.
-          </TitledParagraph>
-          <h2>Syllabus</h2>
-          <p>Follows on from the GraphQL Core syllabus</p>
-          <ul>
-            <li>Building a GraphQL API with Express and GraphQL.js</li>
-            <li>Coming soon...</li>
+            <li>Optimistic updates: slick interface for users.</li>
+            <li>Where to next: a brief overview of related technologies.</li>
           </ul>
         </div>
       </div>
       <div className="row">
-        <div className="col-xs-12 flex flex-column items-center items-start-l">
-          <h2>Target Audience</h2>
-          <p>
-            The course has maximum benefit for those businesses looking to
-            implement Reactjs and GraphQL within the next 6 months. It's also
-            suitable for those evaluating GraphQL as a way of improving
-            development speed and decreasing API complexity.
-          </p>
-          <p>
-            Assumes a working knowledge of ECMAScript (JavaScript) 2017,
-            especially `async`/`await` and promises. A working understanding of
-            React (including React Higher Order Components) will confer a
-            learning advantage. We're happy to send primers for those not yet
-            comfortable at with these technologies.
-          </p>
+        <div className="col-xs-12">
+          <CourseTitle>Coming Soon: Backend GraphQL on Node.js</CourseTitle>
+          <p>Implementing a GraphQL API for apps to consume.</p>
+          <p className="f5">Follows on from the GraphQL Core syllabus</p>
         </div>
       </div>
     </Section>
 
     <Section>
       <RowCenter>
-        <h3 className="ttu tracked-light">
+        <h3 className="ttu tracked-light tc">
           GraphQL &ndash; The Future of Web APIS
         </h3>
         <div className="quote-wrapper">
-          <blockquote className="f5 f4-ns f3-l" cite="jof">
-            GraphQL is a query language for APIs and a runtime for fulfilling
-            those queries with your existing data. GraphQL provides a complete
-            and understandable description of the data in your API, gives
-            clients the power to ask for exactly what they need and nothing
-            more, makes it easier to evolve APIs over time, and enables powerful
-            developer tools.
+          <blockquote className="f5 f4-ns f3-l tc">
+            GraphQL... gives clients the power to ask for exactly what they need
+            and nothing more, makes it easier to evolve APIs over time, and
+            enables powerful developer tools.
           </blockquote>
         </div>
         <h4 className="ttu tracked-light tc">Creator of GraphQL</h4>
