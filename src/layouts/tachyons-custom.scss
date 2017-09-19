@@ -4,6 +4,9 @@
 
 .no-underline-hover:hover { text-decoration: none; }
 
+.b--hover { border-bottom: 2px solid currentColor; }
+.b--hover:hover { border-bottom: 2px dashed currentColor; }
+
 .fire { color: $fire }
 
 .bg-off-grey {
