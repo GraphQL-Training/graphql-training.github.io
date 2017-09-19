@@ -32,8 +32,8 @@ const HeaderLink = ({ faName, children, href, title, pushRight }) => (
   </li>
 );
 
-const TitledParagraph = ({ title, children }) => (
-  <div>
+const TitledParagraph = ({ title, children, className }) => (
+  <div className={`${className || ""}`}>
     {title && <h3 className="ttu tracked-light">{title}</h3>}
     <p className="f5 f4-ns">{children}</p>
   </div>
@@ -49,6 +49,26 @@ const FooterItem = ({ children, href, title }) => (
       children
     )}
   </li>
+);
+
+const Bio = ({ name, avatarUrl, children }) => (
+  <div className="shadow--l1 bg-white w-100 pv4 ph0 mb4">
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12 col-md-3 flex flex-column items-center">
+          <img
+            className="br-100 h4 w4 shadow-2 db mb4"
+            src={avatarUrl}
+            alt={`Profile photo of ${name}`}
+          />
+          <div className="f4 ttu tracked-light tc mb3 mb0-l">{name}</div>
+        </div>
+        <div className="col-xs-12 col-md-9 tc tl-l flex flex-column tc tl-l items-center items-start-l">
+          <TitledParagraph>{children}</TitledParagraph>
+        </div>
+      </div>
+    </div>
+  </div>
 );
 
 const Index = () => (
@@ -85,46 +105,32 @@ const Index = () => (
           >
             Graphile Build
           </HeaderLink>
+          <HeaderLink
+            href="mailto:info@graphql-training.com"
+            faName="envelope-o f4"
+          >
+            info@graphql-training.com
+          </HeaderLink>
         </ul>
       }
     />
     <Section className="bg-dark white">
       <div className="row">
-        <div className="col-xs-12 col-md-9 flex flex-column tc tl-l items-center items-start-l">
-          <TitledParagraph title="Stuff1">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, a
+        <div className="col-xs-12 flex-column tc tl-l items-center items-start-l tc">
+          <TitledParagraph
+            className="flex flex-column items-center tc"
+            title="The GraphQL Revolution"
+          >
+            GraphQL is a breakthrough in API design adopted by many of the
+            world's top companies (and many small ones too). The creator of the
+            open standard, Facebook, have used it to serve 2 billion users and
+            cite it as a key reason for their dominance in mobile.
           </TitledParagraph>
-          <TitledParagraph title="Stuff2">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, a
+          <TitledParagraph className="flex flex-column items-center tc">
+            By adopting GraphQL in your business you can innovate faster and
+            deliver better web experiences leading to increase conversions,
+            fewer lost sales due to bugs and higher search engine ratings.
           </TitledParagraph>
-        </div>
-        <div className="col-xs-12 col-md-3 flex flex-row flex-column-l tc tl-l items-center justify-center justify-start-l items-left-l flex-wrap flex-nowrap-l">
-          <ul className="list pa0 ma3 mb4-l">
-            <li>Sed ut perspiciatis</li>
-            <li>Nde omnis</li>
-            <li>Error sit</li>
-            <li>Voluptatem</li>
-            <li>Accusantium</li>
-          </ul>
-          <ul className="list pa0 ma3 mb4-l">
-            <li>Sed ut perspiciatis</li>
-            <li>Nde omnis</li>
-            <li>Error sit</li>
-            <li>Voluptatem</li>
-            <li>Accusantium</li>
-          </ul>
         </div>
       </div>
     </Section>
@@ -132,64 +138,60 @@ const Index = () => (
     <Section className="bg-off-grey">
       <RowCenter>
         <h3 className="tc">
-          Nothing but awesome. You&rsquo;re getting some serious expertise here!
+          Training from developers with 20 years combined experience.
         </h3>
         <br />
         <br />
-        <div className="shadow--l1 bg-white w-100 pv4 ph0">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-md-3 flex flex-column items-center">
-                <img
-                  className="br-100 h4 w4 shadow-2 db mt4 mb4"
-                  src="images/benjie-medium.jpg"
-                  alt="Profile photo of Benjie Gillam"
-                />
-                <div className="f4 ttu tracked-light tc mb3 mb0-l">
-                  Benjie Gillam
-                </div>
-              </div>
-              <div className="col-xs-12 col-md-9 tc tl-l flex flex-column tc tl-l items-center items-start-l">
-                <TitledParagraph>
-                  “I think PostGraphQL is a game changer for API development.”.
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                  dolor sit amet, consectetur, a
-                </TitledParagraph>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Bio name="Benjie Gillam" avatarUrl="images/benjie-medium.jpg">
+          From small mobile fitness apps with PHP backends through to a massive
+          web-based community portal in Rails and React, Benjie has been writing
+          applications and APIs professionally for over a decade. Now the
+          maintainer of PostGraphQL, a popular OSS package that builds a solid
+          GraphQL API from your existing PostgreSQL database schema, Benjie
+          built the Graphile suite of tools that focus on building pluggable and
+          scalable GraphQL schemas. He sees GraphQL as one of the biggest
+          advancements in web API technology during his career.
+        </Bio>
+        <Bio name="Jof Arnold" avatarUrl="images/jof-medium.jpg">
+          Jof started with JavaScript in 1998 with Microsoft’s release of
+          Internet Explorer 3. Since then he has worked at the cutting edge of
+          the frontend stack, being amongst the first in 2013 to introduce React
+          to a large-scale production application. Jof brings a user-centric
+          approach to frontend technologies. He is a regular speaker and
+          contributor to the London tech scene in all matters frontend.
+        </Bio>
       </RowCenter>
     </Section>
 
     <Section className="section-dark bg-people-dark-grey white tc tl-l">
       <div className="row">
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Stuff4">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, a
+          <TitledParagraph title="Teaching Style">
+            Something something
           </TitledParagraph>
         </div>
         <div className="col-md-6 col-xs-12 flex flex-column items-center items-start-l">
-          <TitledParagraph title="Stuff5">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, a
+          <TitledParagraph title="On-site, Remote and Hosted Locations">
+            Every organization’s need is different which is why we love to work
+            with teams on site, customizing the syllabus to meet your needs.
+            With a decade of experience in building products and consulting with
+            small startups through to household name media companies, we
+            understand how to help your developers achieve the very best…
+            <br />
+            <br />
+            Need a remote or external location? We can do that too. We conduct
+            bespoke online webinars and can host up to 20 developers at central
+            locations in all major European cities.
+            <br />
+            <br />
+            <a
+              className="white b--hover no-underline-hover grow"
+              href="mailto:info@graphql-training.com"
+              title="Email GraphQL Training"
+            >
+              Contact us
+            </a>{" "}
+            for more details.
           </TitledParagraph>
         </div>
         <div className="col-xs-12 flex justify-center pt3 pt4-l pb3 pb3-l">

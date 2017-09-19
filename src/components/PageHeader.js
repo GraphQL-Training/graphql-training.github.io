@@ -44,8 +44,6 @@ const PageHeader = ({ nav }) => (
             <div className="mb4 mb5-l flex justify-center">
               <h3>
                 Expert GraphQL training from the maintainer of PostGraphQL.
-                <br />
-                On and off-site courses...
               </h3>
             </div>
             <div className="tools-logos-container flex flex-wrap justify-center w-100 pa3">
