@@ -257,6 +257,31 @@ const Index = () => (
       </div>
     </Section>
 
+    <Section className="bg-fire-gradient">
+      <div className="row">
+        <div className="col-xs-12 col-md-4 mb3 mb0-l">
+          <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
+            The workshop was presented with well thought out code samples - and
+            even those I was on a (less than ideally set up Windows machine),
+            Benjie knew just how to sort out any problems that arose.
+          </Reference>
+        </div>
+        <div className="col-xs-12 col-md-4 mb3 mb0-l">
+          <Reference name="Neil Sweeney" avatarUrl="/images/neil.jpg">
+            Benjie can give a massively in-depth talk without making your brain
+            melt. His speaking style makes the subject very approachable and
+            gets you excited for what you are learning
+          </Reference>
+        </div>
+        <div className="col-xs-12 col-md-4">
+          <Reference avatarUrl="/images/theo.jpg" name="Theo Vararu">
+            Benjie is an extraordinary teacher. He taught me basically
+            everything I know.
+          </Reference>
+        </div>
+      </div>
+    </Section>
+
     <section className="split-section tc-ns tl-l">
       <div className="split-left white">
         <div className="split-left-core pb6 pt4">
@@ -307,41 +332,6 @@ const Index = () => (
         </div>
       </div>
     </section>
-
-    <Section className="bg-fire-gradient">
-      <div className="row">
-        <div className="col-xs-12 col-md-4 mb3 mb0-l">
-          <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
-            The workshop was presented with well thought out code samples - and
-            even those I was on a (less than ideally set up Windows machine),
-            Benjie knew just how to sort out any problems that arose.
-          </Reference>
-        </div>
-        <div className="col-xs-12 col-md-4 mb3 mb0-l">
-          <Reference name="Neil Sweeney" avatarUrl="/images/neil.jpg">
-            Benjie can give a massively in-depth talk without making your brain
-            melt. His speaking style makes the subject very approachable and
-            gets you excited for what you are learning
-          </Reference>
-        </div>
-        <div className="col-xs-12 col-md-4">
-          <Reference avatarUrl="/images/theo.jpg" name="Theo Vararu">
-            Benjie is an extraordinary teacher. He taught me basically
-            everything I know.
-          </Reference>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xs-12 flex justify-center pt4">
-          <ButtonLinkSolid
-            href="mailto:info@graphql-training.com"
-            title="Book GraphQL Training"
-          >
-            Book Now
-          </ButtonLinkSolid>
-        </div>
-      </div>
-    </Section>
 
     <Section>
       <RowCenter>
