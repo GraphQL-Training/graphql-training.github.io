@@ -270,7 +270,7 @@ const Index = () => (
           >
             <path d="M 100,0 100,100 0,100 z" />
           </svg>
-          <TitledParagraph title="Stuff7">
+          <TitledParagraph title="Teaching Style">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
