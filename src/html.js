@@ -2,9 +2,11 @@ import React from "react";
 
 const buildTimestamp = new Date().toISOString().replace(/:/g, "-");
 
-const Html = ({ postBodyComponents, body }) => (
+const Html = ({ postBodyComponents, headComponents, body }) => (
   <html lang="en">
     <head>
+      {headComponents}
+
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta
