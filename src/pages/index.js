@@ -123,7 +123,7 @@ const Index = () => (
             title="The GraphQL Revolution"
           >
             GraphQL is a breakthrough in API design adopted by many of the
-            world's top companies (and many small ones too). The creator of the
+            world’s top companies (and many small ones too). The creator of the
             open standard, Facebook, have used it to serve 2 billion users and
             cite it as a key reason for their dominance in mobile.
           </TitledParagraph>
@@ -183,7 +183,7 @@ const Index = () => (
             <li>Introduction to GraphQL terminology.</li>
             <li>Methods of exploring a GraphQL schema.</li>
             <li>
-              Performing simple queries and mutations using Graph<em>i.</em>QL .
+              Performing simple queries and mutations using Graph<em>i.</em>QL.
             </li>
             <li>Performing queries/mutations using HTTP.</li>
           </ul>
@@ -206,7 +206,7 @@ const Index = () => (
           <p>
             Follows on from the GraphQL Core syllabus. Assumes a working
             knowledge of ES2017, especially `async`/`await` and promises. A
-            working understanding of React is also very helpful. We're happy to
+            working understanding of React is also very helpful. We’re happy to
             send primers for those not yet comfortable with these technologies.
           </p>
         </div>
@@ -234,7 +234,7 @@ const Index = () => (
               experience.
             </li>
             <li>
-              Advanced mutations: telling Apollo what to do when it's not
+              Advanced mutations: telling Apollo what to do when it’s not
               obvious.
             </li>
             <li>Optimistic updates: slick interface for users.</li>
@@ -275,8 +275,8 @@ const Index = () => (
         </div>
         <div className="col-xs-12 col-md-4">
           <Reference avatarUrl="/images/theo.jpg" name="Theo Vararu">
-            Benjie is an extraordinary teacher. He taught me basically
-            everything I know.
+            Benjie taught me more about software development than anybody I’ve
+            worked with before or since.
           </Reference>
         </div>
       </div>
