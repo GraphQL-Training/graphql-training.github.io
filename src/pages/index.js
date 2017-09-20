@@ -262,7 +262,7 @@ const Index = () => (
         <div className="col-xs-12 col-md-4 mb3 mb0-l">
           <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
             The workshop was presented with well thought out code samples - and
-            even those I was on a (less than ideally set up Windows machine),
+            even though I was on a (less than ideally set up) Windows machine,
             Benjie knew just how to sort out any problems that arose.
           </Reference>
         </div>
@@ -270,7 +270,7 @@ const Index = () => (
           <Reference name="Neil Sweeney" avatarUrl="/images/neil.jpg">
             Benjie can give a massively in-depth talk without making your brain
             melt. His speaking style makes the subject very approachable and
-            gets you excited for what you are learning
+            gets you excited for what you are learning.
           </Reference>
         </div>
         <div className="col-xs-12 col-md-4">
