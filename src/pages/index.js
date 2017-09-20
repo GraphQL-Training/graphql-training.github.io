@@ -147,14 +147,12 @@ const Index = () => (
         <br />
         <br />
         <Bio name="Benjie Gillam" avatarUrl="images/benjie-medium.jpg">
-          From small mobile fitness apps with PHP backends through to a massive
-          web-based community portal in Rails and React, Benjie has been writing
-          applications and APIs professionally for over a decade. Now the
-          maintainer of PostGraphQL, a popular OSS package that builds a solid
-          GraphQL API from your existing PostgreSQL database schema, Benjie
-          built the Graphile suite of tools that focus on building pluggable and
-          scalable GraphQL schemas. He sees GraphQL as one of the biggest
-          advancements in web API technology during his career.
+          Benjie has been writing applications, servers and APIs professionally
+          for over a decade. As part of maintaining PostGraphQL, a popular OSS
+          project that generates a GraphQL API from your existing PostgreSQL
+          database schema, Benjie built the Graphile suite of tools for building
+          scalable GraphQL schemas through plugins. He sees GraphQL as one of
+          the biggest advancements in web API technology during his career.
         </Bio>
         <Bio name="Jof Arnold" avatarUrl="images/jof-medium.jpg">
           Jof started with JavaScript in 1998 with Microsoft’s release of
