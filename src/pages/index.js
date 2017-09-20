@@ -341,9 +341,11 @@ const Index = () => (
             multiple cycles of listening to a short presentation and then
             performing a programming exercise using the techniques discussed.
             This gives the student opportunity to solidify their understanding,
-            experiment and even to make mistakes and learn how to fix them. We
-            operate a buddy system where each student is paired with another so
-            they can help each other to solve any problems, and our teachers
+            experiment and even to make mistakes and learn how to fix them.
+            <br />
+            <br />
+            We operate a buddy system where each student is paired with another
+            so they can help each other to solve any problems, and our teachers
             will be on-hand to help clarify any uncertainties and guide how to
             fix issues.
           </TitledParagraph>
@@ -363,7 +365,7 @@ const Index = () => (
             enables powerful developer tools.
           </blockquote>
         </div>
-        <h4 className="ttu tracked-light tc">Creator of GraphQL</h4>
+        <h4 className="ttu tracked-light tc">Lee Byron, Creator of GraphQL</h4>
       </RowCenter>
     </Section>
 
