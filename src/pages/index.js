@@ -36,15 +36,18 @@ const TitledParagraph = ({ title, children, className }) => (
   </div>
 );
 
-const FooterItem = ({ children, href, title }) => (
+const FooterItem = ({ children, href, title, description }) => (
   <li className="mr3 mb3">
-    {href ? (
-      <a href={href} title={title} target="_blank">
-        {children}
-      </a>
-    ) : (
-      children
-    )}
+    <span>
+      {href ? (
+        <a href={href} title={title} target="_blank">
+          {children}
+        </a>
+      ) : (
+        children
+      )}
+      {description ? <span> &mdash; {description}</span> : null}
+    </span>
   </li>
 );
 
@@ -383,10 +386,16 @@ const Index = () => (
         <div className="col-xs-12 col-sm-4">
           <h3>Projects</h3>
           <ul className="list pl0">
-            <FooterItem href="https://www.graphile.org/postgraphile/">
+            <FooterItem
+              href="https://www.graphile.org/postgraphile/"
+              description="Instant GraphQL API from a PostgreSQL database schema"
+            >
               PostGraphile
             </FooterItem>
-            <FooterItem href="https://www.graphile.org/graphile-build/">
+            <FooterItem
+              href="https://www.graphile.org/graphile-build/"
+              description="Tools to build plugable, performant GraphQL APIs"
+            >
               Graphile Build
             </FooterItem>
           </ul>
