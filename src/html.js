@@ -16,16 +16,16 @@ const Html = ({ postBodyComponents, body }) => (
         href={`/styles.css?t=${encodeURIComponent(buildTimestamp)}`}
       />
       <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-106792928-1"
+      />
+      <script
         dangerouslySetInnerHTML={{
-          __html: `<!-- Global Site Tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106792928-1"></script>
-            <script>
+          __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments)};
               gtag('js', new Date());
-
               gtag('config', 'UA-106792928-1');
-            </script>
         `,
         }}
       />
