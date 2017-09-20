@@ -321,13 +321,15 @@ const Index = () => (
             <path d="M 100,0 100,100 0,100 z" />
           </svg>
           <TitledParagraph title="Teaching Style">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, a dicta
+            We find that most people learn best by doing, so our courses have
+            multiple cycles of listening to a short presentation and then
+            performing a programming exercise using the techniques discussed.
+            This gives the student opportunity to solidify their understanding,
+            experiment and even to make mistakes and learn how to fix them. We
+            operate a buddy system where each student is paired with another so
+            they can help each other to solve any problems, and our teachers
+            will be on-hand to help clarify any uncertainties and guide how to
+            fix issues.
           </TitledParagraph>
         </div>
       </div>
