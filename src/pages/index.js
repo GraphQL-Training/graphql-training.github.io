@@ -167,9 +167,22 @@ const Index = () => (
     <Section className="section-dark bg-people-dark-grey white">
       <div className="row">
         <div className="col-xs-12 flex flex-column items-center tc">
-          <h2 className="ttu tracked-light mb4">1 Day GraphQL Courses</h2>
+          <h2 className="ttu tracked-light mb4">GraphQL Courses</h2>
         </div>
       </div>
+      <div className="row pb5 mb4 bb bb--solid b--white-20">
+        <div className="col-xs-6 flex flex-column items-center tc">
+          <CourseTitle>1 Day Frontend GraphQL</CourseTitle>
+          <p className="f5">AM: GraphQL Core</p>
+          <p className="f5">PM: Frontend GraphQL with React</p>
+        </div>
+        <div className="col-xs-6 flex flex-column items-center tc">
+          <CourseTitle>1 Day Backend GraphQL</CourseTitle>
+          <p className="f5">AM: GraphQL Core</p>
+          <p className="f5">PM: Backend GraphQL on Node.js</p>
+        </div>
+      </div>
+
       <div className="row mb4">
         <div className="col-xs-12 flex flex-column items-center tc">
           <CourseTitle>GraphQL Core</CourseTitle>
