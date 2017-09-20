@@ -1,6 +1,5 @@
 import React from "react";
 
-const ANALYTICS_KEY = "";
 const buildTimestamp = new Date().toISOString().replace(/:/g, "-");
 
 const Html = ({ postBodyComponents, body }) => (
@@ -18,24 +17,21 @@ const Html = ({ postBodyComponents, body }) => (
       />
       <script
         dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${ANALYTICS_KEY}');`,
+          __html: `<!-- Global Site Tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106792928-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments)};
+              gtag('js', new Date());
+
+              gtag('config', 'UA-106792928-1');
+            </script>
+        `,
         }}
       />
       <script src="https://use.fontawesome.com/c72bfae6f9.js" />
     </head>
     <body>
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${ANALYTICS_KEY}`}
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
       <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
       {postBodyComponents}
     </body>
