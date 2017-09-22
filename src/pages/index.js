@@ -256,7 +256,12 @@ const Index = () => (
           </ul>
         </div>
         <div className="col-xs-12 mt4 flex flex-column items-center tc">
-          <ButtonLink>Sign Up</ButtonLink>
+          <ButtonLink
+            href="mailto:info@graphql-training.com"
+            title="Email us to sign up"
+          >
+            Sign Up
+          </ButtonLink>
         </div>
       </div>
       <div className="row">
@@ -266,7 +271,12 @@ const Index = () => (
           <p className="f5">Follows on from the GraphQL Core syllabus</p>
         </div>
         <div className="col-xs-12 mt4 flex flex-column items-center tc">
-          <ButtonLink>Register Interest</ButtonLink>
+          <ButtonLink
+            href="mailto:info@graphql-training.com"
+            title="Email us to register interest"
+          >
+            Register Interest
+          </ButtonLink>
         </div>
       </div>
     </Section>
