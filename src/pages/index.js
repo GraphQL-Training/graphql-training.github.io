@@ -207,7 +207,7 @@ const Index = () => (
             <li>Maximising reuse with fragments.</li>
             <li>Integrating GraphQL into an existing web project.</li>
             <li>GraphQL object stores/caches, normalisation, etc.</li>
-            <li>Conciderations for API maintenance, deprecations, etc.</li>
+            <li>Considerations for API maintenance, deprecations, etc.</li>
           </ul>
         </div>
       </div>
@@ -404,7 +404,7 @@ const Index = () => (
             </FooterItem>
             <FooterItem
               href="https://www.graphile.org/graphile-build/"
-              description="Tools to build plugable, performant GraphQL APIs"
+              description="Tools to build pluggable, performant GraphQL APIs"
             >
               Graphile Build
             </FooterItem>
