@@ -173,14 +173,14 @@ const Index = () => (
       </div>
       <div className="row pb5 mb4 bb bb--solid b--white-20">
         <div className="col-xs-6 flex flex-column items-center tc">
-          <CourseTitle>1 Day Frontend GraphQL</CourseTitle>
-          <p className="f5">AM: GraphQL Core</p>
-          <p className="f5">PM: Frontend GraphQL with React</p>
+          <CourseTitle>2 Days Frontend GraphQL</CourseTitle>
+          <p className="f5">Day 1: GraphQL Core</p>
+          <p className="f5">Day 2: Frontend GraphQL with React</p>
         </div>
         <div className="col-xs-6 flex flex-column items-center tc">
-          <CourseTitle>1 Day Backend GraphQL</CourseTitle>
-          <p className="f5">AM: GraphQL Core</p>
-          <p className="f5">PM: Backend GraphQL on Node.js</p>
+          <CourseTitle>2 Days Backend GraphQL</CourseTitle>
+          <p className="f5">Day 1: GraphQL Core</p>
+          <p className="f5">Day 2: Backend GraphQL on Node.js</p>
         </div>
       </div>
 
