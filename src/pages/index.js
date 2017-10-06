@@ -127,7 +127,7 @@ const Index = () => (
           >
             GraphQL is a breakthrough in API design adopted by many of the
             world’s top companies (and many small ones too). The creator of the
-            open standard, Facebook, have used it to serve 2 billion users and
+            open standard, Facebook, has used it to serve 2 billion users and
             cite it as a key reason for their dominance in mobile.
           </TitledParagraph>
           <TitledParagraph className="flex flex-column items-center tc">
@@ -196,9 +196,7 @@ const Index = () => (
             <li>GraphQL basics (why use GraphQL?).</li>
             <li>Introduction to GraphQL terminology.</li>
             <li>Methods of exploring a GraphQL schema.</li>
-            <li>
-              Performing simple queries and mutations using Graph<em>i.</em>QL.
-            </li>
+            <li>Performing simple queries and mutations using GraphiQL.</li>
             <li>Performing queries/mutations using HTTP.</li>
           </ul>
         </div>
