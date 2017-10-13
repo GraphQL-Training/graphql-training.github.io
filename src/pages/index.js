@@ -1,13 +1,17 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { ButtonLink } from "../components/Button";
-import PageHeader from "../components/PageHeader";
+import { ButtonLink, ButtonLinkSolid } from "../components/Button";
+import { PageHeaderDefault } from "../components/PageHeader";
 import { Section, RowCenter } from "../components/LayoutHelpers";
 import Footer from "../components/Footer";
 import {
   CourseTitle,
   TitledParagraph,
   HeaderLink,
+  FrontendCourseDescription,
+  FrontendCoursePoints,
+  FullstackCoursePoints,
+  FullstackCourseDescription,
 } from "../components/PageElements";
 
 const Reference = ({ children, avatarUrl, name }) => (
@@ -58,33 +62,7 @@ const Index = () => (
         },
       ]}
     />
-    <PageHeader
-      nav={
-        <ul className="flex justify-start pv0 ph3 items-center">
-          <HeaderLink
-            href="https://www.graphile.org/postgraphile/"
-            title="Instant GraphQL API from a PostgreSQL schema"
-            faName="github"
-            pushRight
-          >
-            PostGraphile
-          </HeaderLink>
-          <HeaderLink
-            href="https://www.graphile.org/graphile-build/"
-            title="Tools to build a performant pluggable GraphQL Schema"
-            faName="github"
-          >
-            Graphile Build
-          </HeaderLink>
-          <HeaderLink
-            href="mailto:info@graphql-training.com"
-            faName="envelope-o f4"
-          >
-            info@graphql-training.com
-          </HeaderLink>
-        </ul>
-      }
-    />
+    <PageHeaderDefault />
     <Section className="bg-dark white">
       <div className="row">
         <div className="col-xs-12 flex-column tc tl-l items-center items-start-l tc">
@@ -133,115 +111,62 @@ const Index = () => (
     </Section>
 
     <Section className="section-dark bg-people-dark-grey white">
-      <div className="row">
+      <div className="row pb3 mb4">
         <div className="col-xs-12 flex flex-column items-center tc">
           <h2 className="ttu tracked-light mb4">GraphQL Courses</h2>
-        </div>
-      </div>
-      <div className="row pb5 mb4 bb bb--solid b--white-20">
-        <div className="col-xs-6 flex flex-column items-center tc">
-          <CourseTitle>2 Days Frontend GraphQL</CourseTitle>
-          <p className="f5">Day 1: GraphQL Core</p>
-          <p className="f5">Day 2: Frontend GraphQL with React</p>
-        </div>
-        <div className="col-xs-6 flex flex-column items-center tc">
-          <CourseTitle>2 Days Backend GraphQL</CourseTitle>
-          <p className="f5">Day 1: GraphQL Core</p>
-          <p className="f5">Day 2: Backend GraphQL on Node.js</p>
+          <p>
+            2 day courses for frontend React developers, or fullstack developers
+            and teams.
+          </p>
         </div>
       </div>
 
       <div className="row mb4">
-        <div className="col-xs-12 flex flex-column items-center tc">
-          <CourseTitle>GraphQL Core</CourseTitle>
-          <p>Common to the frontend and backend courses.</p>
-        </div>
+        <FrontendCourseDescription />
       </div>
-      <div className="row pb5 mb4 bb bb--solid b--white-20">
-        <div className="col-xs-10 col-md-6">
-          <ul>
-            <li>GraphQL basics (why use GraphQL?).</li>
-            <li>Introduction to GraphQL terminology.</li>
-            <li>Methods of exploring a GraphQL schema.</li>
-            <li>Performing simple queries and mutations using GraphiQL.</li>
-            <li>Performing queries/mutations using HTTP.</li>
-          </ul>
-        </div>
-        <div className="col-xs-10 col-md-6">
-          <ul>
-            <li>Maximising reuse with fragments.</li>
-            <li>Integrating GraphQL into an existing web project.</li>
-            <li>GraphQL object stores/caches, normalisation, etc.</li>
-            <li>Considerations for API maintenance, deprecations, etc.</li>
-          </ul>
+      <div className="pb5 mb4 bb bb--solid b--white-20">
+        <FrontendCoursePoints />
+        <div className="row">
+          <div className="col-xs-12 mt4 flex flex-row-ns flex-column justify-center tc">
+            <ButtonLinkSolid
+              className="w5-ns w-100 mh2-ns mv2"
+              href="/graphql-training-frontend-course"
+              title="Email us to sign up"
+            >
+              Learn More
+            </ButtonLinkSolid>
+            <ButtonLink
+              className="w5-ns w-100 mh2-ns mv2"
+              href="mailto:info@graphql-training.com"
+              title="Email us to sign up"
+            >
+              Sign Up
+            </ButtonLink>
+          </div>
         </div>
       </div>
       <div className="row mb4">
-        <div className="col-xs-12 flex flex-column items-center tc">
-          <CourseTitle>Frontend GraphQL with React</CourseTitle>
-          <p>
-            Implementing the client-side of GraphQL in React or React Native.
-          </p>
-          <p>
-            Follows on from the GraphQL Core syllabus. Assumes a working
-            knowledge of ES2017, especially `async`/`await` and promises. A
-            working understanding of React is also very helpful. We’re happy to
-            send primers for those not yet comfortable with these technologies.
-          </p>
-        </div>
+        <FullstackCourseDescription />
       </div>
-      <div className="row pb5 mb4 bb bb--solid b--white-20">
-        <div className="col-xs-12 col-md-6">
-          <ul>
-            <li>
-              Introduction to common GraphQL clients including Apollo and Relay
-              Modern.
-            </li>
-            <li>Apollo Basics: adding Apollo GraphQL client to a React app.</li>
-            <li>
-              Authentication: GraphQL authentication methods including JWTs and
-              sessions/cookies.
-            </li>
-            <li>Advanced Apollo: exploring Apollo options and HOCs.</li>
-            <li>Simplification: removing unnecessary state from your app.</li>
-          </ul>
-        </div>
-        <div className="col-xs-12 col-md-6">
-          <ul>
-            <li>
-              Debugging: Using the DevTools for an improved debugging
-              experience.
-            </li>
-            <li>
-              Advanced mutations: telling Apollo what to do when it’s not
-              obvious.
-            </li>
-            <li>Optimistic updates: slick interface for users.</li>
-            <li>Where to next: a brief overview of related technologies.</li>
-          </ul>
-        </div>
-        <div className="col-xs-12 mt4 flex flex-column items-center tc">
-          <ButtonLink
-            href="mailto:info@graphql-training.com"
-            title="Email us to sign up"
-          >
-            Sign Up
-          </ButtonLink>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xs-12 flex flex-column items-center tc">
-          <CourseTitle>Coming Soon: Backend GraphQL on Node.js</CourseTitle>
-          <p>Implementing a GraphQL API for apps to consume.</p>
-          <p className="f5">Follows on from the GraphQL Core syllabus</p>
-        </div>
-        <div className="col-xs-12 mt4 flex flex-column items-center tc">
-          <ButtonLink
-            href="mailto:info@graphql-training.com"
-            title="Email us to register interest"
-          >
-            Register Interest
-          </ButtonLink>
+      <div className="pb5 mb4 bb bb--solid b--white-20">
+        <FullstackCoursePoints />
+        <div className="row">
+          <div className="col-xs-12 mt4 flex flex-row-ns flex-column justify-center tc">
+            <ButtonLinkSolid
+              className="w5-ns w-100 mh2-ns mv2"
+              href="/graphql-training-frontend-course"
+              title="Email us to sign up"
+            >
+              Learn More
+            </ButtonLinkSolid>
+            <ButtonLink
+              className="w5-ns w-100 mh2-ns mv2"
+              href="mailto:info@graphql-training.com"
+              title="Email us to sign up"
+            >
+              Sign Up
+            </ButtonLink>
+          </div>
         </div>
       </div>
     </Section>
