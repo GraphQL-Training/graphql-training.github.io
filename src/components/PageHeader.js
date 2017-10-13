@@ -1,4 +1,5 @@
 import React from "react";
+import { HeaderLink } from "./PageElements";
 
 const PageHeader = ({ nav }) => (
   <div className="bg-off-grey relative">
@@ -72,4 +73,40 @@ const PageHeader = ({ nav }) => (
   </div>
 );
 
+const PageHeaderDefault = () => (
+  <PageHeader
+    nav={
+      <ul className="flex justify-start pv0 ph3 items-center">
+        <HeaderLink
+          href="/graphql-training-frontend"
+          title="GraphQL Training Course for Frontend Developers"
+        >
+          Frontend Syllabus
+        </HeaderLink>
+        <HeaderLink
+          href="/graphql-training-fullstack"
+          title="GraphQL Training Course for Full Stack Developers and Teams"
+        >
+          Full Stack Syllabus
+        </HeaderLink>
+        <HeaderLink
+          href="mailto:info@graphql-training.com"
+          faName="envelope-o f4"
+        >
+          info@graphql-training.com
+        </HeaderLink>
+        <HeaderLink
+          href="https://www.graphile.org/postgraphile/"
+          title="Instant GraphQL API from a PostgreSQL schema"
+          faName="github"
+        >
+          PostGraphile
+        </HeaderLink>
+      </ul>
+    }
+  />
+);
+
 export default PageHeader;
+
+export { PageHeaderDefault };
