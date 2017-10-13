@@ -1,8 +1,14 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { ButtonLink, ButtonLinkSolid } from "../components/Button";
+import { ButtonLink } from "../components/Button";
 import PageHeader from "../components/PageHeader";
 import { Section, RowCenter } from "../components/LayoutHelpers";
+import Footer from "../components/Footer";
+import {
+  CourseTitle,
+  TitledParagraph,
+  HeaderLink,
+} from "../components/PageElements";
 
 const Reference = ({ children, avatarUrl, name }) => (
   <div className="flex mb0-l justify-center h-100">
@@ -14,41 +20,6 @@ const Reference = ({ children, avatarUrl, name }) => (
       </div>
     </div>
   </div>
-);
-
-const HeaderLink = ({ faName, children, href, title, pushRight }) => (
-  <li className={`${pushRight ? "ml-auto" : "ml4"} `}>
-    <a
-      href={href}
-      title={title}
-      className="flex items-center no-underline-hover"
-    >
-      {!!faName && <span className={`fa fa-${faName} f3 mr2 white`} />}
-      <span className="white">{children}</span>
-    </a>
-  </li>
-);
-
-const TitledParagraph = ({ title, children, className }) => (
-  <div className={`${className || ""}`}>
-    {title && <h3 className="ttu tracked-light">{title}</h3>}
-    <p className="f5 f4-ns">{children}</p>
-  </div>
-);
-
-const FooterItem = ({ children, href, title, description }) => (
-  <li className="mr3 mb3">
-    <span>
-      {href ? (
-        <a href={href} title={title} target="_blank">
-          {children}
-        </a>
-      ) : (
-        children
-      )}
-      {description ? <span> &mdash; {description}</span> : null}
-    </span>
-  </li>
 );
 
 const Bio = ({ name, avatarUrl, children }) => (
@@ -69,10 +40,6 @@ const Bio = ({ name, avatarUrl, children }) => (
       </div>
     </div>
   </div>
-);
-
-const CourseTitle = ({ children }) => (
-  <h3 className="ttu tracked-light">{children}</h3>
 );
 
 const Index = () => (
@@ -375,41 +342,7 @@ const Index = () => (
       </RowCenter>
     </Section>
 
-    <Section className="bg-off-grey">
-      <div className="row">
-        <div className="col-xs-12 col-sm-4">
-          <h3>Contact</h3>
-          <ul className="list pl0">
-            <FooterItem href="https://www.twitter.com/benjie">
-              @benjie
-            </FooterItem>
-            <FooterItem href="https://www.twitter.com/jofarnold">
-              @jofarnold
-            </FooterItem>
-            <FooterItem href="mailto:info@graphql-training.com">
-              info@graphql-training.com
-            </FooterItem>
-          </ul>
-        </div>
-        <div className="col-xs-12 col-sm-4">
-          <h3>Projects</h3>
-          <ul className="list pl0">
-            <FooterItem
-              href="https://www.graphile.org/postgraphile/"
-              description="Instant GraphQL API from a PostgreSQL database schema"
-            >
-              PostGraphile
-            </FooterItem>
-            <FooterItem
-              href="https://www.graphile.org/graphile-build/"
-              description="Tools to build pluggable, performant GraphQL APIs"
-            >
-              Graphile Build
-            </FooterItem>
-          </ul>
-        </div>
-      </div>
-    </Section>
+    <Footer />
   </div>
 );
 
