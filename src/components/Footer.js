@@ -20,7 +20,7 @@ const Footer = () => (
   <Section className="bg-off-grey">
     <div className="row">
       <div className="col-xs-12 col-sm-4">
-        <h3>Contact</h3>
+        <h3 className="f6 ttu fw6 mt0 mb3 bb pb2">Contact</h3>
         <ul className="list pl0">
           <FooterItem href="https://www.twitter.com/benjie">@benjie</FooterItem>
           <FooterItem href="https://www.twitter.com/jofarnold">
@@ -32,7 +32,18 @@ const Footer = () => (
         </ul>
       </div>
       <div className="col-xs-12 col-sm-4">
-        <h3>Projects</h3>
+        <h3 className="f6 ttu fw6 mt0 mb3 bb pb2">Courses</h3>
+        <ul className="list pl0">
+          <FooterItem href="/graphql-training-frontend-course">
+            GraphQL training for frontend React developers
+          </FooterItem>
+          <FooterItem href="/graphql-training-frontend-course">
+            GraphQL training for frontend React developers
+          </FooterItem>
+        </ul>
+      </div>
+      <div className="col-xs-12 col-sm-4">
+        <h3 className="f6 ttu fw6 mt0 mb3 bb pb2">Projects</h3>
         <ul className="list pl0">
           <FooterItem
             href="https://www.graphile.org/postgraphile/"
