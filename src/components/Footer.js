@@ -16,11 +16,13 @@ const FooterItem = ({ children, href, title, description }) => (
   </li>
 );
 
+const Title = ({ children }) => <h6 className="ttu mb4 pb2">{children}</h6>;
+
 const Footer = () => (
-  <Section className="bg-off-grey">
+  <Section className="bg-almost-black light-gray">
     <div className="row">
       <div className="col-xs-12 col-sm-4">
-        <h3 className="f6 ttu fw6 mt0 mb3 bb pb2">Contact</h3>
+        <Title>Contact</Title>
         <ul className="list pl0">
           <FooterItem href="https://www.twitter.com/benjie">@benjie</FooterItem>
           <FooterItem href="https://www.twitter.com/jofarnold">
@@ -32,7 +34,7 @@ const Footer = () => (
         </ul>
       </div>
       <div className="col-xs-12 col-sm-4">
-        <h3 className="f6 ttu fw6 mt0 mb3 bb pb2">Courses</h3>
+        <Title>Courses</Title>
         <ul className="list pl0">
           <FooterItem href="/graphql-training-frontend-course">
             GraphQL training for frontend React developers
@@ -43,7 +45,7 @@ const Footer = () => (
         </ul>
       </div>
       <div className="col-xs-12 col-sm-4">
-        <h3 className="f6 ttu fw6 mt0 mb3 bb pb2">Projects</h3>
+        <Title>Projects</Title>
         <ul className="list pl0">
           <FooterItem
             href="https://www.graphile.org/postgraphile/"

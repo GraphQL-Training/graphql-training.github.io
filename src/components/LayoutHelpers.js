@@ -1,7 +1,9 @@
 import React from "react";
 
-const Section = ({ className, children }) => (
-  <section className={`${className} pv4 pv5-l`}>
+const Section = ({ className, isAlt, children }) => (
+  <section
+    className={`${className || ""} ${isAlt ? "bg-near-white" : ""} pv4 pv5-l`}
+  >
     <div className="container mw8 w-100">{children}</div>
   </section>
 );

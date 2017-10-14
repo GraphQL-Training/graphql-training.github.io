@@ -2,11 +2,11 @@ import React from "react";
 import { HeaderLink } from "./PageElements";
 
 const PageHeader = ({ nav }) => (
-  <div className="bg-off-grey relative">
+  <div className="bg-almost-black relative">
     <div className="white flex justify-center flex-column bg-blue-gradient">
       <div className="container mw8 w-100">
         <div className="row">
-          <header className="ttu tracked f7 w-100">
+          <header className="f5 w-100">
             <div className="col-xs-12 flex items-center pv3">
               <div className="flex items-center">
                 <img
@@ -39,13 +39,13 @@ const PageHeader = ({ nav }) => (
         </div>
         <div className="row">
           <div className="pv4 pv5-l col-xs-12 tc">
-            <div className="mb2">
+            <div className="mb3">
               <h1 className="ttu tracked-light">GraphQL Training</h1>
             </div>
             <div className="mb4 mb5-l flex justify-center">
-              <h3>
+              <p className="f3 fw6">
                 Expert GraphQL training from the maintainer of PostGraphQL.
-              </h3>
+              </p>
             </div>
             <div className="tools-logos-container flex flex-wrap justify-center w-100 pa3">
               {["graphql", "apollo", "node", "react"].map(f => (
@@ -61,15 +61,6 @@ const PageHeader = ({ nav }) => (
         </div>
       </div>
     </div>
-    <svg
-      className="down-divider absolute events-none bottom-0 w-100 l-0"
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-    >
-      <path d="M 0,0 50,100 100,0 100,100 0,100 z" />
-    </svg>
   </div>
 );
 
@@ -89,10 +80,7 @@ const PageHeaderDefault = () => (
         >
           Full Stack Syllabus
         </HeaderLink>
-        <HeaderLink
-          href="mailto:info@graphql-training.com"
-          faName="envelope-o f4"
-        >
+        <HeaderLink href="mailto:info@graphql-training.com">
           info@graphql-training.com
         </HeaderLink>
         <HeaderLink

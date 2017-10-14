@@ -1,37 +1,133 @@
 @import "./_variables.scss";
-@import "./globals.scss";
 @import "./tachyons.scss";
 @import "./tachyons-custom.scss";
 @import "./menu-toggler.scss";
 
 // * {border: 1px solid RGBA(255,0,0,0.5);}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .lh-title;
+  @extend .measure;
+  @extend .fw6;
+  @extend .ttu;
+  @extend .tracked;
+  @extend .mt0;
+}
+
+h1 {
+  @extend .mb5-ns;
+  @extend .mb4;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .mb4-ns;
+  @extend .mb3;
+}
+
+h1 {
+  @extend .f1-ns;
+  @extend .f2;
+}
+
+h2 {
+  @extend .f2-ns;
+  @extend .f3;
+}
+
+h3 {
+  @extend .f3-ns;
+  @extend .f4;
+
+}
+h4 {
+  @extend .f4-ns;
+  @extend .f5;
+}
+
+h5 {
+  @extend .f5-ns;
+  @extend .f6;
+}
+
+h6 {
+  @extend .f6-ns;
+  @extend .f7;
+}
+
+p {
+  @extend .lh-copy;
+  @extend .measure;
+  @extend .mb4-ns;
+  @extend .mt0;
+}
+
+a {
+  @extend .no-underline;
+  @extend .blue;
+  @extend .grow;
+  @extend .fw6;
+}
+
+section ul {
+  margin-top: 0;
+  padding-left: 1.1em;
+}
+
+section li {
+  @extend .f5-ns;
+  @extend .f5;
+  @extend .lh-copy;
+  @extend .mb3-ns;
+  @extend .mb2;
+  @extend .measure;
+}
+
+blockquote {
+  @extend .measure;
+  @extend .lh-copy;
+}
+
+img {
+  max-width: initial;
+}
+
 .quote-wrapper {
   blockquote {
-    @extend .relative;
-    @extend .flex;
 
     &:after,
     &:before {
       @extend .db;
-      @extend .fs-normal;
-      @extend .georgia;
+      @extend .helvetica;
+      @extend .fw6;
       font-size: 5em;
       height: 0.3em;
-      line-height: 100%;
-      padding: 0;
+      width: 0.3em;
+      line-height: 0.8em;
+      @extend .blue;
+      position: relative;
+      left: -0.1em;
+
     }
 
     &:before {
       content: "“";
-      align-self: flex-start;
-      @extend .mr2;
+      @extend .mb4;
     }
 
     &:after {
       content: "”";
-      align-self: flex-end;
-      @extend .ml2;
+      margin-left: auto;
+      @extend .mt2;
+      display: none;
     }
   }
 }
@@ -39,68 +135,10 @@
 // ----------------------------------------
 // Fancy split section stuff
 
-.split-section {
-  background-image: linear-gradient(106deg, #0f0c40 0%, #222d5b 8%, #324f77 16%, #407294 25%, #4d98b2 33%, #59c0d0 42%, #64e9f0 50%);
-  display: flex;
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 40%;
-    pointer-events: none;
-    background-image:
-      url('/images/light-graph-2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-.split-left,
-.split-right {
-  flex-basis: 50%;
-  max-width: 50%;
-  box-sizing: border-box;
-  display: flex;
-}
-
-.split-right {
-  background-image: linear-gradient(to bottom, $darkBackgroundColor 0%, $darkBackgroundColor 100%);
-  background-position: 0.5 * $splitWidth top;
-  background-repeat: no-repeat;
-}
-
-.split-left-core,
-.split-right-core {
-  max-width: 32rem;
-}
-
-.split-left-core {
-  margin-left: auto;
-  padding-right: (0.5 * $splitWidth) +  (2 * $gutter);
-  padding-left: $gutter;
-}
-
-.split-right-core {
-  position: relative;
-  padding-right: $gutter;
-  padding-left: (0.5 * $splitWidth) +  (2 * $gutter);
-}
-
-.split-divider {
-  left: -0.5 * $splitWidth;
-  width: $splitWidth;
-  fill: $darkBackgroundColor;
-}
-
 .down-divider {
   height: 2rem;
-  fill: $darkBackgroundColor;
-  border-bottom: 2px solid $darkBackgroundColor; // Hack gap cause by SVG height calc.
+  fill: currentColor;
+  border-bottom: 2px solid currentColor; // Hack gap cause by SVG height calc.
 }
 
 .nav-logo {
@@ -110,38 +148,6 @@
 
 // from flexgrid.css
 @media only screen and (max-width: 60em) {
-  .split-section {
-    display: block;
-  }
-
-  .split-left,
-  .split-right {
-    max-width: 100%;
-  }
-
-  .split-left-core,
-  .split-right-core {
-    width: 100%;
-    max-width: 100%;
-    padding: 2rem $gutter;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .split-left {
-    background: $blueGradient;
-  }
-
-  .split-right {
-    background: $darkBackgroundColor;
-  }
-
-  .split-divider {
-    display: none;
-  }
-
   .down-divider {
     height: 1rem;
   }
@@ -150,7 +156,7 @@
 // ----------------------------------------
 
 .header-tools-logo {
-  height: 3rem;
+  height: 2rem;
 }
 
 @media screen and (max-width: 60em) {
@@ -160,7 +166,7 @@
 }
 
 .tools-logos-container {
-  border-top: 2px solid RGBA(255,255,255, 0.4)
+  //border-top: 2px solid RGBA(255,255,255, 0.4)
 }
 
 
@@ -168,13 +174,11 @@
 // Backgrounds
 
 .bg-people-dark-grey {
-  background-color: #1E232D;
   background-image:
-    url('/images/light-graph-2.png'),
     linear-gradient(0, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%),
-    url('/images/coders.jpg');
+    url('/images/coders-grayscale.jpg');
   background-repeat: no-repeat;
-  background-size: contain, auto, cover;
+  background-size: auto, cover;
   background-position: center bottom;
 }
 
@@ -182,20 +186,11 @@
   background-image: $blueGradient;
 }
 
-.bg-dark {
-  background-color: $darkBackgroundColor;
+.bg-dark-graph {
   background-image: url('/images/light-graph-3.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-}
-
-.bg-fire-gradient {
-  background-image:
-    url('/images/fire-graph-1.png'),
-    linear-gradient(120deg, rgb(237, 47, 24) 0%, rgb(241, 71, 39) 16%, rgb(245, 89, 53) 33%, rgb(248, 106, 66) 50%, rgb(250, 122, 80) 66%, rgb(252, 137, 94) 83%, rgb(254, 151, 108) 100%);
-  background-repeat: no-repeat;
-  background-size: cover, auto;
 }
 
 .bg-brains-gradient {
@@ -223,11 +218,5 @@
   .bg-brains-gradient {
     background-size: 30%, 1000px 150px, auto;
     background-position: right 20% center, right top, top left;
-  }
-  .bg-people-dark-grey {
-    background-size: 1000px 150px, auto;
-  }
-  .bg-dark {
-    background-size: auto;
   }
 }
