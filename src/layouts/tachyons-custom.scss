@@ -13,7 +13,7 @@
 .bg-almost-black { background-color: #1b1b1b; }
 .fire { color: $fire }
 .bg-fire { background-color: $fire }
-.bg-off-grey { background-color: #111824; }
+.bg-off-gray { background-color: #111824; }
 .make-orange { filter: sepia(1) hue-rotate(-16deg); }
 
 
@@ -27,20 +27,27 @@
 .tracked-light { letter-spacing: .03em; }
 .antialised { -webkit-font-smoothing: antialiased; }
 .lh-long { line-height: 1.75; }
+.divider-center,
 .divider {
   position: relative;
-  text-align: center;
   &:before {
     content: "";
     display: block;
     width: 50px;
-    height: 2px;
+    height: 3px;
     background: currentColor;
-    margin-left: auto;
     margin-right: auto;
-    @extend .mb4;
+    @extend .mb3;
   }
 }
+
+.divider-center {
+  text-align: center;
+  &:before {
+    margin-left: auto;
+  }
+}
+
 
 // Layout
 .mw10 { max-width: 128rem; }
@@ -48,6 +55,9 @@
 .pb1vh { padding-bottom: 15vh }
 .gutter-left { padding-left: $gutter; }
 .gutter-right { padding-right: $gutter; }
+.flex-grow-1 { flex-grow: 1}
+.flex-shrink-1 { flex-shrink: 1 }
+.w6 { width: 24rem }
 
 // Interactions
 .events-none { pointer-events: none; }

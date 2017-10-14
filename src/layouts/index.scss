@@ -83,11 +83,10 @@ section ul {
 }
 
 section li {
-  @extend .f5-ns;
   @extend .f5;
   @extend .lh-copy;
-  @extend .mb3-ns;
-  @extend .mb2;
+  @extend .mb2-ns;
+  @extend .mb1;
   @extend .measure;
 }
 
@@ -172,11 +171,23 @@ img {
 
 // ----------------------------------------
 // Backgrounds
+//linear-gradient(0, rgba(21, 26, 76, 0.6) 0%, rgba(15, 12, 62, 0.6) 100%), url(/images/coders-grayscale.jpg)
 
-.bg-people-dark-grey {
+
+
+.bg-people-dark-gray {
   background-image:
-    linear-gradient(0, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%),
+    linear-gradient(340deg, rgba(21, 21, 21, 0.8) 0%, rgba(27, 28, 33, 1) 100%),
     url('/images/coders-grayscale.jpg');
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-position: center bottom;
+}
+
+.bg-laptop-dark-gray {
+  background-image:
+    linear-gradient(340deg, rgba(30, 42, 82, 0.95) 0%, rgba(15, 15, 53, 1) 100%),
+    url('/images/laptop-grayscale.jpg');
   background-repeat: no-repeat;
   background-size: auto, cover;
   background-position: center bottom;

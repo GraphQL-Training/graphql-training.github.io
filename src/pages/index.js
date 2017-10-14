@@ -17,8 +17,8 @@ import {
 const Reference = ({ children, avatarUrl, name }) => (
   <div className="flex justify-center h-100">
     <div className="shadow--l3 mb4 bg-white pa4 w-100 mw6 flex">
-      <div className="w4 mr3 flex flex-column justify-start">
-        <img className="w3 h3 mb3 br-100" src={avatarUrl} />
+      <div className="w4 mr4 flex flex-column justify-start">
+        <img className="w4 h4 mb3 br-100" src={avatarUrl} />
         <div className="near-black fw6 ">{name}</div>
       </div>
       <div className="quote-wrapper">
@@ -28,20 +28,20 @@ const Reference = ({ children, avatarUrl, name }) => (
   </div>
 );
 
-const Bio = ({ name, avatarUrl, children, isRight }) => {
-  const className = isRight ? "order-0" : "order-2";
+const Bio = ({ className, name, avatarUrl, children, isRight }) => {
+  const cn = isRight ? "order-0" : "order-2";
   const style = isRight
     ? { paddingLeft: "1000px", marginLeft: "-1000px" }
     : { paddingRight: "1000px", marginRight: "-1000px" };
   return (
-    <div className="shadow--l3 mb5 bg-white" style={style}>
+    <div className={`${className} shadow--l3 bg-white`} style={style}>
       <div className="flex justify-between">
         <div
-          className="w5 cover bg-center order-1"
+          className="w6 cover bg-center order-1"
           style={{ backgroundImage: `url(/${avatarUrl})` }}
         />
-        <div className={`${className} pa4`}>
-          <div className="fw6 f3 mb4">{name}</div>
+        <div className={`${cn} pa4`}>
+          <div className="fw6 f4 mt3 ttu tracked-light mb4">{name}</div>
           <p className="lh-long dark-gray">{children}</p>
         </div>
       </div>
@@ -87,12 +87,17 @@ const Index = () => (
       </div>
     </Section>
 
-    <Section className="bg-light-gray" isAlt>
+    <Section className="bg-light-gray overflow-hidden" isAlt>
       <RowCenter>
-        <h3 className="tc divider">20 years combined experience</h3>
+        <h3 className="divider-center">20 Years Combined Experience</h3>
         <br />
         <br />
-        <Bio name="Benjie Gillam" avatarUrl="images/benjie-medium.jpg" isRight>
+        <Bio
+          className="mb5"
+          name="Benjie Gillam"
+          avatarUrl="images/benjie-medium.jpg"
+          isRight
+        >
           Benjie has been writing applications, servers and APIs professionally
           for over a decade. As part of maintaining PostGraphQL, a popular OSS
           project that generates a GraphQL API from your existing PostgreSQL
@@ -111,71 +116,80 @@ const Index = () => (
       </RowCenter>
     </Section>
 
-    <Section className="bg-people-dark-grey white">
-      <div className="row pb3 mb4">
+    <Section>
+      <div className="row">
         <div className="col-xs-12 flex flex-column items-center">
-          <h2 className="ttu tracked-light mb4">GraphQL Courses</h2>
+          <h2 className="ttu tracked-light mb0">GraphQL Courses</h2>
         </div>
       </div>
-      <RowCenter>
-        <h3 className="mb5 divider">
-          GraphQL For <br />React Developers
-        </h3>
-        <FrontendCourseDescription />
-        <FrontendCoursePoints />
-        <div className="pb5 mb4">
-          <div className="row">
-            <div className="col-xs-12 mt4 flex flex-row-ns flex-column justify-center tc">
-              <ButtonLinkSolid
-                className="w5-ns w-100 mh2-ns mv2"
-                href="/graphql-training-frontend-course"
-                title="Email us to sign up"
-              >
-                Learn More
-              </ButtonLinkSolid>
-              <ButtonLink
-                className="w5-ns w-100 mh2-ns mv2"
-                href="mailto:info@graphql-training.com"
-                title="Email us to sign up"
-              >
-                Sign Up
-              </ButtonLink>
-            </div>
-          </div>
-        </div>
-        <h3 className="mb5 divider">
-          GraphQL for <br />Fullstack Developers & Teams
-        </h3>
-        <FullstackCourseDescription />
-        <FullstackCoursePoints />
-        <div className="pb5">
-          <div className="row">
-            <div className="col-xs-12 mt4 flex flex-row-ns flex-column justify-center tc">
-              <ButtonLinkSolid
-                className="w5-ns w-100 mh2-ns mv2"
-                href="/graphql-training-frontend-course"
-                title="Email us to sign up"
-              >
-                Learn More
-              </ButtonLinkSolid>
-              <ButtonLink
-                className="w5-ns w-100 mh2-ns mv2"
-                href="mailto:info@graphql-training.com"
-                title="Email us to sign up"
-              >
-                Sign Up
-              </ButtonLink>
-            </div>
-          </div>
-        </div>
-      </RowCenter>
     </Section>
+    <section className="bg-almost-black white flex">
+      <div className="flex-grow-1 flex-shrink-1 flex bg-laptop-dark-gray flex-column items-center pv6 ph5">
+        <div>
+          <h3 className="mb5 divider">
+            GraphQL For <br />React Developers
+          </h3>
+          <div className="mb5">
+            <FrontendCourseDescription />
+          </div>
+
+          <div className="mb5">
+            <FrontendCoursePoints />
+          </div>
+          <div className="pb5 mb4">
+            <ButtonLinkSolid
+              className="w5-ns w-100 mh2-ns mv2"
+              href="/graphql-training-frontend-course"
+              title="Email us to sign up"
+            >
+              Learn More
+            </ButtonLinkSolid>
+            <ButtonLink
+              className="w5-ns w-100 mh2-ns mv2"
+              href="mailto:info@graphql-training.com"
+              title="Email us to sign up"
+            >
+              Sign Up
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+      <div className="flex-grow-1 flex-shrink-1 flex bg-people-dark-gray flex-column items-center pv6 ph5">
+        <div>
+          <h3 className="mb5 divider">
+            GraphQL for <br />Fullstack Developers & Teams
+          </h3>
+          <div className="mb5">
+            <FullstackCourseDescription />
+          </div>
+          <div className="mb5">
+            <FullstackCoursePoints />
+          </div>
+          <div className="pb5">
+            <ButtonLinkSolid
+              className="w5-ns w-100 mh2-ns mv2"
+              href="/graphql-training-frontend-course"
+              title="Email us to sign up"
+            >
+              Learn More
+            </ButtonLinkSolid>
+            <ButtonLink
+              className="w5-ns w-100 mh2-ns mv2"
+              href="mailto:info@graphql-training.com"
+              title="Email us to sign up"
+            >
+              Sign Up
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <Section isAlt>
       <div className="row">
         <div className="col-xs-12">
           <RowCenter className="mb4">
-            <h3 className="divider">Quotes From Trainees</h3>
+            <h3 className="divider-center">Quotes</h3>
           </RowCenter>
         </div>
       </div>
@@ -188,7 +202,7 @@ const Index = () => (
               and gets you excited for what you are learning.
             </Reference>
           </div>
-          <div style={{ marginTop: "3rem" }}>
+          <div style={{ marginTop: "1rem" }}>
             <Reference avatarUrl="/images/theo.jpg" name="Theo Vararu">
               Benjie taught me more about software development than anybody I’ve
               worked with before or since.
@@ -196,7 +210,7 @@ const Index = () => (
           </div>
         </div>
         <div className="col-xs-6">
-          <div style={{ marginTop: "8rem" }}>
+          <div style={{ marginTop: "10rem", transform: "scale(1.05)" }}>
             <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
               The workshop was presented with well thought out code samples -
               and even though I was on a (less than ideally set up) Windows
@@ -253,7 +267,7 @@ const Index = () => (
 
     <Section isAlt>
       <RowCenter>
-        <h3 className="ttu tracked-light tc mb5 divider">
+        <h3 className="mb5 divider-center">
           GraphQL &ndash; The Future of Web APIS
         </h3>
         <div className="bg-white shadow--l3 flex items-stretch mb4">

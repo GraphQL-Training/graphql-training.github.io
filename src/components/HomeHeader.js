@@ -1,7 +1,7 @@
 import React from "react";
 
 const HomeHeader = () => (
-  <div className="bg-off-grey tl-l tc">
+  <div className="bg-off-gray tl-l tc">
     <div className="white flex justify-center flex-column bg-brains-gradient">
       <div className="container mw8 w-100">
         <div className="row">
