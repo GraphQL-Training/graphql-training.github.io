@@ -28,20 +28,26 @@ const Reference = ({ children, avatarUrl, name }) => (
   </div>
 );
 
-const Bio = ({ name, avatarUrl, children, isRight }) => (
-  <div className="shadow--l3 w-100 mb5 bg-white">
-    <div className="flex justify-between">
-      <div
-        className="w5 cover bg-center order-1"
-        style={{ backgroundImage: `url(/${avatarUrl})` }}
-      />
-      <div className={`${isRight ? "order-0" : "order-2"} pa4`}>
-        <div className="fw6 f3 mb4">{name}</div>
-        <p className="">{children}</p>
+const Bio = ({ name, avatarUrl, children, isRight }) => {
+  const className = isRight ? "order-0" : "order-2";
+  const style = isRight
+    ? { paddingLeft: "1000px", marginLeft: "-1000px" }
+    : { paddingRight: "1000px", marginRight: "-1000px" };
+  return (
+    <div className="shadow--l3 mb5 bg-white" style={style}>
+      <div className="flex justify-between">
+        <div
+          className="w5 cover bg-center order-1"
+          style={{ backgroundImage: `url(/${avatarUrl})` }}
+        />
+        <div className={`${className} pa4`}>
+          <div className="fw6 f3 mb4">{name}</div>
+          <p className="lh-long dark-gray">{children}</p>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Index = () => (
   <div>
@@ -94,7 +100,7 @@ const Index = () => (
           scalable GraphQL schemas through plugins. He sees GraphQL as one of
           the biggest advancements in web API technology during his career.
         </Bio>
-        <Bio name="Jof Arnold" avatarUrl="images/jof-medium.jpg" isRight>
+        <Bio name="Jof Arnold" avatarUrl="images/jof-medium.jpg">
           Jof started with JavaScript in 1998 with Microsoft’s release of
           Internet Explorer 3. Since then he has worked at the cutting edge of
           the frontend stack, being amongst the first in 2013 to introduce React
@@ -261,7 +267,7 @@ const Index = () => (
               need and nothing more, makes it easier to evolve APIs over time,
               and enables powerful developer tools.
             </blockquote>
-            <div className="near-black fw6">
+            <div className="near-black fw6 mb2">
               <div className="mb1">Lee Byron</div>
               Creator of GraphQL
             </div>
