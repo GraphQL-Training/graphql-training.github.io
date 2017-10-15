@@ -173,19 +173,25 @@ const CourseDescriptionRow = ({ left, right }) => (
   </div>
 );
 
+const SplitColumn = ({ children }) => (
+  <div className="col-xs-12 col-md-6 mb5 mb0-l">
+    <div className="bg-white ph4-l h-100 flex flex-column items-center mid-gray">
+      <div className="100 flex flex-column items-start">{children}</div>
+    </div>
+  </div>
+);
+
 const Bio = ({ className, name, avatarUrl, children, isRight }) => {
-  const cn = isRight ? "order-0" : "order-2";
-  const style = isRight
-    ? { paddingLeft: "1000px", marginLeft: "-1000px" }
-    : { paddingRight: "1000px", marginRight: "-1000px" };
+  const cn1 = isRight ? "off-left-l" : "off-right-l";
+  const cn2 = isRight ? "order-0-l" : "order-2-l";
   return (
-    <div className={`${className} shadow--l3 bg-white`} style={style}>
-      <div className="flex justify-between">
+    <div className={`${className} ${cn1} shadow--l3 bg-white`}>
+      <div className="flex flex-row-l flex-column justify-between">
         <div
-          className="w6 cover bg-center order-1 db-l dn"
+          className="w6-l w-100 mnh5 cover bg-center order-1-l"
           style={{ backgroundImage: `url(/${avatarUrl})` }}
         />
-        <div className={`${cn} pa4`}>
+        <div className={`${cn2} pa4`}>
           <div className="fw6 f4 mt3 ttu tracked-light mb4">{name}</div>
           <p className="lh-long dark-gray">{children}</p>
         </div>
@@ -256,5 +262,6 @@ export {
   HeaderLink,
   Logos,
   Reference,
+  SplitColumn,
   TitledParagraph,
 };
