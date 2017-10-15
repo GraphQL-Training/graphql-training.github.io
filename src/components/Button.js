@@ -21,7 +21,7 @@ const ButtonLinkSolid = ({ className, href, to, children, title }) => (
   <LinkType
     href={href}
     className={`${className ||
-      ""} ${defaultClasses} white shadow--l2 bg-blue b--blue`}
+      ""} ${defaultClasses} white shadow--l1 bg-blue b--blue`}
     title={title || "Link"}
   >
     {children}
