@@ -210,7 +210,7 @@ const Index = () => (
         </div>
       </div>
       <div className="row">
-        <div className="col-xs-12 col-lg-6">
+        <div className="col-xs-12 col-md-6">
           <div>
             <Reference
               name={
@@ -225,7 +225,7 @@ const Index = () => (
               and gets you excited for what you are learning.
             </Reference>
           </div>
-          <div style={{ marginTop: "1rem" }}>
+          <div className="mt3">
             <Reference
               avatarUrl="/images/theo.jpg"
               name={
@@ -239,8 +239,8 @@ const Index = () => (
             </Reference>
           </div>
         </div>
-        <div className="col-xs-12 col-lg-6">
-          <div style={{ marginTop: "10rem", transform: "scale(1.05)" }}>
+        <div className="col-xs-12 col-md-6">
+          <div className="mt3 mt65-l">
             <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
               The workshop was presented with well thought out code samples -
               and even though I was on a (less than ideally set up) Windows

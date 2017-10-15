@@ -77,14 +77,20 @@
   flex: 0 0 auto;
 }
 
+// ns
+@media screen and (min-width: 30em) {
+  .mt65-ns { margin-top: 10rem; }
+}
+
+// nsi
 @media screen and (min-width: 45em) {
-  .db-nsi {
-    display: block;
-  }
-  .dn-nsi {
-    display: none;
-  }
-  .df-nsi {
-    display: flex;
-  }
+  .db-nsi { display: block; }
+  .dn-nsi { display: none; }
+  .df-nsi { display: flex; }
+  .mt65-nsi { margin-top: 10rem; }
+}
+
+// l
+@media screen and (min-width: 60em) {
+  .mt65-l { margin-top: 10rem; }
 }
