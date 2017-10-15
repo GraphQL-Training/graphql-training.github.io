@@ -42,11 +42,40 @@ const PageHeader = ({ nav }) => (
           </header>
         </div>
         <div className="row">
-          <div className="pv5 pv7-l col-xs-12">
-            <h1 className="f1 ma0">GraphQL Training</h1>
-            <p className="f3 fw4">
-              Expert GraphQL training from the maintainer of PostGraphQL.
-            </p>
+          <div className="pv5 pv5-l col-xs-12">
+            <div className="flex flex-column items-center mb3 tc">
+              <img
+                alt="Logo"
+                className="mb4"
+                height={125}
+                src="/images/brain-medium.png"
+                width={125}
+              />
+              <div className="mb3">
+                <h1 className="f2 ma0">GraphQL Training</h1>
+              </div>
+              <p className="f4 fw6">
+                GraphQL training in London, Berlin and Europe.
+                <br />
+                From the maintainer of PostGraphQL.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="container">
+      <div className="row bg-black">
+        <div className="col-xs-12">
+          <div className="tools-logos-container flex flex-wrap justify-center w-100 pa3">
+            {["graphql", "apollo", "node", "react"].map(f => (
+              <img
+                className="header-tools-logo mh3 mv1 h1-ns"
+                key={f}
+                src={`/images/${f}-logo.png`}
+                title={`${f} logo`}
+              />
+            ))}
           </div>
         </div>
       </div>
