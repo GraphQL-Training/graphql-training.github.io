@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import { Section, RowCenter } from "./LayoutHelpers";
+import LinkType from "./LinkType";
 
 const CourseTitle = ({ children }) => (
   <h3 className="mb5 divider">{children}</h3>
@@ -12,10 +13,6 @@ const TitledParagraph = ({ title, children, className }) => (
     <p className="">{children}</p>
   </div>
 );
-
-const LinkType = ({ href, to, ...rest }) => {
-  return to ? <Link to={to} {...rest} /> : <a href={href} {...rest} />;
-};
 
 const HeaderLink = ({ faName, children, href, title, to, pushRight }) => (
   <li className={`${pushRight ? "ml-auto" : "ml4"} `}>

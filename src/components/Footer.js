@@ -1,13 +1,14 @@
 import React from "react";
 import { Section } from "./LayoutHelpers";
+import LinkType from "./LinkType";
 
-const FooterItem = ({ children, href, title, description }) => (
+const FooterItem = ({ children, href, to, title, description }) => (
   <li className="mr3 mb3">
     <span>
-      {href ? (
-        <a href={href} title={title} target="_blank">
+      {href || to ? (
+        <LinkType href={href} title={title} to={to}>
           {children}
-        </a>
+        </LinkType>
       ) : (
         children
       )}
@@ -36,11 +37,11 @@ const Footer = () => (
       <div className="col-xs-12 col-sm-4 ma0-l mb5">
         <Title>Courses</Title>
         <ul className="list pl0">
-          <FooterItem href="/graphql-training-frontend-course">
+          <FooterItem to="/graphql-training-frontend-course">
             GraphQL training for frontend React developers
           </FooterItem>
-          <FooterItem href="/graphql-training-frontend-course">
-            GraphQL training for frontend React developers
+          <FooterItem to="/graphql-training-fullstack-course">
+            GraphQL training for full stack developers
           </FooterItem>
         </ul>
       </div>

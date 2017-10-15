@@ -1,8 +1,5 @@
 import React from "react";
-
-const LinkType = ({ href, to, ...rest }) => {
-  return to ? <Link to={to} {...rest} /> : <a href={href} {...rest} />;
-};
+import LinkType from "./LinkType";
 
 const defaultClasses =
   "b--solid bw1 ph3 pointer ph3-ns pv2 flex items-center justify-center pv2-ns f5 f4-ns white tracked-light dib fw6 no-underline-hover grow";
