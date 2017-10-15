@@ -129,28 +129,21 @@ const Index = () => (
           <h3 className="mb5 divider">
             GraphQL For <br />React Developers
           </h3>
-          <div className="mb5">
+          <div className="mb5 light-gray">
             <FrontendCourseDescription />
           </div>
 
-          <div className="mb5">
+          <div className="mb5 light-gray">
             <FrontendCoursePoints />
           </div>
           <div className="pb5 mb4">
             <ButtonLinkSolid
-              className="w5-ns w-100 mh2-ns mv2"
-              href="/graphql-training-frontend-course"
-              title="Email us to sign up"
+              className="w5-ns w-100 mh2-ns mv2 pointer"
+              to="/graphql-training-frontend-course"
+              title="Learn more about GraphQL training for frontend developers in London"
             >
               Learn More
             </ButtonLinkSolid>
-            <ButtonLink
-              className="w5-ns w-100 mh2-ns mv2"
-              href="mailto:info@graphql-training.com"
-              title="Email us to sign up"
-            >
-              Sign Up
-            </ButtonLink>
           </div>
         </div>
       </div>
@@ -159,27 +152,20 @@ const Index = () => (
           <h3 className="mb5 divider">
             GraphQL for <br />Fullstack Developers & Teams
           </h3>
-          <div className="mb5">
+          <div className="mb5 light-gray">
             <FullstackCourseDescription />
           </div>
-          <div className="mb5">
+          <div className="mb5 light-gray">
             <FullstackCoursePoints />
           </div>
           <div className="pb5">
             <ButtonLinkSolid
-              className="w5-ns w-100 mh2-ns mv2"
-              href="/graphql-training-frontend-course"
-              title="Email us to sign up"
+              className="w5-ns w-100 mh2-ns mv2 pointer"
+              to="/graphql-training-frontend-course"
+              title="Learn more about GraphQL training for full stack developers and teams in London"
             >
               Learn More
             </ButtonLinkSolid>
-            <ButtonLink
-              className="w5-ns w-100 mh2-ns mv2"
-              href="mailto:info@graphql-training.com"
-              title="Email us to sign up"
-            >
-              Sign Up
-            </ButtonLink>
           </div>
         </div>
       </div>
@@ -189,7 +175,7 @@ const Index = () => (
       <div className="row">
         <div className="col-xs-12">
           <RowCenter className="mb4">
-            <h3 className="divider-center">Quotes</h3>
+            <h3 className="divider-center">What They Are Saying</h3>
           </RowCenter>
         </div>
       </div>
