@@ -1,5 +1,7 @@
 import React from "react";
 import { HeaderLink } from "./PageElements";
+import Link from "gatsby-link";
+import { ButtonLink, ButtonLinkSolid } from "./Button";
 
 const PageHeader = ({ nav }) => (
   <div className="bg-almost-black relative">
@@ -9,11 +11,13 @@ const PageHeader = ({ nav }) => (
           <header className="f5 w-100">
             <div className="col-xs-12 flex items-center pv3">
               <div className="flex items-center">
-                <img
-                  className="nav-logo"
-                  height={36}
-                  src="/images/small-brain-light.png"
-                />
+                <Link to="/" title="Home">
+                  <img
+                    className="nav-logo"
+                    height={36}
+                    src="/images/small-brain-light.png"
+                  />
+                </Link>
               </div>
               <div className="ml-auto flex items-center togglable-menu-container">
                 <input
@@ -55,13 +59,13 @@ const PageHeaderDefault = () => (
     nav={
       <ul className="flex justify-start pv0 ph3 items-center">
         <HeaderLink
-          href="/graphql-training-frontend"
+          to="/graphql-training-frontend"
           title="GraphQL Training Course for Frontend Developers"
         >
           Frontend Syllabus
         </HeaderLink>
         <HeaderLink
-          href="/graphql-training-fullstack"
+          to="/graphql-training-fullstack"
           title="GraphQL Training Course for Full Stack Developers and Teams"
         >
           Full Stack Syllabus

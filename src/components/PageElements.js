@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link";
 
 const CourseTitle = ({ children }) => (
   <h3 className="mb5 divider">{children}</h3>
@@ -11,16 +12,21 @@ const TitledParagraph = ({ title, children, className }) => (
   </div>
 );
 
-const HeaderLink = ({ faName, children, href, title, pushRight }) => (
+const LinkType = ({ href, to, ...rest }) => {
+  return to ? <Link to={to} {...rest} /> : <a href={href} {...rest} />;
+};
+
+const HeaderLink = ({ faName, children, href, title, to, pushRight }) => (
   <li className={`${pushRight ? "ml-auto" : "ml4"} `}>
-    <a
+    <LinkType
       href={href}
       title={title}
+      to={to}
       className="flex items-center no-underline-hover ttu f7 fw6"
     >
       {!!faName && <span className={`fa fa-${faName} f3 mr2 white`} />}
       <span className="white">{children}</span>
-    </a>
+    </LinkType>
   </li>
 );
 
