@@ -42,11 +42,11 @@ const PageHeader = ({ nav }) => (
           </header>
         </div>
         <div className="row">
-          <div className="pv5 pv5-l col-xs-12">
+          <div className="pv6 pv6-l col-xs-12">
             <div className="flex flex-column items-center mb3 tc">
               <img
                 alt="Logo"
-                className="mb4"
+                className="mb5"
                 height={125}
                 src="/images/brain-medium.png"
                 width={125}

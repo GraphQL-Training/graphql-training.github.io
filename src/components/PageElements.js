@@ -44,13 +44,17 @@ const FrontendCoursePoints = () => (
 );
 
 const FrontendCourseDescription = () => (
-  <p>
-    This 2 day course gives React developers the experience and intuitions to
-    create GraphQL applications rapidly and on the right footing. Starting with
-    learning the core concepts and how to use queries, mutations and fragments,
-    the course progresses to building advanced skills in areas such as
-    authentication, caching, optimistic updates and debugging.
-  </p>
+  <div>
+    <p>
+      This 2 day course gives React developers the experience and intuitions to
+      create GraphQL applications rapidly and on the right footing.
+    </p>
+    <p>
+      Starting with learning the core concepts and how to use queries, mutations
+      and fragments, the course progresses to building advanced skills in areas
+      such as authentication, caching, optimistic updates and debugging.
+    </p>
+  </div>
 );
 
 const FullstackCoursePoints = () => (

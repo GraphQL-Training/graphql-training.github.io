@@ -28,6 +28,33 @@ const Reference = ({ children, avatarUrl, name }) => (
   </div>
 );
 
+const CourseTitleRow = ({ children }) => (
+  <div className="row bg-white">
+    <div className="col-xs-12">
+      <div className="ph5 pt6 flex flex-column items-center">
+        <h3 className="divider-center mb5">{children}</h3>
+      </div>
+    </div>
+  </div>
+);
+
+const CourseDescriptionRow = ({ left, right }) => (
+  <div className="row bg-white">
+    <div className="col-xs-6">
+      <div className="ph5 h-100 flex flex-column items-center lh-long">
+        {left}
+      </div>
+    </div>
+    <div className="col-xs-6">
+      <div className="bg-white ph5 h-100 flex flex-column items-center mid-gray">
+        <div className="h-100 flex flex-column">
+          <div className="mb5">{right}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const Bio = ({ className, name, avatarUrl, children, isRight }) => {
   const cn = isRight ? "order-0" : "order-2";
   const style = isRight
@@ -68,21 +95,21 @@ const Index = () => (
     <PageHeaderDefault />
     <Section className="bg-almost-black white">
       <div className="row">
-        <div className="col-xs-12 flex-column tc tl-l items-center items-start-l tc">
-          <TitledParagraph
-            className="flex flex-column items-center"
-            title="The GraphQL Revolution"
-          >
-            GraphQL is a breakthrough in API design adopted by many of the
-            world’s top companies (and many small ones too). The creator of the
-            open standard, Facebook, has used it to serve 2 billion users and
-            cite it as a key reason for their dominance in mobile.
-          </TitledParagraph>
-          <TitledParagraph className="flex flex-column items-center">
-            By adopting GraphQL in your business you can innovate faster and
-            deliver better web experiences leading to increase conversions,
-            fewer lost sales due to bugs and higher search engine ratings.
-          </TitledParagraph>
+        <div className="col-xs-12">
+          <div className="flex flex-column items-center">
+            <h3 className="divider-center">The GraphQL Revolution</h3>
+            <p>
+              GraphQL is a breakthrough in API design adopted by many of the
+              world’s top companies (and many small ones too). The creator of
+              the open standard, Facebook, has used it to serve 2 billion users
+              and cite it as a key reason for their dominance in mobile.
+            </p>
+            <p className="">
+              By adopting GraphQL in your business you can innovate faster and
+              deliver better web experiences leading to increase conversions,
+              fewer lost sales due to bugs and higher search engine ratings.
+            </p>
+          </div>
         </div>
       </div>
     </Section>
@@ -116,14 +143,122 @@ const Index = () => (
       </RowCenter>
     </Section>
 
-    <Section>
-      <div className="row">
-        <div className="col-xs-12 flex flex-column items-center">
-          <h2 className="ttu tracked-light mb0">GraphQL Courses</h2>
+    <section className="bg-almost-black pv6">
+      <div className="container mw8">
+        <div className="row">
+          <div className="col-xs-12 flex flex-column items-center">
+            <h2 className="ttu tracked-light mb5 white">Courses</h2>
+          </div>
+        </div>
+        <CourseTitleRow>
+          GraphQL For <br />React Developers
+        </CourseTitleRow>
+        <CourseDescriptionRow
+          left={
+            <div className="h-100 flex flex-column">
+              <div className="mb3">
+                <FrontendCourseDescription />
+              </div>
+            </div>
+          }
+          right={<FrontendCoursePoints />}
+        />
+        <div className="row bg-white mb4">
+          <div className="col-xs-12 flex flex-column items-center">
+            <ButtonLinkSolid
+              className="w5-ns w-100 mh2-ns mb6 pointer"
+              to="/graphql-training-frontend-course"
+              title="Learn more about GraphQL training for frontend developers in London"
+            >
+              Learn More
+            </ButtonLinkSolid>
+          </div>
+        </div>
+        <CourseTitleRow>
+          GraphQL for <br />Fullstack Developers & Teams
+        </CourseTitleRow>
+        <CourseDescriptionRow
+          left={
+            <div className="h-100 flex flex-column">
+              <div className="mb5">
+                <FullstackCourseDescription />
+              </div>
+            </div>
+          }
+          right={<FullstackCoursePoints />}
+        />
+        <div className="row bg-white">
+          <div className="col-xs-12 flex flex-column items-center">
+            <ButtonLinkSolid
+              className="w5-ns w-100 mh2-nspointer mb6"
+              to="/graphql-training-frontend-course"
+              title="Learn more about GraphQL training for full stack developers and teams in London"
+            >
+              Learn More
+            </ButtonLinkSolid>
+          </div>
         </div>
       </div>
-    </Section>
-    <section className="bg-almost-black white flex">
+    </section>
+
+    <section className="bg-almost-black pv6 dn">
+      <div className="container mw8">
+        <div className="row">
+          <div className="col-xs-12 flex flex-column items-center">
+            <h2 className="ttu tracked-light mb5 white">Courses</h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-6">
+            <div className="bg-white shadow--l3 pa5 h-100 flex flex-column items-center">
+              <div className="h-100 flex flex-column">
+                <h3 className="mb5 divider">
+                  GraphQL For <br />React Developers
+                </h3>
+                <div className="mb5">
+                  <FrontendCourseDescription />
+                </div>
+
+                <div className="mb5">
+                  <FrontendCoursePoints />
+                </div>
+                <ButtonLinkSolid
+                  className="w5-ns w-100 mh2-ns mv2 pointer mt-auto"
+                  to="/graphql-training-frontend-course"
+                  title="Learn more about GraphQL training for frontend developers in London"
+                >
+                  Learn More
+                </ButtonLinkSolid>
+              </div>
+            </div>
+          </div>
+          <div className="col-xs-6">
+            <div className="bg-white shadow--l3 pa5 h-100 flex flex-column items-center">
+              <div className="h-100 flex flex-column">
+                <h3 className="mb5 divider">
+                  GraphQL for <br />Fullstack Developers & Teams
+                </h3>
+                <div className="mb5">
+                  <FullstackCourseDescription />
+                </div>
+                <div className="mb5">
+                  <FullstackCoursePoints />
+                </div>
+                <ButtonLinkSolid
+                  className="w5-ns w-100 mh2-ns mv2 pointer"
+                  to="/graphql-training-frontend-course"
+                  title="Learn more about GraphQL training for full stack developers and teams in London"
+                >
+                  Learn More
+                </ButtonLinkSolid>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="bg-almost-black white dn">
       <div className="flex-grow-1 flex-shrink-1 flex bg-laptop-dark-gray flex-column items-center pv6 ph5">
         <div>
           <h3 className="mb5 divider">

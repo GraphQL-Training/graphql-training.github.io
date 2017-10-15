@@ -53,12 +53,14 @@
 .mw10 { max-width: 128rem; }
 .pt1vh { padding-top: 15vh }
 .pb1vh { padding-bottom: 15vh }
+.pa55 { padding: 6rem }
 .gutter-left { padding-left: $gutter; }
 .gutter-right { padding-right: $gutter; }
-.flex-grow-1 { flex-grow: 1}
-.flex-shrink-1 { flex-shrink: 1 }
+.flex-grow-1 { flex-grow: 1; }
+.flex-shrink-1 { flex-shrink: 1; }
 .w6 { width: 24rem }
-.mvh-100 { min-height: 100vh }
+.mvh-100 { min-height: 100vh; }
+.mt-auto { margin-top: auto; }
 
 // Interactions
 .events-none { pointer-events: none; }
