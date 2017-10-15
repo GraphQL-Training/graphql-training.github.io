@@ -61,11 +61,6 @@ const Index = () => (
     <BioSection />
     <section className="bg-almost-black pv6-l pv5">
       <div className="container mw8">
-        <div className="row">
-          <div className="col-xs-12 flex flex-column items-center">
-            <h2 className="ttu tracked-light mb white f3 f2-l">Courses</h2>
-          </div>
-        </div>
         <CourseTitleRow>
           GraphQL For <br />React Developers
         </CourseTitleRow>
