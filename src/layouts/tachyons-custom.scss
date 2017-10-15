@@ -25,7 +25,7 @@
 
 // Text
 .tracked-light { letter-spacing: .03em; }
-.antialised { -webkit-font-smoothing: antialiased; }
+.antialised { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }
 .lh-long { line-height: 1.75; }
 .divider-center,
 .divider {
@@ -58,6 +58,7 @@
 .flex-grow-1 { flex-grow: 1}
 .flex-shrink-1 { flex-shrink: 1 }
 .w6 { width: 24rem }
+.mvh-100 { min-height: 100vh }
 
 // Interactions
 .events-none { pointer-events: none; }

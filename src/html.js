@@ -33,7 +33,7 @@ const Html = ({ postBodyComponents, headComponents, body }) => (
       />
       <script src="https://use.fontawesome.com/c72bfae6f9.js" />
     </head>
-    <body className="sans-serif almost-black vh-100 antialised f5">
+    <body className="sans-serif almost-black mvh-100 antialised f5">
       <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
       {postBodyComponents}
     </body>
