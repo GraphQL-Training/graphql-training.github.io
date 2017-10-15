@@ -21,7 +21,7 @@ const Title = ({ children }) => <h6 className="ttu mb4 pb2">{children}</h6>;
 const Footer = () => (
   <Section className="bg-almost-black light-gray">
     <div className="row">
-      <div className="col-xs-12 col-sm-4">
+      <div className="col-xs-12 col-sm-4 ma0-l mb5">
         <Title>Contact</Title>
         <ul className="list pl0">
           <FooterItem href="https://www.twitter.com/benjie">@benjie</FooterItem>
@@ -33,7 +33,7 @@ const Footer = () => (
           </FooterItem>
         </ul>
       </div>
-      <div className="col-xs-12 col-sm-4">
+      <div className="col-xs-12 col-sm-4 ma0-l mb5">
         <Title>Courses</Title>
         <ul className="list pl0">
           <FooterItem href="/graphql-training-frontend-course">
@@ -44,7 +44,7 @@ const Footer = () => (
           </FooterItem>
         </ul>
       </div>
-      <div className="col-xs-12 col-sm-4">
+      <div className="col-xs-12 col-sm-4 ma0-l mb5">
         <Title>Projects</Title>
         <ul className="list pl0">
           <FooterItem
