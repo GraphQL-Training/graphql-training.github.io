@@ -46,7 +46,7 @@ const NavCore = () => (
       Frontend Syllabus
     </HeaderLink>
     <HeaderLink
-      to="/graphql-training-fullstack"
+      to="/graphql-training-fullstack-course"
       title="GraphQL Training Course for Full Stack Developers and Teams"
     >
       Full Stack Syllabus
@@ -64,7 +64,7 @@ const NavCore = () => (
   </ul>
 );
 
-const PageHeaderPage = () => (
+const PageHeaderPage = ({ title }) => (
   <div className="bg-almost-black relative">
     <div className="white flex justify-center flex-column bg-blue-gradient">
       <div className="container mw8 w-100">
@@ -75,10 +75,7 @@ const PageHeaderPage = () => (
           <div className="pv5 pv5-l col-xs-12">
             <div className="flex flex-column items-center mb3 tc">
               <div className="mb3">
-                <h1 className="f2 ma0">
-                  GraphQL Training For
-                  <br />Frontend Engineers
-                </h1>
+                <h1 className="f2 ma0">{title}</h1>
               </div>
               <p className="f4 fw6">
                 GraphQL training in London, Berlin and Europe.

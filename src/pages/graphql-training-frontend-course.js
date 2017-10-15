@@ -38,7 +38,14 @@ const Index = () => (
         },
       ]}
     />
-    <PageHeaderPage />
+    <PageHeaderPage
+      title={
+        <div>
+          GraphQL Training For
+          <br />Frontend Engineers
+        </div>
+      }
+    />
     <Section className="bg-almost-black white">
       <div className="row">
         <div className="col-xs-12">
