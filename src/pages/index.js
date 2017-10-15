@@ -5,76 +5,20 @@ import { PageHeaderDefault } from "../components/PageHeader";
 import { Section, RowCenter } from "../components/LayoutHelpers";
 import Footer from "../components/Footer";
 import {
+  ApproachSection,
+  Bio,
+  BioSection,
+  CourseDescriptionRow,
   CourseTitle,
-  TitledParagraph,
-  HeaderLink,
+  CourseTitleRow,
   FrontendCourseDescription,
   FrontendCoursePoints,
-  FullstackCoursePoints,
   FullstackCourseDescription,
+  FullstackCoursePoints,
+  HeaderLink,
+  Reference,
+  TitledParagraph,
 } from "../components/PageElements";
-
-const Reference = ({ children, avatarUrl, name }) => (
-  <div className="flex justify-center h-100">
-    <div className="shadow--l3 mb4 bg-white pa4 w-100 mw6 flex flex-column flex-row-l">
-      <div className="w4 mr4 flex flex-column mb4 justify-start">
-        <img className="w4-l h4-l w3 h3 mb3 br-100" src={avatarUrl} />
-        <div className="near-black fw6 ">{name}</div>
-      </div>
-      <div className="quote-wrapper">
-        <blockquote className="ma0">{children}</blockquote>
-      </div>
-    </div>
-  </div>
-);
-
-const CourseTitleRow = ({ children }) => (
-  <div className="row bg-white">
-    <div className="col-xs-12">
-      <div className="ph5 pt6-l pt5 flex flex-column items-center">
-        <h3 className="divider-center mb5">{children}</h3>
-      </div>
-    </div>
-  </div>
-);
-
-const CourseDescriptionRow = ({ left, right }) => (
-  <div className="row bg-white">
-    <div className="col-xs-12 col-lg-6">
-      <div className="ph5-ns h-100 flex flex-column items-center lh-long">
-        {left}
-      </div>
-    </div>
-    <div className="col-xs-12 col-lg-6">
-      <div className="bg-white ph5-ns h-100 flex flex-column items-center mid-gray">
-        <div className="h-100 flex flex-column">
-          <div className="mb5">{right}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const Bio = ({ className, name, avatarUrl, children, isRight }) => {
-  const cn = isRight ? "order-0" : "order-2";
-  const style = isRight
-    ? { paddingLeft: "1000px", marginLeft: "-1000px" }
-    : { paddingRight: "1000px", marginRight: "-1000px" };
-  return (
-    <div className={`${className} shadow--l3 bg-white`} style={style}>
-      <div className="flex justify-between">
-        <div
-          className="w6 cover bg-center order-1 db-l dn"
-          style={{ backgroundImage: `url(/${avatarUrl})` }}
-        />
-        <div className={`${cn} pa4`}>
-          <div className="fw6 f4 mt3 ttu tracked-light mb4">{name}</div>
-          <p className="lh-long dark-gray">{children}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Index = () => (
   <div>
@@ -114,35 +58,7 @@ const Index = () => (
       </div>
     </Section>
 
-    <Section className="bg-light-gray overflow-hidden" isAlt>
-      <RowCenter>
-        <h3 className="divider-center">20 Years Combined Experience</h3>
-        <br />
-        <br />
-        <Bio
-          className="mb5"
-          name="Benjie Gillam"
-          avatarUrl="images/benjie-medium.jpg"
-          isRight
-        >
-          Benjie has been writing applications, servers and APIs professionally
-          for over a decade. As part of maintaining PostGraphQL, a popular OSS
-          project that generates a GraphQL API from your existing PostgreSQL
-          database schema, Benjie built the Graphile suite of tools for building
-          scalable GraphQL schemas through plugins. He sees GraphQL as one of
-          the biggest advancements in web API technology during his career.
-        </Bio>
-        <Bio name="Jof Arnold" avatarUrl="images/jof-medium.jpg">
-          Jof started with JavaScript in 1998 with Microsoft’s release of
-          Internet Explorer 3. Since then he has worked at the cutting edge of
-          the frontend stack, being amongst the first in 2013 to introduce React
-          to a large-scale production application. Jof brings a user-centric
-          approach to frontend technologies. He is a regular speaker and
-          contributor to the London tech scene in all matters frontend.
-        </Bio>
-      </RowCenter>
-    </Section>
-
+    <BioSection />
     <section className="bg-almost-black pv6-l pv5">
       <div className="container mw8">
         <div className="row">
@@ -251,50 +167,7 @@ const Index = () => (
       </div>
     </Section>
 
-    <Section className="">
-      <RowCenter>
-        <div>
-          <h3 className="divider mb5">On-site, Off-site or Remote</h3>
-          <p>
-            Every organization’s need is different which is why we love to work
-            with teams on site, customizing the syllabus to meet your needs.
-            With a decade of experience in building products and consulting with
-            small startups through to household name media companies, we
-            understand how to help your developers achieve the very best…
-          </p>
-          <p>
-            Need a remote or external location? We can do that too. We conduct
-            bespoke online webinars and can host up to 20 developers at central
-            locations in all major European cities.
-          </p>
-          <p>
-            <a
-              className="inherit grow"
-              href="mailto:info@graphql-training.com"
-              title="Email GraphQL Training"
-            >
-              Contact us
-            </a>{" "}
-            for more details.
-          </p>
-          <h3 className="divider mb5 mt5">Teaching Style</h3>
-          <p>
-            We find that most people learn best by doing, so our courses have
-            multiple cycles of listening to a short presentation and then
-            performing a programming exercise using the techniques discussed.
-            This gives the student opportunity to solidify their understanding,
-            experiment and even to make mistakes and learn how to fix them.
-          </p>
-          <p>
-            We operate a buddy system where each student is paired with another
-            so they can help each other to solve any problems, and our teachers
-            will be on-hand to help clarify any uncertainties and guide how to
-            fix issues.
-          </p>
-        </div>
-      </RowCenter>
-    </Section>
-
+    <ApproachSection />
     <Section isAlt>
       <RowCenter>
         <h3 className="mb5 divider-center">

@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderLink } from "./PageElements";
+import { HeaderLink, Logos } from "./PageElements";
 import Link from "gatsby-link";
 import { ButtonLink, ButtonLinkSolid } from "./Button";
 
@@ -64,22 +64,6 @@ const PageHeader = ({ nav }) => (
         </div>
       </div>
     </div>
-    <div className="container">
-      <div className="row bg-black">
-        <div className="col-xs-12">
-          <div className="tools-logos-container flex flex-wrap justify-center w-100 pa3">
-            {["graphql", "apollo", "node", "react"].map(f => (
-              <img
-                className="header-tools-logo mh3 mv1 h1-ns"
-                key={f}
-                src={`/images/${f}-logo.png`}
-                title={`${f} logo`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 );
 
@@ -88,7 +72,7 @@ const PageHeaderDefault = () => (
     nav={
       <ul className="flex justify-start pv0 ph3 items-center">
         <HeaderLink
-          to="/graphql-training-frontend"
+          to="/graphql-training-frontend-course"
           title="GraphQL Training Course for Frontend Developers"
         >
           Frontend Syllabus
