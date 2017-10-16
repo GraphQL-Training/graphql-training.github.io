@@ -2,7 +2,7 @@ import React from "react";
 import LinkType from "./LinkType";
 
 const defaultClasses =
-  "b--solid bw1 ph3 pointer ph3-ns pv2 flex items-center justify-center pv2-ns f5 f4-ns white tracked-light dib fw6 no-underline-hover grow";
+  "b--solid bw1 ph3 pointer ph3-ns pv2 flex items-center select-none justify-center pv2-ns f5 f4-ns white tracked-light dib fw6 no-underline-hover grow";
 
 const ButtonLink = ({ className, href, to, children, title }) => (
   <LinkType
