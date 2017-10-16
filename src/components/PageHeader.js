@@ -94,4 +94,4 @@ const PageHeaderDefault = () => <PageHeader nav={<NavCore />} />;
 
 export default PageHeader;
 
-export { PageHeaderDefault, PageHeaderPage };
+export { PageHeaderDefault, PageHeaderPage, NavCore, PageHeader };
