@@ -102,7 +102,7 @@ const Index = () => (
           <div className="col-xs-12 flex flex-column items-center">
             <ButtonLinkSolid
               className="w5-ns w-100 mh2-ns mb6-l mb5"
-              to="/graphql-training-frontend-course"
+              to="/graphql-training-fullstack-course"
               title="Learn more about GraphQL training for full stack developers and teams in London"
             >
               Learn More
