@@ -1,12 +1,24 @@
 {
   "assetsByChunkName": {
+    "component---src-pages-graphql-training-frontend-course-js": [
+      "component---src-pages-graphql-training-frontend-course-js-40e8c3778521f8790335.js",
+      "component---src-pages-graphql-training-frontend-course-js-40e8c3778521f8790335.js.map"
+    ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-a3ce4e1a57fbdf1de933.js",
-      "component---src-pages-index-js-a3ce4e1a57fbdf1de933.js.map"
+      "component---src-pages-index-js-299445084ba373d1dd17.js",
+      "component---src-pages-index-js-299445084ba373d1dd17.js.map"
+    ],
+    "path---graphql-training-fullstack-course": [
+      "path---graphql-training-fullstack-course-a0e39f21c11f6a62c5ab.js",
+      "path---graphql-training-fullstack-course-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-pages-graphql-training-fullstack-course-js": [
+      "component---src-pages-graphql-training-fullstack-course-js-c5d93c691c1668d0801c.js",
+      "component---src-pages-graphql-training-fullstack-course-js-c5d93c691c1668d0801c.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-b68bfed34b81c9a6feb4.js",
@@ -16,13 +28,29 @@
       "path---index-a0e39f21c11f6a62c5ab.js",
       "path---index-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-a1fd16b7018985b060a4.js",
+      "component---src-pages-404-js-a1fd16b7018985b060a4.js.map"
+    ],
     "commons": [
-      "commons-28a1bb301d928baaaa1a.js",
-      "commons-28a1bb301d928baaaa1a.js.map"
+      "commons-4b192c787e503a13126a.js",
+      "commons-4b192c787e503a13126a.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-4311a8cd3520d6ced7fa.js",
-      "app-4311a8cd3520d6ced7fa.js.map"
+      "app-ed40c7d968b68129b53f.js",
+      "app-ed40c7d968b68129b53f.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---graphql-training-frontend-course": [
+      "path---graphql-training-frontend-course-a0e39f21c11f6a62c5ab.js",
+      "path---graphql-training-frontend-course-a0e39f21c11f6a62c5ab.js.map"
     ]
   }
 }
