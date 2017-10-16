@@ -171,7 +171,7 @@ const Index = () => (
         <div className="bg-white shadow--l3 flex items-stretch mb4">
           <div
             className="w5 cover bg-center"
-            style={{ backgroundImage: "url(/images/lee-byron-large.jpeg" }}
+            style={{ backgroundImage: "url('images/lee-byron-large.jpeg')" }}
           />
           <div className="quote-wrapper pa4">
             <blockquote className="pa0 ml0 mr0 mt0 mb4">
