@@ -149,7 +149,7 @@ const Index = () => (
           <div className="col-xs-12 flex flex-column items-center">
             <ButtonLinkSolid
               className="w5-ns w-100 mh2-ns mb6-l mb5 mt0 mt4-l"
-              to="mailto:info@graphql-training"
+              href="mailto:info@graphql-training"
               title="Email GraphQL Training"
             >
               Sign Up
