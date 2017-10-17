@@ -168,10 +168,10 @@ const Index = () => (
         <h3 className="mb5 divider-center">
           GraphQL &ndash; The Future of Web APIS
         </h3>
-        <div className="bg-white shadow--l3 flex items-stretch mb4">
+        <div className="bg-white shadow--l3 items-stretch mb4 flex flex-row-l flex-column justify-between">
           <div
-            className="w5 cover bg-center"
-            style={{ backgroundImage: "url('images/lee-byron-large.jpeg')" }}
+            className="w5-l cover bg-center w-100 mnh5"
+            style={{ backgroundImage: "url('/images/lee-byron-large.jpeg')" }}
           />
           <div className="quote-wrapper pa4">
             <blockquote className="pa0 ml0 mr0 mt0 mb4">
