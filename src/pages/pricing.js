@@ -207,6 +207,7 @@ class Index extends React.Component {
                   Training duration: {durationString}
                   <br />
                   <Slider
+                    dots
                     min={0}
                     max={KEYS.length - 1}
                     value={this.state.duration}
