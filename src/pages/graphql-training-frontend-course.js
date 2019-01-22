@@ -118,6 +118,7 @@ const Index = () => (
                 Day 2: Building with <br /> GraphQL and Apollo
               </h4>
               <ul>
+                <li>Day 1 recap and questions.</li>
                 <li>
                   Apollo Basics: adding Apollo GraphQL client to a React app.
                 </li>
@@ -125,17 +126,16 @@ const Index = () => (
                   Authenticating GraphQL requests: including JWTs and
                   sessions/cookies.
                 </li>
-                <li>Advanced Apollo: exploring Apollo options and HOCs.</li>
                 <li>
-                  Simplification: removing unnecessary state from your app.
+                  Advanced Apollo: exploring Apollo options and components.
+                </li>
+                <li>
+                  Ask for only what you need using GraphQL Fragments with
+                  Apollo.
                 </li>
                 <li>
                   Debugging: using the DevTools for an improved debugging
                   experience.
-                </li>
-                <li>
-                  Advanced mutations: telling the Apollo object store what to do
-                  when it’s not obvious.
                 </li>
                 <li>Optimistic updates: slick interface for users.</li>
                 <li>
@@ -166,15 +166,15 @@ const Index = () => (
               <p>
                 All attendees must bring a laptop with git, the latest version
                 of Google Chrome, the React Developer Tools Chrome extension,
-                and Node v8.6 or higher with the associated npm installed.{" "}
+                and Node v10 or higher with the associated npm installed.
               </p>
               <p className="">
-                The course material assumes a working knowledge of ES2017,
-                including concepts such as destructuring assignment,
+                The course material assumes a working knowledge of JavaScript
+                ES2017, including concepts such as destructuring assignment,
                 `async`/`await` and promises. A good understanding of React -
                 particularly concepts like state management, lifecycle methods
                 and higher order components - is advised. We’re happy to send
-                primers for those not yet comfortable with these technologies.{" "}
+                primers for those not yet comfortable with these technologies.
               </p>
             </div>
           </div>

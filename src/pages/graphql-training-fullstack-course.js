@@ -175,13 +175,13 @@ const Index = () => (
               <p>
                 All attendees must bring a laptop with the latest version of
                 Google Chrome installed. The learnings are transferrable between
-                different languages but from time to time we'll be performing
+                different languages but from time to time we‘ll be performing
                 examples with the GraphQL reference implementation so a good
                 understanding of modern JavaScript (ES2017) will be very
                 helpful. If you prefer another environment, you should come to
                 Day 2 with your favourite stack and GraphQL libraries
                 pre-installed. Those attendees wishing to follow along with the
-                JS code examples should have Node.js v8.6 or higher with the
+                JS code examples should have Node.js v10 or higher with the
                 accompanying npm installed.{" "}
               </p>
             </div>
