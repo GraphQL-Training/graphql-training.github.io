@@ -103,7 +103,7 @@ const Index = () => (
             }
             right={<FullstackCoursePoints />}
           />
-          <div className="row bg-white">
+          <div className="row bg-white mb4">
             <div className="col-xs-12 flex flex-column items-center">
               <ButtonLinkSolid
                 className="w5-ns w-100 mh2-ns mb6-l mb5"
@@ -111,6 +111,46 @@ const Index = () => (
                 title="Learn more about GraphQL training for full stack developers and teams in London"
               >
                 Learn More
+              </ButtonLinkSolid>
+            </div>
+          </div>
+          <CourseTitleRow>
+            Bespoke GraphQL Course
+            <br />
+            For Your Team
+          </CourseTitleRow>
+          <CourseDescriptionRow
+            left={
+              <div className="h-100 flex flex-column">
+                <div className="mb3">
+                  <div>
+                    <p>
+                      Discuss your requirements and goals with our experts and
+                      we‘ll help come up with the perfect course for your team.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            }
+            right={
+              <ul>
+                <li>
+                  From a half day intensive course up to a 3-day comprehensive
+                  course
+                </li>
+                <li>Bespoke to your stack</li>
+                <li>Modular learning</li>
+              </ul>
+            }
+          />
+          <div className="row bg-white mb4">
+            <div className="col-xs-12 flex flex-column items-center">
+              <ButtonLinkSolid
+                className="w5-ns w-100 mh2-ns mb6-l mb5"
+                href="mailto:info@graphql-training.com?subject=Bespoke%20GraphQL%20Course"
+                title="Learn more about GraphQL training for frontend developers in London"
+              >
+                Email us
               </ButtonLinkSolid>
             </div>
           </div>
