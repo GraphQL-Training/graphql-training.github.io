@@ -47,7 +47,7 @@ const Index = () => (
               <p>
                 GraphQL is a breakthrough in API design adopted by many of the
                 world’s top companies (and many small ones too). The creator of
-                the open standard, Facebook, has used it to serve 2 billion
+                the open standard, Facebook, has used it to serve over 2 billion
                 users and cite it as a key reason for their dominance in mobile.
               </p>
               <p className="">
@@ -130,16 +130,25 @@ const Index = () => (
               <Reference
                 name={
                   <div>
-                    Neil
+                    Max
                     <br />
-                    Sweeney
+                    Bickett
                   </div>
                 }
-                avatarUrl="/images/neil.jpg"
+                avatarBackground={{
+                  backgroundSize: "80%",
+                  backgroundColor: "#000000",
+                }}
+                avatarUrl="/images/maana.png"
               >
-                Benjie can give a massively in-depth talk without making your
-                brain melt. His speaking style makes the subject very
-                approachable and gets you excited for what you are learning.
+                We were hosting a critical 30-person customer training session
+                for a Fortune 50 company, and needed to establish a baseline
+                understanding of GraphQL. Benjie was flexible, professional, and
+                accommodating in working with us to build a GraphQL module that
+                fit our specific agenda and trainee backgrounds. In the
+                feedback, our customers specifically called out Benjie’s clarity
+                and engaging teaching style out as a highlight of the 3-day
+                training. I can’t recommend him highly enough.
               </Reference>
             </div>
             <div className="mt3">
@@ -159,7 +168,23 @@ const Index = () => (
             </div>
           </div>
           <div className="col-xs-12 col-md-6">
-            <div className="mt3 mt65-l">
+            <div>
+              <Reference
+                name={
+                  <div>
+                    Neil
+                    <br />
+                    Sweeney
+                  </div>
+                }
+                avatarUrl="/images/neil.jpg"
+              >
+                Benjie can give a massively in-depth talk without making your
+                brain melt. His speaking style makes the subject very
+                approachable and gets you excited for what you are learning.
+              </Reference>
+            </div>
+            <div className="mt3">
               <Reference name="Lissi S." avatarUrl="/images/lissi.jpg">
                 The workshop was presented with well thought out code samples -
                 and even though I was on a (less than ideally set up) Windows

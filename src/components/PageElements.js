@@ -57,17 +57,16 @@ const ApproachSection = () => (
         </p>
         <h3 className="divider mb5 mt5">Teaching Style</h3>
         <p>
-          We find that most people learn best by doing, so our courses have
-          multiple cycles of listening to a short presentation and then
-          performing a programming exercise using the techniques discussed. This
-          gives the student opportunity to solidify their understanding,
+          We find that most people learn best by doing, so our 1-day and 2-day
+          courses have multiple cycles of listening to a short presentation and
+          then performing a programming exercise using the techniques discussed.
+          This gives the student opportunity to solidify their understanding,
           experiment and even to make mistakes and learn how to fix them.
         </p>
         <p>
           We operate a buddy system where each student is paired with another so
-          they can help each other to solve any problems, and our teachers will
-          be on-hand to help clarify any uncertainties and guide how to fix
-          issues.
+          they can help each other to solve any problems, and Benjie will be
+          on-hand to help clarify any uncertainties and guide how to fix issues.
         </p>
       </div>
     </RowCenter>
@@ -129,11 +128,20 @@ const FullstackCourseDescription = () => (
   </div>
 );
 
-const Reference = ({ children, avatarUrl, name }) => (
+const Reference = ({ children, avatarUrl, avatarBackground = null, name }) => (
   <div className="flex justify-center h-100">
     <div className="shadow--l3 mb4 bg-white pa4 w-100 mw6 flex flex-column flex-row-l">
       <div className="w4 mr4 flex flex-column mb4 justify-start">
-        <img className="w4-l h4-l w3 h3 mb3 br-100" src={avatarUrl} />
+        <div
+          className="w4-l h4-l w3 h3 mb3 br-100"
+          style={{
+            backgroundImage: `url('${avatarUrl}')`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "50% 50%",
+            ...avatarBackground,
+          }}
+        />
         <div className="near-black fw6 ">{name}</div>
       </div>
       <div className="quote-wrapper">
@@ -217,7 +225,7 @@ const Logos = () => (
 const BioSection = () => (
   <Section className="bg-light-gray overflow-hidden" isAlt>
     <RowCenter>
-      <h3 className="divider-center">20 Years Combined Experience</h3>
+      <h3 className="divider-center">Meet the trainer</h3>
       <br />
       <br />
       <Bio
@@ -227,19 +235,13 @@ const BioSection = () => (
         isRight
       >
         Benjie has been writing applications, servers and APIs professionally
-        for over a decade. As part of maintaining PostGraphQL, a popular OSS
-        project that generates a GraphQL API from your existing PostgreSQL
-        database schema, Benjie built the Graphile suite of tools for building
-        scalable GraphQL schemas through plugins. He sees GraphQL as one of the
-        biggest advancements in web API technology during his career.
-      </Bio>
-      <Bio name="Jof Arnold" avatarUrl="images/jof-medium.jpg">
-        Jof started with JavaScript in 1998 with Microsoft’s release of Internet
-        Explorer 3. Since then he has worked at the cutting edge of the frontend
-        stack, being amongst the first in 2013 to introduce React to a
-        large-scale production application. Jof brings a user-centric approach
-        to frontend technologies. He is a regular speaker and contributor to the
-        London tech scene in all matters frontend.
+        for over a decade. As part of maintaining{" "}
+        <a href="https://graphile.org/postgraphile">PostGraphile</a>, a popular
+        OSS project that generates an extremely high-performance and highly
+        configurable GraphQL API from your existing PostgreSQL database schema,
+        Benjie built the Graphile suite of tools for building scalable GraphQL
+        schemas through plugins. He sees GraphQL as one of the biggest
+        advancements in web API technology during his career.
       </Bio>
     </RowCenter>
   </Section>

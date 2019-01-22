@@ -25,10 +25,6 @@ const Footer = () => (
       <div className="col-xs-12 col-sm-4 ma0-l mb5">
         <Title>Contact</Title>
         <ul className="list pl0">
-          <FooterItem href="https://www.twitter.com/benjie">@benjie</FooterItem>
-          <FooterItem href="https://www.twitter.com/jofarnold">
-            @jofarnold
-          </FooterItem>
           <FooterItem href="mailto:info@graphql-training.com">
             info@graphql-training.com
           </FooterItem>

@@ -115,7 +115,7 @@ const Index = () => (
             </SplitColumn>
             <SplitColumn>
               <h4 className="">
-                Day 2: Building with <br /> GraphQL and Apollo/Relay
+                Day 2: Building with <br /> GraphQL and Apollo
               </h4>
               <ul>
                 <li>
