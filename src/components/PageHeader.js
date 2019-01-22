@@ -25,7 +25,7 @@ const PageHeader = ({ nav }) => (
                 <h1 className="f2 ma0">GraphQL Training</h1>
               </div>
               <p className="f4 fw6">
-                GraphQL training in London, Berlin and Europe.
+                GraphQL training for teams in London, Berlin and Europe.
                 <br />
                 From the maintainer of PostGraphile.
               </p>
@@ -78,7 +78,7 @@ const PageHeaderPage = ({ title }) => (
                 <h1 className="f2 ma0">{title}</h1>
               </div>
               <p className="f4 fw6">
-                GraphQL training in London, Berlin and Europe.
+                GraphQL training for teams in London, Berlin and Europe.
                 <br />
                 From the maintainer of PostGraphile.
               </p>

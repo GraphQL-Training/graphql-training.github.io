@@ -25,11 +25,12 @@ const Index = () => (
   <Layout>
     <div>
       <Helmet
-        title={`GraphQL Training in London, Manchester, Berlin and Beyond`}
+        title={`GraphQL Training for teams in London, Manchester, Berlin and Beyond`}
         meta={[
           {
             name: "description",
-            content: "GraphQL training in London, Manchester and Berlin",
+            content:
+              "GraphQL training for teams in London, Manchester and Berlin",
           },
           {
             name: "keywords",

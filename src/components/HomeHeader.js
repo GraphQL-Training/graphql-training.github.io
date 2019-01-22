@@ -11,7 +11,7 @@ const HomeHeader = () => (
             </div>
             <div className="mb4 flex justify-center justify-start-l">
               <h3>
-                Training in London, Berlin, Paris
+                Training for teams in London, Berlin, Paris
                 <br />
                 and beyond from the brain
                 <br /> behind PostGraphile.
