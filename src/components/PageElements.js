@@ -106,20 +106,19 @@ const FullstackCoursePoints = () => (
     <li>GraphQL concepts and terminology.</li>
     <li>How to perform queries and mutations using GraphiQL and HTTP.</li>
     <li>Composing GraphQL documents with fragments.</li>
-    <li>How to integrate the Apollo GraphQL client into React applications</li>
-    <li>Simplification: removing unnecessary state from your app.</li>
+    <li>Versionless schema design.</li>
+    <li>Understanding GraphQL performance.</li>
     <li>Authenticating GraphQL requests.</li>
-    <li>Debugging techniques.</li>
-    <li>Optimistic updates and other performance and UX optimizations.</li>
+    <li>Collaborating on GraphQL design.</li>
   </ul>
 );
 
 const FullstackCourseDescription = () => (
   <div>
     <p>
-      This advanced 2 day course gives full stack engineers and cross-discipline
-      teams the experience and intuitions to create high performance GraphQL
-      applications/APIs rapidly and on the right footing.
+      This advanced 2- or 3-day course gives full stack engineers and
+      cross-discipline teams the experience and intuitions to create high
+      performance GraphQL applications/APIs rapidly and on the right footing.
     </p>
     <p>
       Starting with learning the core concepts and how to use queries, mutations
