@@ -45,16 +45,16 @@ const Footer = () => (
         <Title>Projects</Title>
         <ul className="list pl0">
           <FooterItem
+            href="https://github.com/graphql/graphiql"
+            description="Tools for building a GraphQL IDE"
+          >
+            GraphiQL
+          </FooterItem>
+          <FooterItem
             href="https://www.graphile.org/postgraphile/"
             description="Instant GraphQL API from a PostgreSQL database schema"
           >
             PostGraphile
-          </FooterItem>
-          <FooterItem
-            href="https://www.graphile.org/graphile-build/"
-            description="Tools to build pluggable, performant GraphQL APIs"
-          >
-            Graphile Build
           </FooterItem>
         </ul>
       </div>

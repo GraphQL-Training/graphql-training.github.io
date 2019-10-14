@@ -65,8 +65,9 @@ const ApproachSection = () => (
         </p>
         <p>
           We operate a buddy system where each student is paired with another so
-          they can help each other to solve any problems, and Benjie will be
-          on-hand to help clarify any uncertainties and guide how to fix issues.
+          they can help each other to solve any problems, and our trainers will
+          be on-hand to help clarify any uncertainties and guide how to fix
+          issues.
         </p>
       </div>
     </RowCenter>
@@ -225,7 +226,7 @@ const Logos = () => (
 const BioSection = () => (
   <Section className="bg-light-gray overflow-hidden" isAlt>
     <RowCenter>
-      <h3 className="divider-center">Meet the trainer</h3>
+      <h3 className="divider-center">Meet the trainers</h3>
       <br />
       <br />
       <Bio
@@ -236,12 +237,27 @@ const BioSection = () => (
       >
         Benjie has been writing applications, servers and APIs professionally
         for over a decade. As part of maintaining{" "}
-        <a href="https://graphile.org/postgraphile">PostGraphile</a>, a popular
+        <a href="https://graphile.org/postgraphile/">PostGraphile</a>, a popular
         OSS project that generates an extremely high-performance and highly
         configurable GraphQL API from your existing PostgreSQL database schema,
         Benjie built the Graphile suite of tools for building scalable GraphQL
-        schemas through plugins. He sees GraphQL as one of the biggest
+        schemas through plugins. He also helps to maintain the official Graph
+        <em>i</em>QL GraphQL IDE and is a contributor to the GraphQL
+        Specification Working Group. He sees GraphQL as one of the biggest
         advancements in web API technology during his career.
+      </Bio>
+      <Bio className="mb5" name="Jem Gillam" avatarUrl="images/jem-medium.jpg">
+        Jem has a Post-Graduate Certificate in Education (PGCE), which equipped
+        her with the tools and techniques to support people in their learning
+        journeys. After a career change to programming where she built web and
+        iOS apps she joined the <em>GraphQL-Training</em> team and brings a
+        focus on learning methodologies and curricula planning. She also
+        operates the human side of the{" "}
+        <a href="https://graphile.org/">
+          Graphile <abbr title="open-source software">OSS</abbr> projects
+        </a>
+        , building the community around the software and ensuring that
+        supporters&rsquo; concerns are rapidly addressed.
       </Bio>
     </RowCenter>
   </Section>

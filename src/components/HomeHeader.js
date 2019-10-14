@@ -13,8 +13,8 @@ const HomeHeader = () => (
               <h3>
                 Training for teams in London, Berlin, Paris
                 <br />
-                and beyond from the brain
-                <br /> behind PostGraphile.
+                and beyond from one of the
+                <br /> maintainers of GraphiQL.
               </h3>
             </div>
           </div>
