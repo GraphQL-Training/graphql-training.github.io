@@ -33,9 +33,6 @@ const Footer = () => (
       <div className="col-xs-12 col-sm-4 ma0-l mb5">
         <Title>Courses</Title>
         <ul className="list pl0">
-          <FooterItem to="/graphql-training-frontend-course">
-            GraphQL training for frontend React developers
-          </FooterItem>
           <FooterItem to="/graphql-training-fullstack-course">
             GraphQL training for full stack developers
           </FooterItem>

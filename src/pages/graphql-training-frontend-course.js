@@ -48,6 +48,64 @@ const Index = () => (
                 frontend engineers
               </h3>
               <p>
+                Sorry; this course has not been updated for 2019 yet so the
+                course spec is temporarily unavailable. If you&rsquo;re
+                interested in this course, please get in touch:
+              </p>
+              <ButtonLinkSolid
+                className="w5-ns w-100 mh2-ns mb6-l mb5 mt0 mt4-l"
+                href="mailto:info@graphql-training"
+                title="Email GraphQL Training"
+              >
+                Express interest
+              </ButtonLinkSolid>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <BioSection />
+      <ApproachSection />
+      <Footer />
+    </div>
+  </Layout>
+);
+export const OldIndex = () => (
+  <Layout>
+    <div>
+      <Helmet
+        title={`GraphQL Training for teams in London, Manchester, Berlin and Beyond`}
+        meta={[
+          {
+            name: "description",
+            content:
+              "GraphQL training for Frontend developers in London, Manchester, Berlin and Europe",
+          },
+          {
+            name: "keywords",
+            content:
+              "GraphQL, Schema, API, Apollo, Frontend, Graph, PostgreSQL, Postgres, PG, Nodejs, Node, Reactjs, React, Training, Teach, Learn, London, Berlin",
+          },
+        ]}
+      />
+      <PageHeaderPage
+        title={
+          <div>
+            GraphQL Training For
+            <br />
+            Frontend Engineers
+          </div>
+        }
+      />
+      <Section className="bg-almost-black white">
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="flex flex-column items-center">
+              <h3 className="divider-center">
+                2 Day GraphQL course for
+                <br />
+                frontend engineers
+              </h3>
+              <p>
                 GraphQL is a revolutionary API technology combining intuitively
                 structured data with a strong type system and powerful tooling,
                 enabling engineers to quickly produce reliable and performant

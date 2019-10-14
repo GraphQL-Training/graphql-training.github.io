@@ -65,31 +65,6 @@ const Index = () => (
       <section className="bg-almost-black pv6-l pv5">
         <div className="container mw8">
           <CourseTitleRow>
-            GraphQL For <br />
-            React Developers
-          </CourseTitleRow>
-          <CourseDescriptionRow
-            left={
-              <div className="h-100 flex flex-column">
-                <div className="mb3">
-                  <FrontendCourseDescription />
-                </div>
-              </div>
-            }
-            right={<FrontendCoursePoints />}
-          />
-          <div className="row bg-white mb4">
-            <div className="col-xs-12 flex flex-column items-center">
-              <ButtonLinkSolid
-                className="w5-ns w-100 mh2-ns mb6-l mb5"
-                to="/graphql-training-frontend-course"
-                title="Learn more about GraphQL training for frontend developers in London"
-              >
-                Learn More
-              </ButtonLinkSolid>
-            </div>
-          </div>
-          <CourseTitleRow>
             GraphQL for <br />
             Fullstack Developers &amp; Teams
           </CourseTitleRow>

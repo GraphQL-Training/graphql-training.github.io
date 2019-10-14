@@ -45,6 +45,7 @@ const Index = () => (
                 2 Day GraphQL course <br /> for full stack <br /> developers &
                 teams
               </h3>
+              <h4 className="divider-center">Updated for 2019</h4>
               <p>
                 GraphQL is a revolutionary API technology combining intuitively
                 structured data with a strong type system and powerful tooling,
@@ -53,16 +54,32 @@ const Index = () => (
               </p>
 
               <p>
-                This advanced 2 day course gives full stack engineers and
-                cross-discipline teams the experience and intuitions to create
-                high performance GraphQL applications/APIs rapidly and on the
-                right footing.
+                This course gives full stack engineers and cross-discipline
+                teams the experience and intuitions to create high performance
+                GraphQL applications/APIs rapidly and on the right footing. We
+                recommend that 3 days are allocated to this course, but we can
+                also deliver a more intensive version over 2 days.
               </p>
               <p>
-                Starting with learning the core concepts and how to use queries,
-                mutations and fragments, the course progresses to building
-                skills in areas such as schema design, authentication and API
-                performance.
+                The course starts by giving frontend and backend engineers the
+                fundamental knowledge they need to use GraphQL well, introducing
+                them to the GraphQL type system, terminology, and how to
+                collaborate with it; how to write queries and mutations; and how
+                to use GraphQL fragments to reduce repetition and increase
+                performance. It goes on to outline some GraphQL best practices
+                applicable to frontend development.
+              </p>
+              <p>
+                Having mastered the fundamentals, participants will go on to
+                acquire the knowledge needed to architect reliable GraphQL APIs.
+                Participants will build knowledge in areas such as common
+                architectural patterns; schema design patterns and best
+                practices; serving GraphQL over HTTP; authentication and
+                determining whether GraphQL is a good fit for a particular
+                problem. Significant time will be spent learning about and
+                practicing schema design, which will give participants a good
+                overview of many of the crucial aspects needed to build an
+                efficient, effective and maintainable schema.
               </p>
               <h3 className="divider-center mt5">Target Audience</h3>
               <ul>
@@ -72,11 +89,11 @@ const Index = () => (
                 </li>
                 <li>
                   Frontend engineers who wish to understand backend concerns
-                  related to implementing GraphQL servers.{" "}
+                  related to implementing GraphQL servers.
                 </li>
                 <li>
                   Teams looking to solidify their understanding and approach to
-                  GraphQL development.{" "}
+                  GraphQL development.
                 </li>
               </ul>
             </div>
@@ -91,34 +108,41 @@ const Index = () => (
           </RowCenter>
           <div className="row bg-white">
             <SplitColumn>
-              <h4 className="">Day 1</h4>
-              <h5>What is GraphQL?</h5>
-              <ul>
-                <li>Thinking with Graphs.</li>
-                <li>Fetching only the data you need.</li>
-                <li>Fetching everything you need in one network request.</li>
-              </ul>
-              <h5>Why GraphQL?</h5>
+              <h5>GraphQL History and Mission</h5>
               <ul>
                 <li>Why did Facebook invent GraphQL?</li>
                 <li>Are the problems it solves unique to Facebook?</li>
+                <li>Thinking with graphs.</li>
                 <li>
-                  How does it solve issues like developer onboarding, scaling
-                  teams, API performance, maintainability, and preventing bugs
-                  and regressions?
+                  How does GraphQL solve issues like developer onboarding,
+                  scaling teams, API performance, maintainability, and
+                  preventing bugs and regressions?
                 </li>
+                <li>GraphQL schema responsibilities.</li>
               </ul>
               <h5>GraphQL Fundamentals</h5>
               <ul>
                 <li>GraphQL terminology.</li>
                 <li>Anatomy of a query/mutation.</li>
+                <li>GraphQL type system.</li>
                 <li>Composing GraphQL documents with fragments.</li>
                 <li>Querying a local GraphQL schema.</li>
-                <li>Exposing a GraphQL schema over HTTP.</li>
+                <li>Tools for exploring/understanding a GraphQL API.</li>
+                <li>Best practices for GraphQL consumers.</li>
+                <li>When to use GraphQL.</li>
+              </ul>
+              <h5>GraphQL Architecture</h5>
+              <ul>
+                <li>Where GraphQL fits in the application stack.</li>
+                <li>GraphQL resolvers.</li>
+                <li>
+                  How GraphQL executes a query, mutation and subscription.
+                </li>
+                <li>The N+1 problem, and solutions to it.</li>
+                <li>Common patterns.</li>
               </ul>
             </SplitColumn>
             <SplitColumn>
-              <h4 className="">Day 2</h4>
               <h5>Designing a GraphQL Schema</h5>
               <ul>
                 <li>Fundamentals.</li>
@@ -128,28 +152,29 @@ const Index = () => (
                 <li>Getting started quickly with a mocked schema.</li>
                 <li>Where does the business logic live?</li>
                 <li>How to handle common requirements.</li>
-              </ul>
-              <h5>Consuming GraphQL</h5>
-              <ul>
                 <li>
                   Client-side caches, synchronisation, global identifiers.
                 </li>
-                <li>
-                  Why do the various client-side tools exist and which should I
-                  choose?
-                </li>
-                <li>Authentication and authorization.</li>
-                <li>Ways to test a GraphQL schema.</li>
+                <li>The Relay GraphQL specifications.</li>
+                <li>Versionless API design.</li>
+                <li>Guiding API consumers onto the &ldquo;happy path&rdquo;</li>
               </ul>
-              <h5>Advanced GraphQL</h5>
+              <h5>Serving a GraphQL Schema</h5>
               <ul>
-                <li>
-                  Introduction to real-time application development via
-                  subscriptions.
-                </li>
-                <li>Reducing network requests via query batching.</li>
-                <li>Whitelisting requests via persisted queries.</li>
+                <li>Understanding that GraphQL is not tied to HTTP.</li>
+                <li>Basics: parsing, validation and execution.</li>
+                <li>Authentication and authorization.</li>
+                <li>Query batching.</li>
+                <li>Persisted queries.</li>
+                <li>Protecting your server.</li>
+              </ul>
+              <h5>Advanced GraphQL Topics</h5>
+              <ul>
+                <li>GraphQL introspection.</li>
                 <li>Database performance (including DataLoaders).</li>
+                <li>Tooling available to build APIs faster.</li>
+                <li>Common GraphQL directives.</li>
+                <li>Realtime GraphQL.</li>
               </ul>
             </SplitColumn>
           </div>
@@ -179,10 +204,11 @@ const Index = () => (
                 examples with the GraphQL reference implementation so a good
                 understanding of modern JavaScript (ES2017) will be very
                 helpful. If you prefer another environment, you should come to
-                Day 2 with your favourite stack and GraphQL libraries
-                pre-installed. Those attendees wishing to follow along with the
-                JS code examples should have Node.js v10 or higher with the
-                accompanying npm installed.{" "}
+                with your favourite stack and GraphQL libraries pre-installed.
+                Those attendees wishing to follow along with the JS code
+                examples should have Node.js v10 or higher with a suitable
+                package manager; we recommend <code>yarn</code> but{" "}
+                <code>npm</code> should suffice.
               </p>
             </div>
           </div>

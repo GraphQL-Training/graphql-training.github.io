@@ -40,12 +40,6 @@ const PageHeader = ({ nav }) => (
 const NavCore = () => (
   <ul className="flex justify-start pv0 ph3 items-center">
     <HeaderLink
-      to="/graphql-training-frontend-course"
-      title="GraphQL Training Course for Frontend Developers"
-    >
-      Frontend Syllabus
-    </HeaderLink>
-    <HeaderLink
       to="/graphql-training-fullstack-course"
       title="GraphQL Training Course for Full Stack Developers and Teams"
     >

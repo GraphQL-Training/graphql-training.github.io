@@ -227,7 +227,7 @@ class Index extends React.Component {
                     href={`mailto:info@graphql-training.com?subject=${encodeURIComponent(
                       `Interested in ${durationString} of GraphQL training for around ${participantsString} participants`
                     )}`}
-                    title="Learn more about GraphQL training for frontend developers in London"
+                    title="Learn more about GraphQL training for developers in London and Europe"
                   >
                     Email us
                   </ButtonLinkSolid>

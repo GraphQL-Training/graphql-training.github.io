@@ -11,7 +11,7 @@ const HomeHeader = () => (
             </div>
             <div className="mb4 flex justify-center justify-start-l">
               <h3>
-                Training for teams in London, Berlin, Paris
+                Training for teams in London, Amsterdam, Berlin
                 <br />
                 and beyond from one of the
                 <br /> maintainers of GraphiQL.
