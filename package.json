@@ -13,7 +13,6 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "flow-bin": "^0.91.0",
-    "fsevents": "^1.2.7",
     "gatsby": "^2.0.91",
     "gatsby-link": "^2.0.8",
     "gatsby-plugin-catch-links": "^2.0.9",
@@ -36,6 +35,9 @@
     "typography": "^0.16.18",
     "typography-theme-fairy-gates": "^0.16.18",
     "typography-theme-funston": "^0.16.18"
+  },
+  "optionalDependencies": {
+    "fsevents": "^1.2.7"
   },
   "keywords": [
     "gatsby"
